@@ -29,15 +29,31 @@
         <img class="logo" src="assets/images/logo.webp" alt="Logo">
         <h1 class="heading"> Rock, Scissors, Paper, Lizard, Spock</h1>
     </header>
-    <!--result display area-->
+    <!--Game start section-->
+    <section class="start-game">
+        <div>
+            <h2>Best of seven rounds</h2>
+            <form method="post" action="https://formdump.codeinstitute.net/">
+                <label for="user-name">Enter your name:</label>
+                <br>
+                <input type="text" id="user-name" name="name" pattern="^[A-Za-z]{1,20}$">
+                <br>
+                <input type="submit" name="submit" class="start-btn" value="Play!">
+            </form>
+
+
+        </div>
+
+    </section>
+    <!--Result display area-->
     <section class="result-display-area">
 
         <div class="players-pick">
             <span class="user-pick">
-            ✊
+                ✊
             </span>
             <span class="computer-pick">
-            ✊
+                ✊
             </span>
         </div>
 
@@ -56,14 +72,15 @@
             User wins!
         </div>
     </section>
+    <!--Control buttons area-->
     <section class="controls-area">
         <h2>Let's Play!</h2>
         <div class="control-btn">
-            <button class="btn" id="rock">✊</button>
-            <button class="btn" id="paper">✋</button>
-            <button class="btn" id="scissors">✌️</button>
-            <button class="btn" id="lizard">🤌</button>
-            <button class="btn" id="spock">🖖</button>
+            <button class="btn" data-type="rock">✊</button>
+            <button class="btn" data-type="paper">✋</button>
+            <button class="btn" data-type="scissors">✌️</button>
+            <button class="btn" id="lizard" data-type="lizard">🤌</button>
+            <button class="btn" data-type="spock">🖖</button>
         </div>
     </section>
     <button class="rules">Rules</button>
