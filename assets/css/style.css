@@ -13,17 +13,61 @@
 body {
     min-height: 100vh;
     background-color: #F7F7F7;
-    color: rgb(7, 7, 17);
-    display: flex;
-    /* For elements to show underneath each other*/
-    flex-direction: column;
+    color: rgb(3, 3, 14);
 }
 header {
     text-align: center;
     padding: 1.5rem 0;
-    border-bottom: 2px solid rgb(7, 7, 17);
+    border-bottom: 2px solid rgb(3, 3, 14);
 
 }
 .logo {
     height: 75px;
+}
+
+.result-display-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 7rem;
+}
+
+.players-pick {
+    display: flex;
+    column-gap: 8rem;
+}
+
+.user-pick {
+    transform: rotate(90deg);
+    font-size: 80px;
+}
+
+.computer-pick {
+    transform: rotate(-90deg);
+    font-size: 80px;
+}
+
+.scores {
+    display: flex;
+    column-gap: 7rem;
+    font-size: 24px;
+}
+
+.score-counter{
+    font-weight: bold;
+}
+
+.user-counter {
+    color: rgb(64, 215, 64);
+}
+
+.pc-counter {
+    color: rgb(255, 0, 17);
+}
+
+.text-result {
+    padding: 2rem 0;
+    font-size: 40px;
+    font-weight: bold;
 }
