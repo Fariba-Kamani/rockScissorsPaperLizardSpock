@@ -28,6 +28,7 @@ header {
     height: 75px;
 }
 
+/*Start section*/
 .start-game {  
     text-align: center;
     padding: 2rem;
@@ -79,7 +80,7 @@ form {
 }
 
 .user-pick {
-    transform: rotate(90deg);
+    transform: rotate(90deg) rotateY(180deg);
     font-size: 80px;
 }
 
