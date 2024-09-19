@@ -78,10 +78,14 @@ function showComputersChoice() {
 }
 
 function countUsersScore() {
+    let userScore = parseInt(document.getElementById('user-counter').innerText);
+    document.getElementById('user-counter').innerText = ++userScore;
 
 }
 
 function countComputersScore() {
+    let computerScore = parseInt(document.getElementById('pc-counter').innerText);
+    document.getElementById('pc-counter').innerText = ++computerScore;
 
 }
 
@@ -91,79 +95,107 @@ function ShowResult() {
     let result = document.getElementById('text-result');
     let player = document.getElementById("user-name").value;
     result.style.display = 'block';
+    document.getElementById('control-area-heading').style.display = 'none';
     if (playerPick === computerPick) {
         result.innerHTML = "It's a tie!";
         result.style.color = 'rgb(3, 3, 14)';
+        countUsersScore();
+        countComputersScore();
 
     } else {
         switch (playerPick) {
             case '✊':
                 if (computerPick === '🤌') {
-                    result.innerHTML = `Rock crushes lizard. ${player} wins!`;
+                    result.innerHTML = `Rock crushes lizard.<br>
+                    ${player} wins!`;
                     result.style.color = 'rgb(64, 215, 64)';
+                    countUsersScore();
                 } else if(computerPick === '✌️'){
-                    result.innerHTML = `Rock crushes scissors. ${player} wins!`;
+                    result.innerHTML = `Rock crushes scissors.<br> 
+                    ${player} wins!`;
                     result.style.color = 'rgb(64, 215, 64)';
+                    countUsersScore();
 
                 } else {
                     result.innerHTML = 'Computer wins!';
                     result.style.color = 'rgb(255, 0, 17)';
+                    countComputersScore();
 
                 }
                 break;
             case '✋':
                 if (computerPick === '✊') {
-                    result.innerHTML = `Paper covers rock. ${player} wins!`;
+                    result.innerHTML = `Paper covers rock.<br> 
+                    ${player} wins!`;
                     result.style.color = 'rgb(64, 215, 64)';
+                    countUsersScore();
                 } else if (computerPick === '🖖') {
-                    result.innerHTML = `Paper disproves spock. ${player} wins!`;
+                    result.innerHTML = `Paper disproves spock.<br> 
+                    ${player} wins!`;
                     result.style.color = 'rgb(64, 215, 64)';
+                    countUsersScore();
 
                 } else {
                     result.innerHTML = 'Computer wins!';
                     result.style.color = 'rgb(255, 0, 17)';
+                    countComputersScore();
 
                 }
                 break;
             case '✌️':
                 if (computerPick === '✋') {
-                    result.innerHTML = `scissors cuts paper. ${player} wins!`;
+                    result.innerHTML = `scissors cuts paper.<br> 
+                    ${player} wins!`;
                     result.style.color = 'rgb(64, 215, 64)';
+                    countUsersScore();
                 } else if (computerPick === '🤌') {
-                    result.innerHTML = `Scissors dicapitates lizard. ${player} wins!`;
+                    result.innerHTML = `Scissors dicapitates lizard.<br> 
+                    ${player} wins!`;
                     result.style.color = 'rgb(64, 215, 64)';
+                    countUsersScore();
 
                 } else {
                     result.innerHTML = 'Computer wins!';
                     result.style.color = 'rgb(255, 0, 17)';
+                    countComputersScore();
 
                 }
                 break;
             case '🤌':
                 if (computerPick === '🖖') {
-                    result.innerHTML = `Lizard poisons spock. ${player} wins!`;
+                    result.innerHTML = `Lizard poisons spock.<br> 
+                    ${player} wins!`;
                     result.style.color = 'rgb(64, 215, 64)';
+                    countUsersScore();
                 } else if (computerPick === '✋') {
-                    result.innerHTML = `Lizard eats paper. ${player} wins!`;
+                    result.innerHTML = `Lizard eats paper.<br> 
+                    ${player} wins!`;
                     result.style.color = 'rgb(64, 215, 64)';
+                    countUsersScore();
 
                 } else {
                     result.innerHTML = 'Computer wins!';
                     result.style.color = 'rgb(255, 0, 17)';
+                    countComputersScore();
 
                 }
                 break;
             case '🖖':
                 if (computerPick === '✊') {
-                    result.innerHTML = `Spock vaporizes rock. ${player} wins!`;
+                    result.innerHTML = `Spock vaporizes rock.<br>
+                    ${player} wins!`;
                     result.style.color = 'rgb(64, 215, 64)';
+                    countUsersScore();
                 } else if (computerPick === '✌️') {
-                    result.innerHTML = `Spock smashes scissors. ${player} wins!`;
+                    result.innerHTML = `Spock smashes scissors.<br>
+                    ${player} wins!`;
                     result.style.color = 'rgb(64, 215, 64)';
+                    countUsersScore();
 
                 } else {
                     result.innerHTML = 'Computer wins!';
                     result.style.color = 'rgb(255, 0, 17)';
+                    countComputersScore();
 
                 }
                 break;

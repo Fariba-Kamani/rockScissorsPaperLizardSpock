@@ -107,9 +107,10 @@ form {
 
 .text-result {
     padding: 2rem 0;
-    font-size: 40px;
+    font-size: 1.5em;
     font-weight: bold;
     display: none;
+    text-align: center;
 }
 
 /*Controls area style*/
