@@ -92,14 +92,19 @@ function ShowResult() {
     let player = document.getElementById("user-name").value;
     result.style.display = 'block';
     if (playerPick === computerPick) {
-        display.innerHTML = "It's a tie!";
+        result.innerHTML = "It's a tie!";
+        result.style.color = 'rgb(3, 3, 14)';
 
     } else {
         switch (playerPick) {
             case '✊':
-                if (computerPick === '🤌' || computerPick === '✌️') {
-                    result.innerHTML = `${playerPick} crushes ${computerPick}. ${player} wins!`;
+                if (computerPick === '🤌') {
+                    result.innerHTML = `Rock crushes lizard. ${player} wins!`;
                     result.style.color = 'rgb(64, 215, 64)';
+                } else if(computerPick === '✌️'){
+                    result.innerHTML = `Rock crushes scissors. ${player} wins!`;
+                    result.style.color = 'rgb(64, 215, 64)';
+
                 } else {
                     result.innerHTML = 'Computer wins!';
                     result.style.color = 'rgb(255, 0, 17)';
@@ -108,10 +113,10 @@ function ShowResult() {
                 break;
             case '✋':
                 if (computerPick === '✊') {
-                    result.innerHTML = `${playerPick} covers ${computerPick}. ${player} wins!`;
+                    result.innerHTML = `Paper covers rock. ${player} wins!`;
                     result.style.color = 'rgb(64, 215, 64)';
                 } else if (computerPick === '🖖') {
-                    result.innerHTML = `${playerPick} disproves ${computerPick}. ${player} wins!`;
+                    result.innerHTML = `Paper disproves spock. ${player} wins!`;
                     result.style.color = 'rgb(64, 215, 64)';
 
                 } else {
@@ -122,10 +127,10 @@ function ShowResult() {
                 break;
             case '✌️':
                 if (computerPick === '✋') {
-                    result.innerHTML = `${playerPick} cuts ${computerPick}. ${player} wins!`;
+                    result.innerHTML = `scissors cuts paper. ${player} wins!`;
                     result.style.color = 'rgb(64, 215, 64)';
                 } else if (computerPick === '🤌') {
-                    result.innerHTML = `${playerPick} dicapitates ${computerPick}. ${player} wins!`;
+                    result.innerHTML = `Scissors dicapitates lizard. ${player} wins!`;
                     result.style.color = 'rgb(64, 215, 64)';
 
                 } else {
@@ -136,10 +141,10 @@ function ShowResult() {
                 break;
             case '🤌':
                 if (computerPick === '🖖') {
-                    result.innerHTML = `${playerPick} poisons ${computerPick}. ${player} wins!`;
+                    result.innerHTML = `Lizard poisons spock. ${player} wins!`;
                     result.style.color = 'rgb(64, 215, 64)';
                 } else if (computerPick === '✋') {
-                    result.innerHTML = `${playerPick} eats ${computerPick}. ${player} wins!`;
+                    result.innerHTML = `Lizard eats paper. ${player} wins!`;
                     result.style.color = 'rgb(64, 215, 64)';
 
                 } else {
@@ -150,10 +155,10 @@ function ShowResult() {
                 break;
             case '🖖':
                 if (computerPick === '✊') {
-                    result.innerHTML = `${playerPick} vaporizes ${computerPick}. ${player} wins!`;
+                    result.innerHTML = `Spock vaporizes rock. ${player} wins!`;
                     result.style.color = 'rgb(64, 215, 64)';
                 } else if (computerPick === '✌️') {
-                    result.innerHTML = `${playerPick} smashes ${computerPick}. ${player} wins!`;
+                    result.innerHTML = `Spock smashes scissors. ${player} wins!`;
                     result.style.color = 'rgb(64, 215, 64)';
 
                 } else {
