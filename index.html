@@ -49,10 +49,10 @@
     <section class="result-display-area">
 
         <div class="players-pick">
-            <span class="user-pick">
+            <span class="user-pick" id="user-pick">
                 ✊
             </span>
-            <span class="computer-pick">
+            <span class="computer-pick" id="computer-pick">
                 ✊
             </span>
         </div>
@@ -68,7 +68,7 @@
             </span>
 
         </div>
-        <div class="text-result">
+        <div class="text-result" id="text-result">
             User wins!
         </div>
     </section>
@@ -76,14 +76,14 @@
     <section class="controls-area">
         <h2>Let's Play!</h2>
         <div class="control-btn">
-            <button class="btn" data-type="rock">✊</button>
-            <button class="btn" data-type="paper">✋</button>
-            <button class="btn" data-type="scissors">✌️</button>
-            <button class="btn" id="lizard" data-type="lizard">🤌</button>
-            <button class="btn" data-type="spock">🖖</button>
+            <button class="btn" data-type="✊">✊</button>
+            <button class="btn" data-type="✋">✋</button>
+            <button class="btn" data-type="✌️">✌️</button>
+            <button class="btn" id="lizard" data-type="🤌">🤌</button>
+            <button class="btn" data-type="🖖">🖖</button>
         </div>
     </section>
-    <button class="rules">Rules</button>
+    <button class="rules" data-type="rules">Rules</button>
     <script src="assets/js/script.js"></script>
 </body>
 
