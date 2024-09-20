@@ -90,12 +90,22 @@ function countComputersScore() {
 }
 
 function ShowResult() {
+    let options = {
+        '✊': 'rock',
+        '✋': 'paper',
+        '✌️': 'scissors',
+        '🤌': 'lizard',
+        '🖖': 'spock',
+    };
+
     let playerPick = document.getElementById('user-pick').innerHTML;
     let computerPick = document.getElementById('computer-pick').innerHTML;
     let result = document.getElementById('text-result');
     let player = document.getElementById("user-name").value;
     result.style.display = 'block';
     document.getElementById('control-area-heading').style.display = 'none';
+    console.log(options[playerPick]);
+
     if (playerPick === computerPick) {
         result.innerHTML = "It's a tie!";
         result.style.color = 'rgb(3, 3, 14)';
@@ -106,18 +116,18 @@ function ShowResult() {
         switch (playerPick) {
             case '✊':
                 if (computerPick === '🤌') {
-                    result.innerHTML = `Rock crushes lizard.<br>
+                    result.innerHTML = `${options[playerPick]} crushes ${options[computerPick]}.<br>
                     ${player} wins!`;
                     result.style.color = 'rgb(64, 215, 64)';
                     countUsersScore();
-                } else if(computerPick === '✌️'){
-                    result.innerHTML = `Rock crushes scissors.<br> 
+                } else if (computerPick === '✌️') {
+                    result.innerHTML = `${options[playerPick]} crushes ${options[computerPick]}.<br> 
                     ${player} wins!`;
                     result.style.color = 'rgb(64, 215, 64)';
                     countUsersScore();
 
                 } else {
-                    result.innerHTML = 'Computer wins!';
+                    result.innerHTML = `${options[computerPick]} beats ${options[playerPick]}.<br> Computer wins!`;
                     result.style.color = 'rgb(255, 0, 17)';
                     countComputersScore();
 
@@ -125,18 +135,18 @@ function ShowResult() {
                 break;
             case '✋':
                 if (computerPick === '✊') {
-                    result.innerHTML = `Paper covers rock.<br> 
+                    result.innerHTML = `${options[playerPick]} covers ${options[computerPick]}.<br> 
                     ${player} wins!`;
                     result.style.color = 'rgb(64, 215, 64)';
                     countUsersScore();
                 } else if (computerPick === '🖖') {
-                    result.innerHTML = `Paper disproves spock.<br> 
+                    result.innerHTML = `${options[playerPick]} disproves ${options[computerPick]}.<br> 
                     ${player} wins!`;
                     result.style.color = 'rgb(64, 215, 64)';
                     countUsersScore();
 
                 } else {
-                    result.innerHTML = 'Computer wins!';
+                    result.innerHTML = `${options[computerPick]} beats ${options[playerPick]}.<br> Computer wins!`;
                     result.style.color = 'rgb(255, 0, 17)';
                     countComputersScore();
 
@@ -144,18 +154,18 @@ function ShowResult() {
                 break;
             case '✌️':
                 if (computerPick === '✋') {
-                    result.innerHTML = `scissors cuts paper.<br> 
+                    result.innerHTML = `${options[playerPick]} cut ${options[computerPick]}.<br> 
                     ${player} wins!`;
                     result.style.color = 'rgb(64, 215, 64)';
                     countUsersScore();
                 } else if (computerPick === '🤌') {
-                    result.innerHTML = `Scissors dicapitates lizard.<br> 
+                    result.innerHTML = `${options[playerPick]} dicapitate ${options[computerPick]}.<br> 
                     ${player} wins!`;
                     result.style.color = 'rgb(64, 215, 64)';
                     countUsersScore();
 
                 } else {
-                    result.innerHTML = 'Computer wins!';
+                    result.innerHTML = `${options[computerPick]} beats ${options[playerPick]}.<br> Computer wins!`;
                     result.style.color = 'rgb(255, 0, 17)';
                     countComputersScore();
 
@@ -163,18 +173,18 @@ function ShowResult() {
                 break;
             case '🤌':
                 if (computerPick === '🖖') {
-                    result.innerHTML = `Lizard poisons spock.<br> 
+                    result.innerHTML = `${options[playerPick]} poisons ${options[computerPick]}.<br> 
                     ${player} wins!`;
                     result.style.color = 'rgb(64, 215, 64)';
                     countUsersScore();
                 } else if (computerPick === '✋') {
-                    result.innerHTML = `Lizard eats paper.<br> 
+                    result.innerHTML = `${options[playerPick]} eats ${options[computerPick]}.<br> 
                     ${player} wins!`;
                     result.style.color = 'rgb(64, 215, 64)';
                     countUsersScore();
 
                 } else {
-                    result.innerHTML = 'Computer wins!';
+                    result.innerHTML = `${options[computerPick]} beats ${options[playerPick]}.<br> Computer wins!`;
                     result.style.color = 'rgb(255, 0, 17)';
                     countComputersScore();
 
@@ -182,18 +192,18 @@ function ShowResult() {
                 break;
             case '🖖':
                 if (computerPick === '✊') {
-                    result.innerHTML = `Spock vaporizes rock.<br>
+                    result.innerHTML = `${options[playerPick]} vaporizes ${options[computerPick]}.<br>
                     ${player} wins!`;
                     result.style.color = 'rgb(64, 215, 64)';
                     countUsersScore();
                 } else if (computerPick === '✌️') {
-                    result.innerHTML = `Spock smashes scissors.<br>
+                    result.innerHTML = `${options[playerPick]} smashes ${options[computerPick]}.<br>
                     ${player} wins!`;
                     result.style.color = 'rgb(64, 215, 64)';
                     countUsersScore();
 
                 } else {
-                    result.innerHTML = 'Computer wins!';
+                    result.innerHTML = `${options[computerPick]} beats ${options[playerPick]}.<br> Computer wins!`;
                     result.style.color = 'rgb(255, 0, 17)';
                     countComputersScore();
 
