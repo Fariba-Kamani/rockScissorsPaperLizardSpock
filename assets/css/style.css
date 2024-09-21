@@ -83,43 +83,41 @@ form {
     letter-spacing: 0.1em;
 }
 
-.start-btn:focus {
+.start-btn:focus-visible {
     border: 2px solid rgb(197, 229, 238);
-}
-
-.start-btn:hover {
-    border: none;
-    background-color: rgb(197, 229, 238);
 }
 
 /*Result display area style*/
 .result-display-area {
+    width: 100%;
     display: none;
     flex-direction: column;
     align-items: center;
     margin-top: 10rem;
-    padding: 2rem 7rem 0;
+    padding: 2rem 4rem 0;
 }
 
 .players-pick {
     display: flex;
-    column-gap: 10rem;
+    justify-content: space-evenly;
+    column-gap: 2rem;
 }
 
 .user-pick {
     transform: rotate(90deg) rotateY(180deg);
-    font-size: 80px;
+    font-size: 60px;
 }
 
 .computer-pick {
     transform: rotate(-90deg);
-    font-size: 80px;
+    font-size: 60px;
 }
 
 .scores {
     display: flex;
-    column-gap: 9rem;
-    font-size: 24px;
+    column-gap: 3rem;
+    font-size: 18px;
+    
 }
 
 .user-counter {
@@ -146,33 +144,53 @@ form {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem 7rem;
+    padding: 2rem 3rem;
+    width: 100%;
 }
 
 .controls-area h2 {
     padding-bottom: 2rem;
+    text-align: center;
 }
 
 .control-btn {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 2rem;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1rem;
 }
 
 .btn {
-    font-size: 48px;
+    font-size: 28px;
     border: none;
     background-color: #F7F7F7;
 }
 
-.btn:focus, .btn:hover {
+.btn:focus-visible {
     border-radius: 50%;
     background-color: rgb(197, 229, 238);
     border: none;
 }
 
+#rock {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+#paper {
+    grid-area: 1 / 4 / 2 / 5;
+}
+
+#scissors {
+    grid-area: 2 / 1 / 2 / 2;
+}
+
 #lizard {
     transform: rotate(-90deg);
+    grid-area: 3 / 3 / 3 / 4;
+}
+
+#spock {
+    grid-area: 2 / 5 / 2 / 5;
 }
 
 /*Rules button*/
