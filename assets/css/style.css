@@ -12,15 +12,203 @@
 /* General styles */
 body {
     min-height: 100vh;
+    min-width: 100vw;
     background-color: #F7F7F7;
     color: rgb(3, 3, 14);
     text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+header {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    text-align: center;
+    padding: 0 0 1.5rem 0;
+    border-bottom: 2px solid rgb(3, 3, 14);
+    line-height: 2rem;
+}
+
+h1 {
+    font-size: 1.25rem;
+    padding: 0 3rem;
+    letter-spacing: 0.15rem;
+}
+
+.logo {
+    height: 40px;
+}
+
+/*Start section*/
+.start-game {  
+    text-align: center;
+    padding: 4.5rem 2rem 2rem;
+    margin-top: 10rem;
+    line-height: 1rem;;
+}
+
+.start-game h2 {
+    font-size: 1rem;
+}
+
+form {
+    margin-top: 1.5rem;
+}
+
+#user-name {
+    width: 160px;
+    height: 47.19px;
+    padding: 0.6rem 2.5rem;
+    border: 2px solid rgb(3, 3, 14);
+    border-radius: 0.6rem;
+    margin-top: 1rem;
+}
+
+.start-btn {
+    font-family: inherit;
+    text-transform: inherit;
+    width: 160px;
+    margin-top: 2rem;
+    background: none;
+    outline: none;
+    border: 2px solid rgb(3, 3, 14);
+    border-radius: 0.6rem;
+    color: rgb(3, 3, 14);
+    padding: 0.6rem 2.5rem;
+    font-family: inherit;
+    text-transform: inherit;
+    font-size: 1.3rem;
+    letter-spacing: 0.1em;
+}
+
+.start-btn:focus {
+    border: 2px solid rgb(197, 229, 238);
+}
+
+.start-btn:hover {
+    border: none;
+    background-color: rgb(197, 229, 238);
+}
+
+/*Result display area style*/
+.result-display-area {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10rem;
+    padding: 2rem 7rem 0;
+}
+
+.players-pick {
+    display: flex;
+    column-gap: 10rem;
+}
+
+.user-pick {
+    transform: rotate(90deg) rotateY(180deg);
+    font-size: 80px;
+}
+
+.computer-pick {
+    transform: rotate(-90deg);
+    font-size: 80px;
+}
+
+.scores {
+    display: flex;
+    column-gap: 9rem;
+    font-size: 24px;
+}
+
+.user-counter {
+    color: rgb(64, 215, 64);
+    font-weight: bold;
+}
+
+.pc-counter {
+    color: rgb(255, 0, 17);
+    font-weight: bold;
+}
+
+.text-result {
+    padding: 2rem 0;
+    font-size: 1.5em;
+    font-weight: bold;
+    display: none;
+    text-align: center;
+}
+
+/*Controls area style*/
+.controls-area {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 7rem;
+}
+
+.controls-area h2 {
+    padding-bottom: 2rem;
+}
+
+.control-btn {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+}
+
+.btn {
+    font-size: 48px;
+    border: none;
+    background-color: #F7F7F7;
+}
+
+.btn:focus, .btn:hover {
+    border-radius: 50%;
+    background-color: rgb(197, 229, 238);
+    border: none;
+}
+
+#lizard {
+    transform: rotate(-90deg);
+}
+
+/*Rules button*/
+.rules {
+   /* position: absolute;
+    bottom: 2rem;
+    right: 2rem;*/
+    background: none;
+    outline: none;
+    border: 2px solid rgb(3, 3, 14);
+    border-radius: 0.6rem;
+    color: rgb(3, 3, 14);
+    width: 160px;
+    padding: 0.6rem 2.5rem;
+    font-family: inherit;
+    text-transform: inherit;
+    font-size: 1.3rem;
+    letter-spacing: 0.1em;
+}
+
+.rules:focus {
+    border: 2px solid rgb(197, 229, 238);
+}
+
+.rules:hover {
+    border: none;
+    background-color: rgb(197, 229, 238);
+}
+
+/* Media query: tablets and larger (768px and up)*/
+@media screen and (min-width: 768px) {
 
 /*Header style*/
 header {
     text-align: center;
-    padding: 1.5rem 0;
+    padding: 0 0 1.5rem 0;
     border-bottom: 2px solid rgb(3, 3, 14);
 
 }
@@ -32,7 +220,7 @@ header {
 .start-game {  
     text-align: center;
     padding: 2rem;
-    margin: 2rem;
+    margin: 2rem 2rem 0 2rem;
     line-height: 2rem;;
 }
 
@@ -40,10 +228,20 @@ form {
     margin-top: 3rem;
 }
 
+#user-name {
+    width: 160px;
+    height: 47.19px;
+    padding: 0.6rem 2.5rem;
+    border: 2px solid rgb(3, 3, 14);
+    border-radius: 0.6rem;
+    margin-top: 1rem;
+}
+
 .start-btn {
     font-family: inherit;
     text-transform: inherit;
-    margin-top: 1rem;
+    width: 160px;
+    margin-top: 2rem;
     background: none;
     outline: none;
     border: 2px solid rgb(3, 3, 14);
@@ -150,14 +348,15 @@ form {
 
 /*Rules button*/
 .rules {
-    position: absolute;
+   /* position: absolute;
     bottom: 2rem;
-    right: 2rem;
+    right: 2rem;*/
     background: none;
     outline: none;
     border: 2px solid rgb(3, 3, 14);
     border-radius: 0.6rem;
     color: rgb(3, 3, 14);
+    width: 160px;
     padding: 0.6rem 2.5rem;
     font-family: inherit;
     text-transform: inherit;
@@ -172,4 +371,5 @@ form {
 .rules:hover {
     border: none;
     background-color: rgb(197, 229, 238);
+}
 }
