@@ -71,8 +71,6 @@ form {
     text-transform: inherit;
     width: 160px;
     margin-top: 2rem;
-    background: none;
-    outline: none;
     border: 2px solid rgb(3, 3, 14);
     border-radius: 0.6rem;
     color: rgb(3, 3, 14);
@@ -83,10 +81,6 @@ form {
     letter-spacing: 0.1em;
 }
 
-.start-btn:focus-visible {
-    border: 2px solid rgb(197, 229, 238);
-}
-
 /*Result display area style*/
 .result-display-area {
     width: 100%;
@@ -94,7 +88,7 @@ form {
     flex-direction: column;
     align-items: center;
     margin-top: 10rem;
-    padding: 2rem 4rem 0;
+    padding: 2rem 2rem 0;
 }
 
 .players-pick {
@@ -115,9 +109,22 @@ form {
 
 .scores {
     display: flex;
-    column-gap: 3rem;
-    font-size: 18px;
+    flex-direction: row;
+    flex: 1;
+    gap: 5rem;
     
+}
+
+.user-score {
+    width: 45%;
+    align-self: flex-start;
+    text-align: right;
+}
+
+.computer-score {
+    width: 45%;
+    align-self: flex-end;
+    text-align: left;
 }
 
 .user-counter {
@@ -163,16 +170,21 @@ form {
 }
 
 .btn {
+    width: 40px;
+    height: 40px;
     font-size: 28px;
-    border: none;
+    border: 1px solid rgb(33, 33, 241);
     background-color: #F7F7F7;
+    border-radius: 50%;
+    background-color: rgb(33, 33, 241);
+    transition: background-color 3s ease-in-out;
+    box-shadow: -2px 2px 5px rgb(79, 79, 91);
 }
 
-.btn:focus-visible {
-    border-radius: 50%;
-    background-color: rgb(197, 229, 238);
-    border: none;
+.btn:active {
+    opacity: 0.5;
 }
+
 
 #rock {
     grid-area: 1 / 2 / 2 / 3;
