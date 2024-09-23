@@ -17,14 +17,20 @@ document.querySelector('form').addEventListener('submit', function (event) {
         element.style.display = "flex";
     });
     
-    runGame(userName);
+    setUser(userName);
     
 });
 
 document.querySelector('.rules').addEventListener('click', gameRules1);
 
-function runGame(user) {
+function setUser(user) {
     document.getElementById('player').innerHTML = `${user}'s`;
+    runGame();
+
+}
+
+function runGame() {
+   
     // Add an event listener to button elements
     let buttons = document.getElementsByTagName('button');
     let playerChoice;
@@ -86,12 +92,14 @@ function showComputersChoice() {
 function countUsersScore() {
     let userScore = parseInt(document.getElementById('user-counter').innerText);
     document.getElementById('user-counter').innerText = ++userScore;
+    
 
 }
 
 function countComputersScore() {
     let computerScore = parseInt(document.getElementById('pc-counter').innerText);
     document.getElementById('pc-counter').innerText = ++computerScore;
+    
 
 }
 
@@ -109,8 +117,6 @@ function ShowResult() {
     let result = document.getElementById('text-result');
     let player = document.getElementById("user-name").value;
     result.style.display = 'block';
-    document.getElementById('control-area-heading').style.display = 'none';
-    console.log(options[playerPick]);
 
     if (playerPick === computerPick) {
         result.innerHTML = "It's a tie!";
@@ -217,7 +223,23 @@ function ShowResult() {
                 break;
 
         }
+        
     }
+    roundCounter();
+    
+    
+
+}
+
+function roundCounter() {
+    let myCounter = parseInt(document.getElementById('round-count').innerText);
+   
+    if(myCounter === 7) {
+        exitGame();
+    } else if(myCounter < 7) {
+        document.getElementById('round-count').innerText = myCounter + 1;
+        myCounter ++;
+        } 
 
 }
 
@@ -240,7 +262,12 @@ function gameRules2() {
     document.querySelectorAll(".rules-explain").forEach(element => {
         element.style.display = "block";
     });
-    document.querySelectorAll(".section-container").forEach(element => {
+    document.querySelectorAll(".result-display-area").forEach(element => {
+        element.style.display = "none";
+    });
+
+    // Show elements with class 'controls-area'
+    document.querySelectorAll(".controls-area").forEach(element => {
         element.style.display = "none";
     });
     document.querySelectorAll("footer").forEach(element => {
@@ -271,7 +298,12 @@ function closeRules2() {
     document.querySelectorAll(".start-game").forEach(element => {
         element.style.display = "none";
     });
-    document.querySelectorAll(".section-container").forEach(element => {
+    document.querySelectorAll(".result-display-area").forEach(element => {
+        element.style.display = "flex";
+    });
+
+    // Show elements with class 'controls-area'
+    document.querySelectorAll(".controls-area").forEach(element => {
         element.style.display = "flex";
     });
     document.querySelectorAll("footer").forEach(element => {
@@ -281,5 +313,15 @@ function closeRules2() {
 }
 
 function exitGame() {
+    let userScore = parseInt(document.getElementById('user-counter').innerText);
+    let computerScore = parseInt(document.getElementById('pc-counter').innerText);
+    if(userScore === computerScore) {
+        alert("It's a tie");
+    } else if(userScore > computerScore) {
+        alert("User wins!");
+    } else {
+        alert("Computer wins!");
+    }
+
 
 }
