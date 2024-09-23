@@ -91,28 +91,25 @@ form {
     padding: 2rem 2rem 0;
 }
 
-.players-pick {
+.players-pick, .scores {
     display: flex;
-    justify-content: space-evenly;
-    column-gap: 2rem;
+    flex-direction: row;
+    flex: 1;
+    gap: 5rem;
 }
 
 .user-pick {
     transform: rotate(90deg) rotateY(180deg);
     font-size: 60px;
+    align-self: flex-start;
+    text-align: end;
 }
 
 .computer-pick {
     transform: rotate(-90deg);
     font-size: 60px;
-}
-
-.scores {
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-    gap: 5rem;
-    
+    align-self: flex-start;
+    text-align: start;
 }
 
 .user-score {
