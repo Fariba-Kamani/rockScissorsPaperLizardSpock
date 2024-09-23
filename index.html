@@ -32,7 +32,7 @@
     </header>
     <main>
         <section class="rules-explain">
-            <div id="close-rules">
+            <div id="close-rules" data-type="close">
                 <p><i class="fa-regular fa-rectangle-xmark"></i></p>
                 <hr>
             </div>
@@ -62,7 +62,7 @@
             <form method="post" action="https://formdump.codeinstitute.net/">
                 <label for="user-name">Enter your name:</label>
                 <br>
-                <input type="text" id="user-name" name="name" pattern="^[A-Za-z]{1,20}$">
+                <input type="text" id="user-name" name="name" pattern="^[A-Za-z]{1,20}$" required>
                 <br>
                 <input type="submit" name="submit" class="start-btn" value="Play!">
             </form>

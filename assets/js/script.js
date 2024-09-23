@@ -1,3 +1,4 @@
+
 document.querySelector('form').addEventListener('submit', function (event) {
     event.preventDefault();
     let userName = document.getElementById("user-name").value;
@@ -15,12 +16,16 @@ document.querySelector('form').addEventListener('submit', function (event) {
     document.querySelectorAll(".controls-area").forEach(element => {
         element.style.display = "flex";
     });
+    
     runGame(userName);
+    
 });
+
+document.querySelector('.rules').addEventListener('click', gameRules);
 
 function runGame(user) {
     document.getElementById('player').innerHTML = `${user}'s`;
-    // Add an event listener to elements with the class 'control-btn'
+    // Add an event listener to button elements
     let buttons = document.getElementsByTagName('button');
     let playerChoice;
     for (let button of buttons) {
@@ -51,9 +56,10 @@ function runGame(user) {
                     showUsersChoice(playerChoice);
                     showComputersChoice();
                     break;
-                default:
-                    playerChoice = this.getAttribute('data-type');
-                    alert(playerChoice);
+                case 'rules':
+                    gameRules();
+                    break;
+                    
 
             }
         });
@@ -216,6 +222,19 @@ function ShowResult() {
 }
 
 function gameRules() {
+    document.querySelectorAll(".rules-explain").forEach(element => {
+        element.style.display = "block";
+    });
+    document.querySelectorAll(".start-game").forEach(element => {
+        element.style.display = "none";
+    });
+    document.querySelectorAll(".section-container").forEach(element => {
+        element.style.display = "none";
+    });
+    document.querySelectorAll("footer").forEach(element => {
+        element.style.display = "none";
+    });
+    
 
 }
 
