@@ -29,6 +29,7 @@
         <img class="logo" src="assets/images/logo.webp" alt="Logo">
         <h1 class="heading"> Rock, Scissors, Paper, Lizard, Spock</h1>
     </header>
+
     <!--Game start section-->
     <section class="start-game">
         <div>
@@ -45,46 +46,50 @@
         </div>
 
     </section>
-    <!--Result display area-->
-    <section class="result-display-area">
+    <div class="section-container">
+        <!--Result display area-->
+        <section class="result-display-area">
 
-        <div class="players-pick">
-            <span class="user-pick" id="user-pick">
-                ✊
-            </span>
-            <span class="computer-pick" id="computer-pick">
-                ✊
-            </span>
-        </div>
-
-        <div class="scores">
-            <div class="user-score">
-                <p> <span id="player">User's</span>
-                <span class="score-counter score-left">score: <span class="user-counter" id="user-counter">0</span></span>
-                </p>
-            </div>
-            <div class="computer-score">
-                <p>Computer's
-                <span class="score-counter score-right">score: <span class="pc-counter" id="pc-counter">0</span></span>
-                </p>
+            <div class="players-pick">
+                <span class="user-pick" id="user-pick">
+                    ✊
+                </span>
+                <span class="computer-pick" id="computer-pick">
+                    ✊
+                </span>
             </div>
 
-        </div>
-        <div class="text-result" id="text-result">
-            User wins!
-        </div>
-    </section>
-    <!--Control buttons area-->
-    <section class="controls-area">
-        <h2 id="control-area-heading">Let's Play!</h2>
-        <div class="control-btn">
-            <button class="btn" id="rock" data-type="✊">✊</button>
-            <button class="btn" id="paper" data-type="✋">✋</button>
-            <button class="btn" id="scissors" data-type="✌️">✌️</button>
-            <button class="btn" id="lizard" data-type="🤌">🤌</button>
-            <button class="btn" id="spock" data-type="🖖">🖖</button>
-        </div>
-    </section>
+            <div class="scores">
+                <div class="user-score">
+                    <p> <span id="player">User's</span>
+                        <span class="score-counter score-left">score: <span class="user-counter"
+                                id="user-counter">0</span></span>
+                    </p>
+                </div>
+                <div class="computer-score">
+                    <p>Computer's
+                        <span class="score-counter score-right">score: <span class="pc-counter"
+                                id="pc-counter">0</span></span>
+                    </p>
+                </div>
+
+            </div>
+            <div class="text-result" id="text-result">
+                User wins!
+            </div>
+        </section>
+        <!--Control buttons area-->
+        <section class="controls-area">
+            <h2 id="control-area-heading">Let's Play!</h2>
+            <div class="control-btn">
+                <button class="btn" id="rock" data-type="✊">✊</button>
+                <button class="btn" id="paper" data-type="✋">✋</button>
+                <button class="btn" id="scissors" data-type="✌️">✌️</button>
+                <button class="btn" id="lizard" data-type="🤌">🤌</button>
+                <button class="btn" id="spock" data-type="🖖">🖖</button>
+            </div>
+        </section>
+    </div>
     <button class="rules" data-type="rules">Rules</button>
     <script src="assets/js/script.js"></script>
 </body>

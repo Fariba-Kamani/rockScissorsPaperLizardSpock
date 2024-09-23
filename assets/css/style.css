@@ -23,10 +23,10 @@ body {
 
 header {
     position: absolute;
-    top: 1rem;
+    top: 0;
     left: 0;
     text-align: center;
-    padding: 0 0 1.5rem 0;
+    padding: 1rem 0 1.5rem 0;
     border-bottom: 2px solid rgb(3, 3, 14);
     line-height: 2rem;
 }
@@ -118,13 +118,13 @@ form {
 .user-score {
     width: 45%;
     align-self: flex-start;
-    text-align: right;
+    text-align: end;
 }
 
 .computer-score {
     width: 45%;
     align-self: flex-end;
-    text-align: left;
+    text-align: start;
 }
 
 .user-counter {
@@ -225,67 +225,23 @@ form {
     letter-spacing: 0.1em;
 }
 
-.rules:focus {
-    border: 2px solid rgb(197, 229, 238);
-}
-
-.rules:hover {
-    border: none;
-    background-color: rgb(197, 229, 238);
-}
-
-/* Media query: tablets and larger (768px and up)*/
-@media screen and (min-width: 768px) {
+/* Media query: full screen mobile and larger (667px and up)*/
+@media screen and (min-width: 667px) {
 
 /*Header style*/
-header {
-    text-align: center;
-    padding: 0 0 1.5rem 0;
-    border-bottom: 2px solid rgb(3, 3, 14);
-
-}
-.logo {
-    height: 75px;
-}
 
 /*Start section*/
+header {
+    width: 100%;
+}
 .start-game {  
-    text-align: center;
-    padding: 2rem;
-    margin: 2rem 2rem 0 2rem;
-    line-height: 2rem;;
+    padding: 1rem;
+    line-height: 0.5rem;
 }
-
-form {
-    margin-top: 3rem;
-}
-
-#user-name {
-    width: 160px;
-    height: 47.19px;
-    padding: 0.6rem 2.5rem;
-    border: 2px solid rgb(3, 3, 14);
-    border-radius: 0.6rem;
+.start-btn {
     margin-top: 1rem;
 }
-
-.start-btn {
-    font-family: inherit;
-    text-transform: inherit;
-    width: 160px;
-    margin-top: 2rem;
-    background: none;
-    outline: none;
-    border: 2px solid rgb(3, 3, 14);
-    border-radius: 0.6rem;
-    color: rgb(3, 3, 14);
-    padding: 0.6rem 2.5rem;
-    font-family: inherit;
-    text-transform: inherit;
-    font-size: 1.3rem;
-    letter-spacing: 0.1em;
-}
-
+/* 
 .start-btn:focus {
     border: 2px solid rgb(197, 229, 238);
 }
@@ -293,17 +249,33 @@ form {
 .start-btn:hover {
     border: none;
     background-color: rgb(197, 229, 238);
-}
+} */
 
 /*Result display area style*/
-.result-display-area {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem 7rem 0;
+
+.section-container {
+    margin-top: 100px;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
 }
 
+.result-display-area, .controls-area {
+    width: 45%;
+}
+
+.result-display-area {
+    margin-top: 0;
+}
+
+.computer-score {
+    align-self: flex-start;
+}
+
+/*
 .players-pick {
     display: flex;
     column-gap: 10rem;
@@ -342,8 +314,9 @@ form {
     display: none;
     text-align: center;
 }
-
+*/
 /*Controls area style*/
+/*  
 .controls-area {
     display: none;
     flex-direction: column;
@@ -377,7 +350,7 @@ form {
 #lizard {
     transform: rotate(-90deg);
 }
-
+ */
 /*Rules button*/
 .rules {
    /* position: absolute;
