@@ -271,6 +271,7 @@ form {
 
 /* Footer */
 footer {
+    display: block;
     width: 100%; 
     border-top: 2px solid rgb(3, 3, 14);
 }

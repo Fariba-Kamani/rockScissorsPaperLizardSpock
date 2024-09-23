@@ -21,7 +21,7 @@ document.querySelector('form').addEventListener('submit', function (event) {
     
 });
 
-document.querySelector('.rules').addEventListener('click', gameRules);
+document.querySelector('.rules').addEventListener('click', gameRules1);
 
 function runGame(user) {
     document.getElementById('player').innerHTML = `${user}'s`;
@@ -57,7 +57,7 @@ function runGame(user) {
                     showComputersChoice();
                     break;
                 case 'rules':
-                    gameRules();
+                    gameRules2();
                     break;
                     
 
@@ -221,12 +221,24 @@ function ShowResult() {
 
 }
 
-function gameRules() {
+function gameRules1() {
     document.querySelectorAll(".rules-explain").forEach(element => {
         element.style.display = "block";
     });
     document.querySelectorAll(".start-game").forEach(element => {
         element.style.display = "none";
+    });
+    document.querySelectorAll("footer").forEach(element => {
+        element.style.display = "none";
+    });
+
+    document.querySelector("#close-rules").addEventListener('click', closeRules1);  
+
+}
+
+function gameRules2() {
+    document.querySelectorAll(".rules-explain").forEach(element => {
+        element.style.display = "block";
     });
     document.querySelectorAll(".section-container").forEach(element => {
         element.style.display = "none";
@@ -234,7 +246,37 @@ function gameRules() {
     document.querySelectorAll("footer").forEach(element => {
         element.style.display = "none";
     });
-    
+
+    document.querySelector("#close-rules").addEventListener('click', closeRules2);  
+
+}
+
+function closeRules1() {
+    document.querySelectorAll(".rules-explain").forEach(element => {
+        element.style.display = "none";
+    });
+    document.querySelectorAll(".start-game").forEach(element => {
+        element.style.display = "flex";
+    });
+    document.querySelectorAll("footer").forEach(element => {
+        element.style.display = "block";
+    });
+
+}
+
+function closeRules2() {
+    document.querySelectorAll(".rules-explain").forEach(element => {
+        element.style.display = "none";
+    });
+    document.querySelectorAll(".start-game").forEach(element => {
+        element.style.display = "none";
+    });
+    document.querySelectorAll(".section-container").forEach(element => {
+        element.style.display = "flex";
+    });
+    document.querySelectorAll("footer").forEach(element => {
+        element.style.display = "block";
+    });
 
 }
 
