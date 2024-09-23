@@ -73,13 +73,45 @@ h1 {
     margin-right: 1rem;
 }
 
+.rules-explain {
+    display: none;
+    background-color: white;
+    position: absolute;
+    top: 30%;
+    left:10%;
+    width: 80%;
+    border: 4px inset #dadae3;
+    border-radius: 3px;
+    padding: 0 1.5rem 0.5rem;
+    line-height: 1.75rem; 
+    letter-spacing: 0.1rem; 
+}
+
+#close-rules {
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgb(33, 33, 241);
+
+}
+
+.rules-explain h2 {
+    text-align: center;
+    color: rgb(33, 33, 241);
+}
+
+#rules-text li {
+    list-style-type: none;
+    text-transform: none;
+}
+
 
 /*Start section*/
 .start-game {  
     text-align: center;
     padding: 4.5rem 2rem 2rem;
     margin-top: 10rem;
-    line-height: 1rem;;
+    line-height: 1rem;
+    
 }
 
 .start-game h2 {
@@ -239,7 +271,6 @@ form {
 
 /* Footer */
 footer {
-  
     width: 100%; 
     border-top: 2px solid rgb(3, 3, 14);
 }
@@ -262,38 +293,28 @@ footer {
 @media screen and (min-width: 667px) {
 
 /*Header style*/
-
-/*Start section*/
 header {
     width: 100%;
 }
+
 .logo {
     width: 5%;
     margin-left: 2rem;
 }
+
 nav {
     margin-right: 2rem;
 }
+
 .start-game {  
     margin-top: 5.4rem;
     padding: 2rem 1rem 1rem;
     line-height: 0.5rem;
-    display: flex;
-     /* For main element to take all surplus space and push the footer element down */
-     flex: 1 0 auto;
 }
+
 .start-btn {
     margin-top: 1rem;
 }
-/* 
-.start-btn:focus {
-    border: 2px solid rgb(197, 229, 238);
-}
-
-.start-btn:hover {
-    border: none;
-    background-color: rgb(197, 229, 238);
-} */
 
 /*Result display area style*/
 
@@ -318,87 +339,6 @@ nav {
 .computer-score {
     align-self: flex-start;
 }
-
-
-
-/*
-.players-pick {
-    display: flex;
-    column-gap: 10rem;
-}
-
-.user-pick {
-    transform: rotate(90deg) rotateY(180deg);
-    font-size: 80px;
-}
-
-.computer-pick {
-    transform: rotate(-90deg);
-    font-size: 80px;
-}
-
-.scores {
-    display: flex;
-    column-gap: 9rem;
-    font-size: 24px;
-}
-
-.user-counter {
-    color: rgb(64, 215, 64);
-    font-weight: bold;
-}
-
-.pc-counter {
-    color: rgb(255, 0, 17);
-    font-weight: bold;
-}
-
-.text-result {
-    padding: 2rem 0;
-    font-size: 1.5em;
-    font-weight: bold;
-    display: none;
-    text-align: center;
-}
-*/
-/*Controls area style*/
-/*  
-.controls-area {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem 7rem;
-}
-
-.controls-area h2 {
-    padding-bottom: 2rem;
-}
-
-.control-btn {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 2rem;
-}
-
-.btn {
-    font-size: 48px;
-    border: none;
-    background-color: #F7F7F7;
-}
-
-.btn:focus, .btn:hover {
-    border-radius: 50%;
-    background-color: rgb(197, 229, 238);
-    border: none;
-}
-
-#lizard {
-    transform: rotate(-90deg);
-}
- */
-/*Rules button*/
-
 }
 
 /* Media query: tablets and larger (768px and up)*/
@@ -418,6 +358,17 @@ nav {
         align-self: center;
         align-items: center;
     }
+    .result-display-area, .controls-area {
+        width: 100%;
+    }
+    
+   /* .result-display-area {
+        margin-top: 0;
+    }
+    
+    .computer-score {
+        align-self: flex-start;
+    }*/
 
     .text-result {
         padding: 1.5rem 0 3rem;
@@ -427,5 +378,19 @@ nav {
 
 /* Media query: tablets and larger (992px and up)*/
 @media screen and (min-width: 992px) {
+    /* 
+.start-btn:focus {
+    border: 2px solid rgb(197, 229, 238);
+}
+
+.start-btn:hover {
+    border: none;
+    background-color: rgb(197, 229, 238);
+}
+    .btn:focus, .btn:hover {
+    border-radius: 50%;
+    background-color: rgb(197, 229, 238);
+    border: none;
+} */
     
 }
