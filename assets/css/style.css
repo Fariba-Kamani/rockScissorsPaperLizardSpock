@@ -283,7 +283,7 @@ letter-spacing: 0.1rem;
 text-align: center;
 }
 
-.yes-no-buttons {
+#continue-quit {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -291,7 +291,7 @@ text-align: center;
     margin-top: 1rem;
 }
 
-.yes-no-buttons button {
+.yes-no-buttons {
     width: 40px;
     height: 40px;
     font-size: 28px;
