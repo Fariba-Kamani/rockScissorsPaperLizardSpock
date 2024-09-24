@@ -233,14 +233,19 @@ function ShowResult() {
 
 function roundCounter() {
     let myCounter = parseInt(document.getElementById('round-count').innerText);
-   
-    if(myCounter === 7) {
-        exitGame();
-    } else if(myCounter < 7) {
-        document.getElementById('round-count').innerText = myCounter + 1;
-        myCounter ++;
-        } 
-
+    
+    // If the round count reaches 7, show final result and exit game
+    if (myCounter === 7) {
+        document.getElementById('control-area-heading').innerHTML = "Wait to see the final result ...";
+         // Delay the execution of exitGame() by 2 seconds (2000 milliseconds)
+         setTimeout(function() {
+            exitGame();  // Exit game after a delay
+        }, 3000);
+    } else if (myCounter < 7) {
+        // Increment and update the round count
+        myCounter++;
+        document.getElementById('round-count').innerText = myCounter;
+    } 
 }
 
 function gameRules1() {
@@ -329,43 +334,50 @@ function exitGame() {
 
     if(userScore === computerScore) {
        document.getElementById('round-result').innerText = "It's a tie!";
+       document.getElementById('round-result').style.color = 'rgb(3, 3, 14)';
     } else if(userScore > computerScore) {
         document.getElementById('round-result').innerText = "You win!";
+        document.getElementById('round-result').style.color = 'rgb(64, 215, 64)';
     } else {
         document.getElementById('round-result').innerText = "Computer wins!";
+        document.getElementById('round-result').style.color = 'rgb(255, 0, 17)';
     }
     let buttons = document.getElementsByClassName('yes-no-buttons');
-    for (let button of buttons) {
-        button.addEventListener('click', function() {
-            switch (this.getAttribute('data-type')) {
-                case 'yes':
-                    document.getElementById('round-count').innerText = "1";
-                    document.getElementById('user-counter').innerText = "0";
-                    document.getElementById('pc-counter').innerText = "0";
-                    document.querySelectorAll(".end-game").forEach(element => {
-                        element.style.display = "none";
-                    });
-                    document.querySelectorAll(".result-display-area").forEach(element => {
-                        element.style.display = "flex";
-                    });
-                
-                    document.querySelectorAll(".controls-area").forEach(element => {
-                        element.style.display = "flex";
-                    });
-                    
-                    break;
-                case 'no':
-                    document.querySelectorAll(".end-game").forEach(element => {
-                        element.style.display = "none";
-                    });
-                    document.querySelectorAll(".start-game").forEach(element => {
-                        element.style.display = "flex";
-                    });
-                    
-                    break;
-                }
+        for (let button of buttons) {
+            button.removeEventListener('click', quitContinue); // Prevent duplicate listeners
+            button.addEventListener('click', quitContinue); // Attach event listener
+        } 
+}
+
+function quitContinue() {
+    document.getElementById('control-area-heading').innerHTML =`Round <span id="round-count">1</span><br>Let's Play!`;
+    document.getElementById('user-counter').innerText = "0";
+    document.getElementById('pc-counter').innerText = "0";
+    document.getElementById('text-result').innerHTML = "";
+    switch (this.getAttribute('data-type')) {
+        case 'yes':
+            document.querySelectorAll(".end-game").forEach(element => {
+                element.style.display = "none";
+            });
+            document.querySelectorAll(".result-display-area").forEach(element => {
+                element.style.display = "flex";
+            });
+        
+            document.querySelectorAll(".controls-area").forEach(element => {
+                element.style.display = "flex";
+            });
+            
+            break;
+        case 'no':
+            document.querySelectorAll(".end-game").forEach(element => {
+                element.style.display = "none";
+            });
+            document.querySelectorAll(".start-game").forEach(element => {
+                element.style.display = "flex";
+            });
+            
+            break;
+        }
 
 
-        });
-  
-}}
+}
