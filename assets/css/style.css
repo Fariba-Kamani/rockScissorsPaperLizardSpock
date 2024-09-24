@@ -161,19 +161,19 @@ form {
     flex-direction: row;
     flex: 1;
     gap: 5rem;
+    justify-content: center;
+    justify-items: center;
 }
 
 .user-pick {
     transform: rotate(90deg) rotateY(180deg);
     font-size: 60px;
-    align-self: flex-start;
-    text-align: end;
+    text-align: start;
 }
 
 .computer-pick {
     transform: rotate(-90deg);
     font-size: 60px;
-    align-self: flex-start;
     text-align: start;
 }
 
@@ -200,7 +200,7 @@ form {
 }
 
 .text-result {
-    padding: 2rem 0;
+    padding: 1rem 0;
     font-size: 1em;
     letter-spacing: 0.06rem;
     line-height: 1.25rem;
@@ -236,7 +236,6 @@ form {
     height: 40px;
     font-size: 28px;
     border: 1px solid rgb(33, 33, 241);
-    background-color: #F7F7F7;
     border-radius: 50%;
     background-color: rgb(33, 33, 241);
     transition: background-color 3s ease-in-out;
@@ -267,6 +266,39 @@ form {
 
 #spock {
     grid-area: 2 / 5 / 2 / 5;
+}
+
+.end-game {
+display: none;
+background-color: white;
+position: absolute;
+top: 30%;
+left:15%;
+width: 70%;
+border: 4px outset #dadae3;
+border-radius: 3px;
+padding: 1rem;
+line-height: 2rem; 
+letter-spacing: 0.1rem; 
+text-align: center;
+}
+
+.yes-no-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 1rem;
+}
+
+.yes-no-buttons button {
+    width: 40px;
+    height: 40px;
+    font-size: 28px;
+    border: 1px solid rgb(33, 33, 241);
+    border-radius: 3px;
+    background-color: rgb(33, 33, 241);
+    box-shadow: -2px 2px 5px rgb(79, 79, 91);
 }
 
 /* Footer */
@@ -345,8 +377,24 @@ nav {
 /* Media query: tablets and larger (768px and up)*/
 @media screen and (min-width: 768px) {
     .start-game {  
-        margin-top: 7rem;
+        margin-top: 4rem;
         padding-top: 3rem;
+    }
+   /* .result-display-area {
+        margin-top: 0;
+    }
+    
+    .computer-score {
+        align-self: flex-start;
+    }*/
+
+   
+}
+
+/* Media query: tablets and larger (992px and up)*/
+@media screen and (min-width: 992px) {
+    .start-game {  
+        margin-top: 7rem;
     }
 
     .section-container {
@@ -362,23 +410,32 @@ nav {
     .result-display-area, .controls-area {
         width: 100%;
     }
-    
-   /* .result-display-area {
-        margin-top: 0;
-    }
-    
-    .computer-score {
-        align-self: flex-start;
-    }*/
 
     .text-result {
         padding: 1.5rem 0 3rem;
     }
 
-}
+    #rock {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+    
+    #paper {
+        grid-area: 1 / 4 / 2 / 5;
+    }
+    
+    #scissors {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+    
+    #lizard {
+        grid-area: 2 / 3 / 3 / 4;
+    }
+    
+    #spock {
+        grid-area: 2 / 5 / 3 / 5;
+    }
 
-/* Media query: tablets and larger (992px and up)*/
-@media screen and (min-width: 992px) {
+   
     /* 
 .start-btn:focus {
     border: 2px solid rgb(197, 229, 238);
