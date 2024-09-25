@@ -284,6 +284,16 @@ function gameRules2() {
 }
 
 function closeRules1() {
+    let endGameElements = document.querySelectorAll(".end-game");
+
+    // Check if all elements are hidden
+    let isVisible = Array.from(endGameElements).every(element => element.style.display === "block");
+    if(isVisible) {
+        document.querySelectorAll(".rules-explain").forEach(element => {
+            element.style.display = "none";
+        });
+
+    } else {
     document.querySelectorAll(".rules-explain").forEach(element => {
         element.style.display = "none";
     });
@@ -293,10 +303,21 @@ function closeRules1() {
     document.querySelectorAll("footer").forEach(element => {
         element.style.display = "block";
     });
+}
 
 }
 
 function closeRules2() {
+    let endGameElements = document.querySelectorAll(".end-game");
+
+    // Check if all elements are hidden
+    let isVisible = Array.from(endGameElements).every(element => element.style.display === "block");
+    if(isVisible) {
+        document.querySelectorAll(".rules-explain").forEach(element => {
+            element.style.display = "none";
+        });
+
+    } else {
     document.querySelectorAll(".rules-explain").forEach(element => {
         element.style.display = "none";
     });
@@ -314,6 +335,7 @@ function closeRules2() {
     document.querySelectorAll("footer").forEach(element => {
         element.style.display = "block";
     });
+}
 
 }
 
@@ -377,6 +399,7 @@ function quitContinue() {
             });
             
             break;
+
         }
 
 

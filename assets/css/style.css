@@ -85,6 +85,7 @@ h1 {
     padding: 0 1.5rem 0.5rem;
     line-height: 1.75rem; 
     letter-spacing: 0.1rem; 
+    z-index: 10;
 }
 
 #close-rules {
@@ -200,8 +201,8 @@ form {
 }
 
 .text-result {
-    padding: 1rem 0;
-    font-size: 1em;
+    padding: 1rem 0 0;
+    font-size: 1.25rem;
     letter-spacing: 0.06rem;
     line-height: 1.25rem;
     font-weight: bold;
@@ -215,13 +216,14 @@ form {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem 3rem;
+    padding: 0.5rem 3rem 2rem;
     width: 100%;
 }
 
 .controls-area h2 {
     padding-bottom: 2rem;
     text-align: center;
+    font-size: 1.25rem;
 }
 
 .control-btn {
@@ -364,13 +366,17 @@ nav {
 .result-display-area, .controls-area {
     width: 45%;
 }
-
 .result-display-area {
     margin-top: 0;
+    padding-top: 0;
 }
-
 .computer-score {
     align-self: flex-start;
+}
+
+.text-result {
+    padding-top: 0;
+    padding-bottom: 2rem;
 }
 }
 
