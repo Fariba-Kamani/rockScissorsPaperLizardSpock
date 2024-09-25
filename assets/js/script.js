@@ -52,7 +52,7 @@ function runGame() {
                     showUsersChoice(playerChoice);
                     showComputersChoice();
                     break;
-                case '🤌':
+                case '🦎':
                     playerChoice = this.getAttribute('data-type');
                     showUsersChoice(playerChoice);
                     showComputersChoice();
@@ -82,7 +82,7 @@ function showUsersChoice(playerChoice) {
 }
 
 function showComputersChoice() {
-    let choices = ['✊', '✋', '✌️', '🤌', '🖖'];
+    let choices = ['✊', '✋', '✌️', '🦎', '🖖'];
     let index = Math.floor(Math.random() * choices.length);
     document.getElementById('computer-pick').innerHTML = choices[index];
     ShowResult();
@@ -108,7 +108,7 @@ function ShowResult() {
         '✊': 'rock',
         '✋': 'paper',
         '✌️': 'scissors',
-        '🤌': 'lizard',
+        '🦎': 'lizard',
         '🖖': 'spock',
     };
 
@@ -127,7 +127,7 @@ function ShowResult() {
     } else {
         switch (playerPick) {
             case '✊':
-                if (computerPick === '🤌') {
+                if (computerPick === '🦎') {
                     result.innerHTML = `${options[playerPick]} crushes ${options[computerPick]}.<br>
                     ${player} wins!`;
                     result.style.color = 'rgb(64, 215, 64)';
@@ -170,7 +170,7 @@ function ShowResult() {
                     ${player} wins!`;
                     result.style.color = 'rgb(64, 215, 64)';
                     countUsersScore();
-                } else if (computerPick === '🤌') {
+                } else if (computerPick === '🦎') {
                     result.innerHTML = `${options[playerPick]} dicapitate ${options[computerPick]}.<br> 
                     ${player} wins!`;
                     result.style.color = 'rgb(64, 215, 64)';
@@ -183,7 +183,7 @@ function ShowResult() {
 
                 }
                 break;
-            case '🤌':
+            case '🦎':
                 if (computerPick === '🖖') {
                     result.innerHTML = `${options[playerPick]} poisons ${options[computerPick]}.<br> 
                     ${player} wins!`;
@@ -388,13 +388,10 @@ function quitContinue() {
             document.querySelectorAll(".controls-area").forEach(element => {
                 element.style.display = "flex";
             });
-            
             break;
         case 'no':
            location.reload(true);
-            
             break;
-
         }
 
 

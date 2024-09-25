@@ -36,7 +36,7 @@ header {
     top: 0;
     left: 0;
     padding: 1rem 0 1.5rem 0;
-    border-bottom: 2px solid rgb(3, 3, 14);
+    border-bottom: 2px solid #00D26A;
 }
 
 h1 {
@@ -46,10 +46,10 @@ h1 {
     align-self: center;
     text-align: center;
     width: 60%;
+    color: #FFC83D;
 }
 
 .logo {
-    
     align-self: flex-start;
     text-align: end;
     width: 10%;
@@ -63,7 +63,7 @@ h1 {
     background: none;
     outline: none;
     border: none;
-    color: rgb(33, 33, 241);
+    color: #FFC83D;
     font-family: inherit;
     text-transform: inherit;
     font-size: 2rem;
@@ -169,12 +169,14 @@ form {
 .user-pick {
     transform: rotate(90deg) rotateY(180deg);
     font-size: 60px;
+    align-self: flex-end;
     text-align: start;
 }
 
 .computer-pick {
     transform: rotate(-90deg);
     font-size: 60px;
+    align-self: flex-start;
     text-align: start;
 }
 
@@ -237,9 +239,9 @@ form {
     width: 40px;
     height: 40px;
     font-size: 28px;
-    border: 1px solid rgb(33, 33, 241);
+    border: 1px solid #E8F5E9;
     border-radius: 50%;
-    background-color: rgb(33, 33, 241);
+    background-color: #E8F5E9;
     transition: background-color 3s ease-in-out;
     box-shadow: -2px 2px 5px rgb(79, 79, 91);
 }
@@ -262,8 +264,9 @@ form {
 }
 
 #lizard {
-    transform: rotate(-90deg);
     grid-area: 3 / 3 / 3 / 4;
+    border: 1px solid #F5F5DC;
+    background-color: #F5F5DC;
 }
 
 #spock {
@@ -307,7 +310,7 @@ text-align: center;
 footer {
     display: block;
     width: 100%; 
-    border-top: 2px solid rgb(3, 3, 14);
+    border-top: 2px solid #FFC83D;
 }
 
 #contact-ways {
@@ -321,7 +324,7 @@ footer {
 #contact-ways i {
     font-size: 150%;
     padding: 5%;
-    color: rgb(3, 3, 14);
+    color: #00D26A;
 }
 
 /* Media query: full screen mobile and larger (667px and up)*/
