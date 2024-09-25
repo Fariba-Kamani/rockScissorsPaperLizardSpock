@@ -391,12 +391,7 @@ function quitContinue() {
             
             break;
         case 'no':
-            document.querySelectorAll(".end-game").forEach(element => {
-                element.style.display = "none";
-            });
-            document.querySelectorAll(".start-game").forEach(element => {
-                element.style.display = "flex";
-            });
+           location.reload(true);
             
             break;
 
