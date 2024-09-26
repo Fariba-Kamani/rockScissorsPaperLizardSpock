@@ -75,10 +75,6 @@ function runGame() {
 
 function showUsersChoice(playerChoice) {
     document.getElementById('user-pick').innerHTML = playerChoice;
-
-
-
-
 }
 
 function showComputersChoice() {
@@ -257,7 +253,13 @@ function gameRules1() {
         element.style.display = "none";
     });
 
-    document.querySelector("#close-rules").addEventListener('click', closeRules1);  
+    document.querySelector("#close-rules").addEventListener('click', closeRules1);
+    document.querySelector("#close-rules").addEventListener("keydown", function(event) {
+        // Check if the pressed key is "Enter"
+        if (event.key === "Enter") {
+          closeRules1();
+        }
+      }); 
 
 }
 
@@ -277,7 +279,13 @@ function gameRules2() {
         element.style.display = "none";
     });
 
-    document.querySelector("#close-rules").addEventListener('click', closeRules2);  
+    document.querySelector("#close-rules").addEventListener('click', closeRules2);
+    document.querySelector("#close-rules").addEventListener("keydown", function(event) {
+        // Check if the pressed key is "Enter"
+        if (event.key === "Enter") {
+          closeRules2();
+        }
+      }); 
 
 }
 
