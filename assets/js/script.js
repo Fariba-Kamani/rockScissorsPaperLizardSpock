@@ -69,8 +69,6 @@ function runGame() {
                 case 'rules':
                     gameRules2();
                     break;
-                    
-
             }
         });
     }
@@ -130,12 +128,12 @@ function ShowResult() {
                 if (computerPick === '🦎') {
                     result.innerHTML = `${options[playerPick]} crushes ${options[computerPick]}.<br>
                     ${player} wins!`;
-                    result.style.color = 'rgb(64, 215, 64)';
+                    result.style.color = '#00D26A';
                     countUsersScore();
                 } else if (computerPick === '✌️') {
                     result.innerHTML = `${options[playerPick]} crushes ${options[computerPick]}.<br> 
                     ${player} wins!`;
-                    result.style.color = 'rgb(64, 215, 64)';
+                    result.style.color = '#00D26A';
                     countUsersScore();
 
                 } else {
@@ -149,12 +147,12 @@ function ShowResult() {
                 if (computerPick === '✊') {
                     result.innerHTML = `${options[playerPick]} covers ${options[computerPick]}.<br> 
                     ${player} wins!`;
-                    result.style.color = 'rgb(64, 215, 64)';
+                    result.style.color = '#00D26A';
                     countUsersScore();
                 } else if (computerPick === '🖖') {
                     result.innerHTML = `${options[playerPick]} disproves ${options[computerPick]}.<br> 
                     ${player} wins!`;
-                    result.style.color = 'rgb(64, 215, 64)';
+                    result.style.color = '#00D26A';
                     countUsersScore();
 
                 } else {
@@ -168,12 +166,12 @@ function ShowResult() {
                 if (computerPick === '✋') {
                     result.innerHTML = `${options[playerPick]} cut ${options[computerPick]}.<br> 
                     ${player} wins!`;
-                    result.style.color = 'rgb(64, 215, 64)';
+                    result.style.color = '#00D26A';
                     countUsersScore();
                 } else if (computerPick === '🦎') {
                     result.innerHTML = `${options[playerPick]} decapitate ${options[computerPick]}.<br> 
                     ${player} wins!`;
-                    result.style.color = 'rgb(64, 215, 64)';
+                    result.style.color = '#00D26A';
                     countUsersScore();
 
                 } else {
@@ -187,12 +185,12 @@ function ShowResult() {
                 if (computerPick === '🖖') {
                     result.innerHTML = `${options[playerPick]} poisons ${options[computerPick]}.<br> 
                     ${player} wins!`;
-                    result.style.color = 'rgb(64, 215, 64)';
+                    result.style.color = '#00D26A';
                     countUsersScore();
                 } else if (computerPick === '✋') {
                     result.innerHTML = `${options[playerPick]} eats ${options[computerPick]}.<br> 
                     ${player} wins!`;
-                    result.style.color = 'rgb(64, 215, 64)';
+                    result.style.color = '#00D26A';
                     countUsersScore();
 
                 } else {
@@ -206,12 +204,12 @@ function ShowResult() {
                 if (computerPick === '✊') {
                     result.innerHTML = `${options[playerPick]} vaporizes ${options[computerPick]}.<br>
                     ${player} wins!`;
-                    result.style.color = 'rgb(64, 215, 64)';
+                    result.style.color = '#00D26A';
                     countUsersScore();
                 } else if (computerPick === '✌️') {
                     result.innerHTML = `${options[playerPick]} smashes ${options[computerPick]}.<br>
                     ${player} wins!`;
-                    result.style.color = 'rgb(64, 215, 64)';
+                    result.style.color = '#00D26A';
                     countUsersScore();
 
                 } else {
@@ -369,7 +367,7 @@ function exitGame() {
        document.getElementById('round-result').style.color = 'rgb(3, 3, 14)';
     } else if(userScore > computerScore) {
         document.getElementById('round-result').innerText = "You win!";
-        document.getElementById('round-result').style.color = 'rgb(64, 215, 64)';
+        document.getElementById('round-result').style.color = '#00D26A';
     } else {
         document.getElementById('round-result').innerText = "Computer wins!";
         document.getElementById('round-result').style.color = 'rgb(255, 0, 17)';

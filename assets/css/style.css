@@ -240,12 +240,12 @@ form label {
 }
 
 .user-counter {
-    color: rgb(64, 215, 64);
+    color: #00D26A;
     font-weight: bold;
 }
 
 .pc-counter {
-    color: rgb(255, 0, 17);
+    color: rgb(245, 19, 60);
     font-weight: bold;
 }
 
@@ -297,10 +297,6 @@ form label {
     border: 1px solid #00D26A;
     transform: scale(1.2);
  } 
-
-.btn:active {
-    opacity: 0.5;
-}
 
 #rock {
     grid-area: 1 / 2 / 2 / 3;
