@@ -1,4 +1,8 @@
 
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById('user-name').focus();
+    document.getElementById('user-name').value = "";
+})
 document.querySelector('form').addEventListener('submit', function (event) {
     event.preventDefault();
     let userName = document.getElementById("user-name").value;
@@ -167,7 +171,7 @@ function ShowResult() {
                     result.style.color = 'rgb(64, 215, 64)';
                     countUsersScore();
                 } else if (computerPick === '🦎') {
-                    result.innerHTML = `${options[playerPick]} dicapitate ${options[computerPick]}.<br> 
+                    result.innerHTML = `${options[playerPick]} decapitate ${options[computerPick]}.<br> 
                     ${player} wins!`;
                     result.style.color = 'rgb(64, 215, 64)';
                     countUsersScore();
