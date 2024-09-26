@@ -1,5 +1,6 @@
 /* Importing google fonts*/
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,700&family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
 
 /* Asterisk wildcard selector to override default styles added by the browser*/
 * {
@@ -19,6 +20,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: "Cabin", sans-serif;
 }
 main {
     display: flex;
@@ -149,6 +151,7 @@ form label {
     border-radius: 0.6rem;
     margin-top: 1rem;
     background: white;
+    font-family: inherit;
     font-size: 1rem;
     color: #00D26A;
     text-align: center;
@@ -471,7 +474,7 @@ nav {
     }
     
     #lizard {
-        grid-area: 2 / 3 / 3 / 4;
+        grid-area: 3 / 3 / 3 / 4;
     }
     
     #spock {

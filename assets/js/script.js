@@ -225,9 +225,7 @@ function ShowResult() {
         }
         
     }
-    roundCounter();
-    
-    
+    roundCounter();   
 
 }
 
@@ -388,6 +386,8 @@ function quitContinue() {
             document.querySelectorAll(".controls-area").forEach(element => {
                 element.style.display = "flex";
             });
+            document.getElementById('computer-pick').innerHTML = "✊";
+            document.getElementById('user-pick').innerHTML = "✊";
             break;
         case 'no':
            location.reload(true);
