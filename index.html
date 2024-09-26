@@ -27,13 +27,13 @@
     <header>
         <img class="logo" src="assets/images/logo.webp" alt="Logo">
         <h1 class="heading"> Rock, Scissors, Paper, Lizard, Spock</h1>
-        <nav><button class="rules" data-type="rules"><i class="fa-regular fa-circle-question"></i></button></nav>
+        <nav><button class="rules" data-type="rules" aria-label="Opens the rules window"><i class="fa-regular fa-circle-question"></i></button></nav>
     </header>
     <main>
         <section class="rules-explain">
             <div id="rules-header">
                 <h2>Rules</h2>
-                <div id="close-rules" tabindex="0"><i class="fa-regular fa-rectangle-xmark"></i></div>
+                <div id="close-rules" tabindex="0" aria-label="Closes the rules window"><i class="fa-regular fa-rectangle-xmark"></i></div>
             </div>
             <hr>
             <div id="rules-text">
@@ -59,7 +59,7 @@
                     <br>
                     <input type="text" id="user-name" name="name" pattern="^[A-Za-z]{1,20}$" autocomplete="on" required>
                     <br>
-                    <input type="submit" name="submit" class="start-btn" value="Play!">
+                    <input type="submit" name="submit" class="start-btn" value="Play!" aria-label="Click to start the game">
                 </form>
             </div>
         </section>
@@ -67,10 +67,10 @@
             <!--Result display area-->
             <section class="result-display-area">
                 <div class="players-pick">
-                    <span class="user-pick" id="user-pick">
+                    <span class="user-pick" id="user-pick" aria-label="Player's pick">
                         ✊
                     </span>
-                    <span class="computer-pick" id="computer-pick">
+                    <span class="computer-pick" id="computer-pick" aria-label="Computer's pick">
                         ✊
                     </span>
                 </div>
@@ -97,11 +97,11 @@
             <section class="controls-area">
                 <h2 id="control-area-heading">Round <span id="round-count">1</span><br>Let's Play!</h2>
                 <div class="control-btn">
-                    <button class="btn" id="rock" data-type="✊">✊</button>
-                    <button class="btn" id="paper" data-type="✋">✋</button>
-                    <button class="btn" id="scissors" data-type="✌️">✌️</button>
-                    <button class="btn" id="lizard" data-type="🦎">🦎</button>
-                    <button class="btn" id="spock" data-type="🖖">🖖</button>
+                    <button class="btn" id="rock" data-type="✊" aria-label="rock">✊</button>
+                    <button class="btn" id="paper" data-type="✋" aria-label="paper">✋</button>
+                    <button class="btn" id="scissors" data-type="✌️" aria-label="scissors">✌️</button>
+                    <button class="btn" id="lizard" data-type="🦎" aria-label="lizard">🦎</button>
+                    <button class="btn" id="spock" data-type="🖖" aria-label="spock">🖖</button>
                 </div>
             </section>
             <section class="end-game">
@@ -109,8 +109,8 @@
                     <h2 id="round-result">Round result</h2>
                     <p>Play again?</p>
                     <div id="continue-quit">
-                        <button class="yes-no-buttons" id="yes" data-type="yes">👍</button>
-                        <button class="yes-no-buttons" id="no" data-type="no">👎</button>
+                        <button class="yes-no-buttons" id="yes" data-type="yes" aria-label="yes">👍</button>
+                        <button class="yes-no-buttons" id="no" data-type="no" aria-label="no">👎</button>
                     </div>
                 </div>
             </section>
