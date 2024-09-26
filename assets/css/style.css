@@ -14,7 +14,7 @@
 body {
     min-height: 100vh;
     min-width: 100vw;
-    background-color: #F7F7F7;
+    background-color: white;
     color: rgb(3, 3, 14);
     text-transform: uppercase;
     display: flex;
@@ -48,7 +48,7 @@ h1 {
     align-self: center;
     text-align: center;
     width: 60%;
-    color: #00D26A;
+    color: inherit;
 }
 
 .logo {
@@ -137,28 +137,24 @@ h1 {
 
 .start-game h2 {
     font-size: 1rem;
-    color: #00D26A;
+    
 }
 
 form {
     margin-top: 1.5rem;
 }
 
-form label {
-    color: #00D26A;
-}
-
 #user-name {
     width: 160px;
     height: 47.19px;
     padding: 0.6rem 2.5rem;
-    border: 2px solid #FFC83D;
+    border: 2px solid #00D26A;
     border-radius: 0.6rem;
     margin-top: 1rem;
     background: white;
     font-family: inherit;
     font-size: 1rem;
-    color: #00D26A;
+    color: inherit;
     text-align: center;
     font-weight: bold;
 }
@@ -168,9 +164,9 @@ form label {
     text-transform: inherit;
     width: 160px;
     margin-top: 2rem;
-    border: 2px solid #FFC83D;
+    border: 2px solid #00D26A;
     border-radius: 0.6rem;
-    color: #00D26A;
+    color: inherit;
     background-color: white;
     padding: 0.6rem 2.5rem;
     font-size: 1.3rem;
@@ -369,12 +365,12 @@ footer {
 #contact-ways i {
     font-size: 170%;
     padding: 5%;
-    color: #D67D00;
+    color: #00D26A;
 }
 
 #contact-ways i:focus {
     transform: scale(1.2);
-    color:#00D26A;
+    color: #FFC83D;
 }
 
 /* Media query: full screen mobile and larger (667px and up)*/
@@ -478,11 +474,6 @@ nav {
         cursor: pointer;
     }
 
-    #close-rules h2:hover {
-        color: #FFC83D;
-        cursor: pointer;
-    }
-
 .start-btn:hover {
     border: 2px solid #00D26A;
     background-color: #00D26A;
@@ -498,7 +489,12 @@ nav {
 
 #contact-ways i:hover {
     transform: scale(1.2);
-    color:#00D26A;
+    color: #FFC83D;
+    cursor: pointer;
+}
+
+.yes-no-buttons:hover {
+    transform: scale(1.2);
     cursor: pointer;
 }
 
