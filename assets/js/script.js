@@ -70,6 +70,10 @@ function runGame() {
                     gameRules2();
                     break;
             }
+            // Remove focus after half a second
+        setTimeout(() => {
+            button.blur();
+        }, 500); // half a second delay
         });
     }
 
@@ -115,6 +119,10 @@ function ShowResult() {
     let result = document.getElementById('text-result');
     let player = document.getElementById("user-name").value;
     result.style.display = 'block';
+
+     // Hide the control-area-heading during result display
+     let controlAreaHeading = document.getElementById('control-area-heading');
+     controlAreaHeading.style.display = 'none';
 
     if (playerPick === computerPick) {
         result.innerHTML = "It's a tie!";
@@ -223,7 +231,18 @@ function ShowResult() {
         }
         
     }
-    roundCounter();   
+    roundCounter();  
+     // Show the result for 3 seconds and then reset
+     setTimeout(function () {
+        result.style.display = 'none';  // Hide result after 3 seconds
+
+        // Reset user and computer choices to ✊
+        document.getElementById('user-pick').innerHTML = '✊';
+        document.getElementById('computer-pick').innerHTML = '✊';
+
+        // Show control-area-heading again after 3 seconds
+        controlAreaHeading.style.display = 'block';
+    }, 3000);  // 3 seconds delay 
 
 }
 
@@ -233,10 +252,10 @@ function roundCounter() {
     // If the round count reaches 7, show final result and exit game
     if (myCounter === 7) {
         document.getElementById('control-area-heading').innerHTML = "Wait to see the final result ...";
-         // Delay the execution of exitGame() by 2 seconds (2000 milliseconds)
+         // Delay the execution of exitGame() by 3 seconds (3000 milliseconds)
          setTimeout(function() {
             exitGame();  // Exit game after a delay
-        }, 3000);
+        }, 6000);
     } else if (myCounter < 7) {
         // Increment and update the round count
         myCounter++;
@@ -368,7 +387,7 @@ function exitGame() {
 }
 
 function quitContinue() {
-    document.getElementById('control-area-heading').innerHTML =`Round <span id="round-count">1</span><br>Let's Play!`;
+    document.getElementById('control-area-heading').innerHTML =`Round <span id="round-count">1</span><br>Choose your weapon!`;
     document.getElementById('user-counter').innerText = "0";
     document.getElementById('pc-counter').innerText = "0";
     document.getElementById('text-result').innerHTML = "";
