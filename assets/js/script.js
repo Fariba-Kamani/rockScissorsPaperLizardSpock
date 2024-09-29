@@ -70,13 +70,9 @@ function runGame() {
                     gameRules2();
                     break;
             }
-            // Remove focus after half a second
-        setTimeout(() => {
-            button.blur();
-        }, 500); // half a second delay
-        });
-    }
+    });
 
+}
 }
 
 function showUsersChoice(playerChoice) {
@@ -121,8 +117,9 @@ function ShowResult() {
     result.style.display = 'block';
 
      // Hide the control-area-heading during result display
-     let controlAreaHeading = document.getElementById('control-area-heading');
-     controlAreaHeading.style.display = 'none';
+     document.querySelectorAll(".controls-area").forEach(element => {
+        element.style.display = "none";
+    });
 
     if (playerPick === computerPick) {
         result.innerHTML = "It's a tie!";
@@ -240,8 +237,10 @@ function ShowResult() {
         document.getElementById('user-pick').innerHTML = '✊';
         document.getElementById('computer-pick').innerHTML = '✊';
 
-        // Show control-area-heading again after 3 seconds
-        controlAreaHeading.style.display = 'block';
+        // Show control-area again after 3 seconds
+        document.querySelectorAll(".controls-area").forEach(element => {
+            element.style.display = "flex";
+        });
     }, 3000);  // 3 seconds delay 
 
 }
@@ -251,11 +250,13 @@ function roundCounter() {
     
     // If the round count reaches 7, show final result and exit game
     if (myCounter === 7) {
+        document.querySelectorAll(".control-btn").forEach(element => {
+            element.style.display = "none";});
         document.getElementById('control-area-heading').innerHTML = "Wait to see the final result ...";
-         // Delay the execution of exitGame() by 3 seconds (3000 milliseconds)
+         // Delay the execution of exitGame() by 6 seconds (3000 milliseconds)
          setTimeout(function() {
             exitGame();  // Exit game after a delay
-        }, 6000);
+        }, 7000);
     } else if (myCounter < 7) {
         // Increment and update the round count
         myCounter++;
@@ -403,6 +404,10 @@ function quitContinue() {
             document.querySelectorAll(".controls-area").forEach(element => {
                 element.style.display = "flex";
             });
+
+            document.querySelectorAll(".control-btn").forEach(element => {
+                element.style.display = "grid";});
+
             document.getElementById('computer-pick').innerHTML = "✊";
             document.getElementById('user-pick').innerHTML = "✊";
             break;
