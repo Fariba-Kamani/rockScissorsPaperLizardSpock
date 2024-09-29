@@ -30,26 +30,6 @@
         <nav><button class="rules" data-type="rules" aria-label="Opens the rules window"><i class="fa-regular fa-circle-question"></i></button></nav>
     </header>
     <main>
-        <section class="rules-explain">
-            <div id="rules-header">
-                <h2>Rules</h2>
-                <div id="close-rules" tabindex="0" aria-label="Closes the rules window"><i class="fa-regular fa-rectangle-xmark"></i></div>
-            </div>
-            <hr>
-            <div id="rules-text">
-                <p>
-                    <ul>
-                        <li>Scissors cuts Paper.</li>
-                        <li>Scissors decapitates Lizard.</li>
-                        <li>Paper covers Rock.</li>
-                        <li>Paper disproves Spock.</li>
-                        <li>Rock crushes Lizard.</li>
-                        <li>Rock crushes Scissors.</li>
-                        <li>Best score wins after seven rounds.</li>
-                    </ul>
-                </p>
-            </div>
-        </section>
         <!--Game start section-->
         <section class="start-game">
             <div>
@@ -95,7 +75,7 @@
             </section>
             <!--Control buttons area-->
             <section class="controls-area">
-                <h2 id="control-area-heading">Round <span id="round-count">1</span><br>Let's Play!</h2>
+                <h2 id="control-area-heading">Round <span id="round-count">1</span><br>Choose your weapon!</h2>
                 <div class="control-btn">
                     <button class="btn" id="rock" data-type="✊" aria-label="rock">✊</button>
                     <button class="btn" id="paper" data-type="✋" aria-label="paper">✋</button>
@@ -112,6 +92,26 @@
                         <button class="yes-no-buttons" id="yes" data-type="yes" aria-label="yes">👍</button>
                         <button class="yes-no-buttons" id="no" data-type="no" aria-label="no">👎</button>
                     </div>
+                </div>
+            </section>
+            <section class="rules-explain">
+                <div id="rules-header">
+                    <h2>Rules</h2>
+                    <div id="close-rules" tabindex="0" aria-label="Closes the rules window"><i class="fa-regular fa-rectangle-xmark"></i></div>
+                </div>
+                <hr>
+                <div id="rules-text">
+                    <p>
+                        <ul>
+                            <li>Scissors cuts Paper.</li>
+                            <li>Scissors decapitates Lizard.</li>
+                            <li>Paper covers Rock.</li>
+                            <li>Paper disproves Spock.</li>
+                            <li>Rock crushes Lizard.</li>
+                            <li>Rock crushes Scissors.</li>
+                            <li>Best score wins after seven rounds.</li>
+                        </ul>
+                    </p>
                 </div>
             </section>
         </div>

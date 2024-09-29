@@ -251,9 +251,6 @@ function gameRules1() {
     document.querySelectorAll(".start-game").forEach(element => {
         element.style.display = "none";
     });
-    document.querySelectorAll("footer").forEach(element => {
-        element.style.display = "none";
-    });
 
     document.querySelector("#close-rules").addEventListener('click', closeRules1);
     document.querySelector("#close-rules").addEventListener("keydown", function(event) {
@@ -275,9 +272,6 @@ function gameRules2() {
 
     // Show elements with class 'controls-area'
     document.querySelectorAll(".controls-area").forEach(element => {
-        element.style.display = "none";
-    });
-    document.querySelectorAll("footer").forEach(element => {
         element.style.display = "none";
     });
 
@@ -308,9 +302,6 @@ function closeRules1() {
     document.querySelectorAll(".start-game").forEach(element => {
         element.style.display = "flex";
     });
-    document.querySelectorAll("footer").forEach(element => {
-        element.style.display = "block";
-    });
 }
 
 }
@@ -339,9 +330,6 @@ function closeRules2() {
     // Show elements with class 'controls-area'
     document.querySelectorAll(".controls-area").forEach(element => {
         element.style.display = "flex";
-    });
-    document.querySelectorAll("footer").forEach(element => {
-        element.style.display = "block";
     });
 }
 
