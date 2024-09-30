@@ -402,20 +402,9 @@ nav {
     margin-top: 1rem;
 }
 
-.section-container {
-    margin-top: 90px;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-    align-self: center;
-    align-items: center;
-}
-
 .result-display-area {
     
-    margin-top: 0;
+    margin-top: 6.25rem;
     padding-top: 0;
 }
 

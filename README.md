@@ -1,14 +1,20 @@
-<a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">
-
 # Rock, Scissors, Paper, Lizard, Spock
 
 ![Rock, Scissors, Paper, Lizard, Spock shown on a variety of screen sizes]()
 
 Visit the deployed site: [Rock, Scissors, Paper, Lizard, Spock](https://fariba-kamani.github.io/rockScissorsPaperLizardSpock/)
 
-Let’s Padel is a growing community for everyone who loves playing padel, regardless of gender, age, or skill level. As a padel player myself, I often struggle to find others to play with during my spare time. I would play padel more frequently if I had access to more players beyond those in my contact list. I realized this might be a common obstacle for other padel enthusiasts as well. By creating Let’s Padel, I aim to address this issue and help padel players find and connect with each other, so they can play as often as they desire.
+Rock, Scissors, Paper, Lizard, Spock is an expansion of Rock, Paper, Scissors with the additional hand signs of Lizard and Spock. It was first invented by Sam Kass, an internet pioneer and blogger. It has also been featured in an episode of the TV show, The Big Bang Theory <a href="https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock">1</a>, <a href="https://bigbangtheory.fandom.com/wiki/Sam_Kass">2</a>.
 
-The website is very straightforward and intuitive. Players simply need to fill out a form, indicating when and where they want to play, their skill level, and how many players are needed for a match. We will then try to find other players with the same preferences. Once we have identified all the necessary players, we will reach out to them using the contact details provided in the form.
+This website is a game application based on the mentioned expansion, in which the player competes against the computer in seven rounds before the game decides the winner. Emojis have been used to showcase the hand signs in the game and are called weapons. ‘✊’ (raised fist) for rock, ‘✋’ (raised hand) for paper, ‘✌️’ (peace) for scissors, ‘🦎’ for lizard, and ‘🖖’ (Vulcan salute) for Spock are available for the player to choose from in the form of five buttons during each round. At first, the hand sign ‘🤌’ (pinched fingers) was used for lizard, but during the game development, I decided that ‘🦎’ for lizard is more intuitive and recognizable. Additionally, it brings another layer of playfulness to the game design.
+
+The game starts with a login form where the player is asked to enter a name, which will then be used to display the player’s score in the game, giving a more personal feeling. In each round, the player chooses one of the weapons mentioned above, while the computer makes a random selection of the weapons. Both the player’s and the computer’s choices will be displayed right underneath the header on top of the page body. The winner’s score increases for each round. In tie situations, both the player and the computer get one point each. The round’s result will be displayed in green if the player wins, in red if the computer wins, and in black if it’s a tie.
+
+The rules are: Scissors cut paper, paper covers rock, rock crushes lizard, lizard poisons Spock, Spock smashes scissors, scissors decapitate lizard, lizard eats paper, paper disproves Spock, Spock vaporizes rock, and as it always has, rock crushes scissors. The rules are accessible at all times during the game on the top right side of the header, indicated by a question mark icon.
+
+The final result will be shown after all seven rounds are completed, giving the player two options: either playing again or quitting the game. The options are represented as buttons using emojis, continuing the theme of using hand gestures: 👍 (thumbs up) for yes and playing a new game, and 👎 (thumbs down) for no and quitting the game. If the player chooses yes, a new game with reset scores and rounds will begin, and if they choose no, they will be directed to the login.
+
+The purpose of creating this game is to entertain users by providing a fun and casual experience while demonstrating core concepts in front-end web development, including HTML, CSS, and JavaScript. It features a simple, user-friendly interface that ensures smooth gameplay and instant visual feedback on the user’s and computer’s choices, as well as the game results. I have ensured the use of responsive layouts so that the game works well on all screen sizes. Additionally, features like keyboard controls and screen reader support have been added to make the game accessible to a wider audience.
 
 ## CONTENTS
 
@@ -54,21 +60,21 @@ The website is very straightforward and intuitive. Players simply need to fill o
 
 
 #### First Time Visitor Goals
-* I would like to try padel or play padel occasionally, and I want to find people to play with.
-* I have a different schedule from my padel friends, so I’m looking for other padel players who have a similar schedule to mine.
+* I would like to 
+* 
 * I want the website to be intuitive and easy to use.
 * I want the website to be responsive and compatible with my device.
 
 #### Returning Visitor Goals
 
-* I want to be able to play padel more frequently, and I want to find players on a more regular basis.
-* Even if I spontaneously decide to play padel, I still want to know that there is a high chance I could find other players to play with by using the website.
+* I want to be able to
+* 
 
 #### Frequent Visitor Goals
 
-* I want to be able to see what matches other players have requested and be able to independently join their matches.
-* I want to be able to have an account on the website and be able to stay connected to my padel friends via the website.
-* I want to be able to independently upload pictures taken from my padel experiences on the Gallery page.
+* I want to be able 
+* I want to be able to 
+* I want to be able to
 
 - - -
 
@@ -76,7 +82,7 @@ The website is very straightforward and intuitive. Players simply need to fill o
 
 ### Colour Scheme
 
-The Let’s Padel colour scheme draws inspiration from the hues commonly seen on padel courts throughout Stockholm. These colours typically include blue, black, and white. The goal was to evoke the same feeling as being on a padel court while maintaining a minimalistic design to avoid visual overload, especially for users with Autism.
+The colour scheme draws inspiration from the hand signs and the lizard emojis shades. Yellow #D67D00, #FFC83D and green #00D26A, #e2f5e2. while maintaining a minimalistic design to avoid visual overload, 
 
 The header background features an image of a padel court, with the dominant colour being rgb(18, 128, 223) or #1280DF. This colour choice also influenced the footer colour across all three web pages. To ensure readability, the menu bar links and Font Fantastic icons in the footer are white, creating contrast against the blue background.
 
@@ -142,90 +148,49 @@ All Pages on the website are responsive and have the following features:
 
   ![favicon](assets/images/favicon-tab.png)
 
-* The title of the site at the top of every page. This title also acts as a link back to the home page, and it turns into a saffron yellow colour when hovered over on desktop screens.
+* The title of the site at the top of the page. 
 
-  ![The Let's Padel Title](assets/images/title-link-to-homepage.png)
-  ![The Let's Padel Title responsive](assets/images/title-hover-desktop.png)
+  ![The  Title](assets/images/title-link-to-homepage.png)
 
-* Drop down navigation menu for mobile screens  
+* Rules button icon in form of a question mark at the top right hand side of the header 
 
-  ![drop down navigation menu](assets/images/dropdown-navigation-menu.png)  
-
-  * Underlining the active page in the navigation menu
-  * Navigation menu for screens larger than tablets
-  
-    ![navigation menu for screens larger than tablets with underlined active page](assets/images/responsive-nav-menu-active-page.png)
-
-  * Navigation links turn into Saffron yellow color with an underline of the same colour when hovered over on desktop screens 
-
-    ![navigation menu links on hover](assets/images/responsive-nav-links-by-hover.png)
+  ![The rules button](assets/images/dropdown-navigation-menu.png)  
   
 
 * The footer of the site, located at the bottom of every page, features links to the website’s Facebook, Instagram, email, and phone. These links are displayed using Font Awesome icons. When hovered over on desktop screens, each icon changes to a Saffron yellow colour.
 
   ![footer](assets/images/footer.png)
 
-* White shadow underneath the navigation bar and above the footer to create more distinction between them and the body content for the user.
-
-  ![White box show seperating the header and the footer from the body](assets/images/white-box-shadow.png)
-
 #### Login
 
-![Responsive home page](assets/images/homepage-responsive.png)
+![Responsive home page]()
 
-* The landing section
 
-  ![Landing section](assets/images/landing-section.png)
+* 
+  * 
 
-* The second section; about the website, its purpose, and how it works.
-  * The ‘Find Players’ button, as well as the word ‘form,’ sends users to the Find Players page.
+  * 
+  * 
 
-    ![About section](assets/images/about-section.png)
-
-  * Responsive button that turns blue with white text when hovered over on desktops
-  * Responsive content. The paragraphs show in three columns for screens larger than tablets
-
-    ![About section responsive](assets/images/second-section-responsive.png)
-
-* Benefits of padel section with font fantastic intuitive icons and responsive content
-![benefits of padel section](assets/images/benefit-section.png)
-![benefits of padel on screens larger than tablets](assets/images/benefits-responsive.png)
+* 
 
 #### Game
 
-![the Find Players page responsive](assets/images/find-players-page-responsive.png)
+![the  responsive]()
 
-  * Page title and quick instructions for the users
+  * 
 
-    ![form page title and user instructions](assets/images/find-players-page-title.png)
+  * 
+  * 
 
-  * The submit form with two fieldsets and the Vamos button for submitting the form
-  * Added fieldset border for more visible sectioning on screens larger than tablets
-
-    ![The submit form](assets/images/submit-form.png)
-
-  * Hover effect for Vamos button on desktops
-
-    ![Vamos button with hover effect](assets/images/responsive-vamos-button.png)
-
-  * The submission page opens to inform the user that the form has been successfully submitted. 
-
-    ![The submission page](assets/images/submission-page.png)
+  
 
 
 #### Rules
 
-![the Gallery page responsive](assets/images/gallery-page-responsive.png)
+![the  page responsive]()
 
-  * The page title to let the users know that they can share their photos
-
-    ![gallery page title](assets/images/gallery-page-title.png)
-
-  * Masonry design for displaying the gallery photos; images display in 1-4 columns depending on the screen size.
-
-  * Added hover effect to gallery images to make them bigger when hovered over
-
-    ![gallery images hovered on for desktop](assets/images/hovered-on-gallery-img-desktop.png)
+  
 
 #### Final result
 
@@ -233,13 +198,9 @@ All Pages on the website are responsive and have the following features:
 
 In future implementations I would like to:
 
-1. Display the matches that users have requested on the website, allowing other users to send requests to join available matches while the match hasn’t become full.
-2. Update the displayed matches and remove old ones from the display.
-3. Allow users to have an account on the website to: 
-   * Add other players to their friend list. 
-   * Send messages. 
-   * Keep a record of played matches. 
-   * View the status of the match they have requested.
+1. 
+2. 
+3. 
 
 ### Accessibility
 
@@ -332,14 +293,9 @@ Please refer to [TESTING.md](TESTING.md) file for all testing carried out.
 
 ### Solved Bugs
 
-An issue was reported after some friends with iPhones had tested the website. The text content “Vamos!” wasn’t showing on the submit button on the Find Players page in iPhone devices. Troubleshooting for this problem was quite hard and time-consuming, as the submit button was performing just as expected on all screen sizes in Chrome DevTools. However, the issue was very specific to iPhones. I solved this issue by moving the styles targeting the submit button above the styles targeting the input and selection fields in style.css, ensuring they wouldn’t be overridden by iPhone’s default styles.
-
-Another issue occurred after I created my initial README.md file on GitHub, not directly in my IDE workspace. I committed the changes on GitHub, but afterward, I couldn’t add, commit, or push the changes in my workspace. I had to pull from the origin and seek assistance from a Code Institute tutor to merge the README.md file I had created and committed to the repository remotely from outside of the IDE.
-
 
 ### Known Bugs
 
-The fields related to input type="date" and input type="time" don’t adhere to the intended CSS styles when displayed on iPhones. After spending a considerable amount of time troubleshooting and seeking a solution for this issue, and discussing it with my mentor and tutors, it appears that this discrepancy may be due to iOS Safari compatibility and the fact that input types for time and date are not fully supported across all browsers. For now, I’ve decided to accept the fact that these input fields will appear slightly different when displayed on iPhones.
 
 - - -
 
@@ -356,8 +312,6 @@ I have also used the tutor support to learn how to link to an email and phone nu
 ### Content
 
 For documentation and creating my README.md file I have taken inspiration from the sample README.md file that my mentor shared with me [The Quiz Arms](https://github.com/kera-cudmore/TheQuizArms/blob/main/README.md) as well as the README.md sample available on the course for Portfolio 1: Assessments Guide Preview.
-
-I used an article available at google fonts in order to understand the critera for choosing a proper font type; [A checklist for choosing type](https://fonts.google.com/knowledge/choosing_type/a_checklist_for_choosing_type).
 
 All the imagery I’ve used, along with the corresponding links, is provided in [Imagery](#imagery) section.
 
