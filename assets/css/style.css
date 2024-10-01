@@ -96,6 +96,8 @@ h1 {
     top: 30%;
     left:10%;
     width: 80%;
+    height: 50%;
+    overflow-y: scroll;
     border: 4px outset #FFC83D;
     border-radius: 3px;
     padding: 0 1.5rem 0.5rem;
@@ -118,6 +120,18 @@ h1 {
     text-transform: none;
     font-weight: 100;
 }
+
+.scroll-down-arrow {
+    position: fixed;
+    bottom: 22%;
+    left: 84%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    color: inherit;
+    text-decoration: none;
+    color: #00D26A;
+  }
 
 #close-rules:focus {
     color: #FFC83D;    
@@ -253,7 +267,7 @@ form {
 }
 
 .text-result {
-    padding: 1rem 0 0;
+    padding: 2rem 0 0;
     font-size: 1.25rem;
     letter-spacing: 0.06rem;
     line-height: 1.25rem;
@@ -268,11 +282,11 @@ form {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0.5rem 3rem 2rem;
+    padding: 4rem 3rem 2rem;
     width: 100%;
 }
 
-.controls-area h2 {
+#control-area-heading {
     padding-bottom: 2rem;
     text-align: center;
     font-size: 1.25rem;
@@ -372,6 +386,7 @@ text-align: center;
 .error-page a {
         text-decoration: none;
         color:#00D26A;
+        cursor: pointer;
     }
 
 /* Footer */
@@ -418,6 +433,10 @@ nav {
     margin-right: 2rem;
 }
 
+.scroll-down-arrow {
+    bottom: 24%;
+}
+
 .start-game {  
     margin-top: 5.4rem;
     padding: 2rem 1rem 1rem;
@@ -432,6 +451,18 @@ nav {
     
     margin-top: 6.25rem;
     padding-top: 0;
+}
+
+.text-result {
+    padding-top: 5rem 0 3rem 0;
+}
+
+.controls-area {
+    padding: 0 3rem 2rem;
+}
+
+#control-area-heading {
+    padding-bottom: 1.25rem;
 }
 
 .control-btn {
@@ -463,13 +494,19 @@ nav {
 
 /* Media query: tablets and larger (768px and up)*/
 @media screen and (min-width: 768px) {
+    .scroll-down-arrow {
+        left: 86%;
+        bottom: 24%;
+        font-size: 40px;
+    }
+
     .start-game {  
         margin-top: 4rem;
         padding-top: 3rem;
     }
 
     #control-area-heading {
-        padding-bottom: 1rem;
+        padding: 2rem 0 1.25rem;
     }
 
     .control-btn {
@@ -494,7 +531,7 @@ nav {
         grid-area: 2 / 3 / 3 / 4;
     }
     
-    #spock {
+#spock {
         grid-area: 2 / 5 / 2 / 5;
     }
    
@@ -502,25 +539,28 @@ nav {
 
 /* Media query: tablets and larger (992px and up)*/
 @media screen and (min-width: 992px) {
-    .start-game {  
+.start-game {  
         margin-top: 7rem;
     }
 
-    .result-display-area, .controls-area {
+.result-display-area, .controls-area {
         width: 100%;
     }
+ .result-display-area {
+    margin-top: 7.25rem;
+ }
 
-    .text-result {
+.text-result {
         padding: 1.5rem 0 3rem;
     }
 
-    .rules:hover {
+.rules:hover {
         transform: scale(1.2);
         color:#FFC83D;
         cursor: pointer;
     }
 
-    #close-rules:hover {
+#close-rules:hover {
         color: #FFC83D;
         cursor: pointer;
     }
