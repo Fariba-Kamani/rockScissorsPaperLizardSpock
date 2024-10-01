@@ -84,7 +84,7 @@ h1 {
 }
 
 .nav-error i {
-    color: rgb(245, 19, 60);
+    color: #D67D00;
     font-size: 2.3rem;
     align-self: flex-end;
     text-align: start;
@@ -369,6 +369,11 @@ text-align: center;
     line-height: 2rem; 
     letter-spacing: 0.1rem; 
     text-align: center;
+    }
+
+    .error-page a {
+        text-transform: none;
+        color:#00D26A;
     }
 
 /* Footer */
