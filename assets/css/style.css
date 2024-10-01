@@ -83,6 +83,10 @@ h1 {
     color: #D67D00;
 }
 
+.nav-error i {
+    color: rgb(245, 19, 60);
+}
+
 .rules-explain {
     display: none;
     background-color: white;
