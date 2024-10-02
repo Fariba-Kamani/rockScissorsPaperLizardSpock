@@ -1,7 +1,3 @@
-/* Importing google fonts*/
-@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
-
-
 /* Asterisk wildcard selector to override default styles added by the browser*/
 * {
     padding: 0;
@@ -21,7 +17,13 @@ body {
     flex-direction: column;
     align-items: center;
     font-family: "Cabin", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth"100;
 }
+
 main {
     display: flex;
     /* For main element to take all surplus space and push the footer element down */
@@ -39,7 +41,7 @@ header {
     left: 0;
     padding: 1rem 0 1.5rem 0;
     border-bottom: 2px solid #00D26A;
-    background-color: #e2f5e2; 
+    background-color: #e2f5e2;
 }
 
 h1 {
@@ -94,15 +96,15 @@ h1 {
     background-color: white;
     position: absolute;
     top: 30%;
-    left:10%;
+    left: 10%;
     width: 80%;
     height: 50%;
     overflow-y: scroll;
     border: 4px outset #FFC83D;
     border-radius: 3px;
     padding: 0 1.5rem 0.5rem;
-    line-height: 1.75rem; 
-    letter-spacing: 0.1rem; 
+    line-height: 1.75rem;
+    letter-spacing: 0.1rem;
     z-index: 10;
 }
 
@@ -131,10 +133,10 @@ h1 {
     color: inherit;
     text-decoration: none;
     color: #00D26A;
-  }
+}
 
 #close-rules:focus {
-    color: #FFC83D;    
+    color: #FFC83D;
 }
 
 
@@ -149,16 +151,16 @@ h1 {
 
 
 /*Start section*/
-.start-game {  
+.start-game {
     text-align: center;
     padding: 4.5rem 2rem 2rem;
     margin-top: 10rem;
-    line-height: 1rem;   
+    line-height: 1rem;
 }
 
 .start-game h2 {
     font-size: 1rem;
-    
+
 }
 
 form {
@@ -206,7 +208,7 @@ form {
 .start-btn:focus {
     border: 2px solid #00D26A;
     background-color: #00D26A;
-    color:white;
+    color: white;
 }
 
 /*Result display area style*/
@@ -223,8 +225,10 @@ form {
     display: flex;
     flex-direction: row;
     gap: 5rem;
-    justify-content: center; /* Center the picks horizontally */
-    justify-items: center; /* Center the picks vertically */
+    justify-content: center;
+    /* Center the picks horizontally */
+    justify-items: center;
+    /* Center the picks vertically */
     width: 100%;
 }
 
@@ -322,7 +326,7 @@ form {
 .btn:focus {
     border: 1px solid #00D26A;
     transform: scale(1.2);
- } 
+}
 
 #rock {
     grid-area: 1 / 2 / 2 / 3;
@@ -345,18 +349,18 @@ form {
 }
 
 .end-game {
-display: none;
-background-color: white;
-position: absolute;
-top: 30%;
-left:15%;
-width: 70%;
-border: 4px outset #FFC83D;
-border-radius: 3px;
-padding: 1rem;
-line-height: 2rem; 
-letter-spacing: 0.1rem; 
-text-align: center;
+    display: none;
+    background-color: white;
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    width: 70%;
+    border: 4px outset #FFC83D;
+    border-radius: 3px;
+    padding: 1rem;
+    line-height: 2rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
 }
 
 #continue-quit {
@@ -382,26 +386,26 @@ text-align: center;
     background-color: white;
     position: absolute;
     top: 30%;
-    left:15%;
+    left: 15%;
     width: 70%;
     border: 4px outset #FFC83D;
     border-radius: 3px;
     padding: 1rem;
-    line-height: 2rem; 
-    letter-spacing: 0.1rem; 
+    line-height: 2rem;
+    letter-spacing: 0.1rem;
     text-align: center;
-    }
+}
 
 .error-page a {
-        text-decoration: none;
-        color:#00D26A;
-        cursor: pointer;
-    }
+    text-decoration: none;
+    color: #00D26A;
+    cursor: pointer;
+}
 
 /* Footer */
 footer {
     display: block;
-    width: 100%; 
+    width: 100%;
     border-top: 2px solid #00D26A;
     background-color: #e2f5e2;
 }
@@ -428,80 +432,80 @@ footer {
 /* Media query: full screen mobile and larger (667px and up)*/
 @media screen and (min-width: 667px) {
 
-/*Header style*/
-header {
-    width: 100%;
-}
+    /*Header style*/
+    header {
+        width: 100%;
+    }
 
-.logo {
-    width: 5%;
-    margin-left: 2rem;
-}
+    .logo {
+        width: 5%;
+        margin-left: 2rem;
+    }
 
-nav {
-    margin-right: 2rem;
-}
+    nav {
+        margin-right: 2rem;
+    }
 
-main {
-    min-height: 366px;
-}
+    main {
+        min-height: 366px;
+    }
 
-.scroll-down-arrow {
-    bottom: 24%;
-}
+    .scroll-down-arrow {
+        bottom: 24%;
+    }
 
-.start-game {  
-    margin-top: 5.4rem;
-    padding: 2rem 1rem 1rem;
-    line-height: 0.5rem;
-}
+    .start-game {
+        margin-top: 5.4rem;
+        padding: 2rem 1rem 1rem;
+        line-height: 0.5rem;
+    }
 
-.start-btn {
-    margin-top: 1rem;
-}
+    .start-btn {
+        margin-top: 1rem;
+    }
 
-.result-display-area {
-    
-    margin-top: 6.25rem;
-    padding-top: 0;
-}
+    .result-display-area {
 
-.text-result {
-    padding-top: 5rem 0 3rem 0;
-}
+        margin-top: 6.25rem;
+        padding-top: 0;
+    }
 
-.controls-area {
-    padding: 0 3rem 2rem;
-}
+    .text-result {
+        padding-top: 5rem 0 3rem 0;
+    }
 
-#control-area-heading {
-    padding-bottom: 1.25rem;
-}
+    .controls-area {
+        padding: 0 3rem 2rem;
+    }
 
-.control-btn {
-    grid-template-rows: repeat(1, 1fr);
-    gap: 1.5rem;
-}
+    #control-area-heading {
+        padding-bottom: 1.25rem;
+    }
 
-#rock {
-    grid-area: 1 / 1 / 2 / 2;
-}
+    .control-btn {
+        grid-template-rows: repeat(1, 1fr);
+        gap: 1.5rem;
+    }
 
-#paper {
-    grid-area: 1 / 2 / 2 / 3;
-}
+    #rock {
+        grid-area: 1 / 1 / 2 / 2;
+    }
 
-#scissors {
-    grid-area: 1 / 4 / 2 / 5;
-}
+    #paper {
+        grid-area: 1 / 2 / 2 / 3;
+    }
 
-#lizard {
-    grid-area: 1 / 3 / 2 / 4;
-}
+    #scissors {
+        grid-area: 1 / 4 / 2 / 5;
+    }
 
-#spock {
-    grid-area: 1 / 5 / 2 / 5;
-}
+    #lizard {
+        grid-area: 1 / 3 / 2 / 4;
+    }
+
+    #spock {
+        grid-area: 1 / 5 / 2 / 5;
+    }
 
 }
 
@@ -513,7 +517,7 @@ main {
         font-size: 40px;
     }
 
-    .start-game {  
+    .start-game {
         margin-top: 4rem;
         padding-top: 3rem;
     }
@@ -531,85 +535,87 @@ main {
     #rock {
         grid-area: 1 / 2 / 2 / 3;
     }
-    
+
     #paper {
         grid-area: 1 / 4 / 2 / 5;
     }
-    
+
     #scissors {
         grid-area: 2 / 1 / 2 / 2;
     }
-    
+
     #lizard {
         grid-area: 2 / 3 / 3 / 4;
     }
-    
-#spock {
+
+    #spock {
         grid-area: 2 / 5 / 2 / 5;
     }
-   
+
 }
 
 /* Media query: tablets and larger (992px and up)*/
 @media screen and (min-width: 992px) {
-.start-game {  
+    .start-game {
         margin-top: 7rem;
     }
 
-.result-display-area, .controls-area {
+    .result-display-area,
+    .controls-area {
         width: 100%;
     }
- .result-display-area {
-    margin-top: 7.25rem;
- }
 
-.text-result {
+    .result-display-area {
+        margin-top: 7.25rem;
+    }
+
+    .text-result {
         padding: 1.5rem 0 3rem;
     }
 
-.rules:hover {
+    .rules:hover {
         transform: scale(1.2);
-        color:#FFC83D;
-        cursor: pointer;
-    }
-
-#close-rules:hover {
         color: #FFC83D;
         cursor: pointer;
     }
 
-.start-btn:hover {
-    border: 2px solid #00D26A;
-    background-color: #00D26A;
-    color:white;
-    cursor: pointer;
-}
+    #close-rules:hover {
+        color: #FFC83D;
+        cursor: pointer;
+    }
 
-.control-btn {
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-}
+    .start-btn:hover {
+        border: 2px solid #00D26A;
+        background-color: #00D26A;
+        color: white;
+        cursor: pointer;
+    }
 
-#lizard {
-    grid-area: 3 / 3 / 3 / 4;
-}
+    .control-btn {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
 
-.btn:hover {
-   border: 1px solid #00D26A;
-   transform: scale(1.2);
-   cursor: pointer;
-} 
+    #lizard {
+        grid-area: 3 / 3 / 3 / 4;
+    }
 
-#contact-ways i:hover {
-    transform: scale(1.2);
-    color: #FFC83D;
-    cursor: pointer;
-}
+    .btn:hover {
+        border: 1px solid #00D26A;
+        transform: scale(1.2);
+        cursor: pointer;
+    }
 
-.yes-no-buttons:hover {
-    transform: scale(1.2);
-    cursor: pointer;
-}
+    #contact-ways i:hover {
+        transform: scale(1.2);
+        color: #FFC83D;
+        cursor: pointer;
+    }
 
-    
+    .yes-no-buttons:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+    }
+
+
 }
