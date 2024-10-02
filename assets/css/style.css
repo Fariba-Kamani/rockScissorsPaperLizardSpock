@@ -180,6 +180,15 @@ form {
     font-weight: bold;
 }
 
+#error-message {
+    display: none;
+    padding-top: 1rem;
+    font-size: 16px;
+    text-transform: none;
+    color: red;
+    letter-spacing: 0.1rem;
+}
+
 .start-btn {
     font-family: inherit;
     text-transform: inherit;

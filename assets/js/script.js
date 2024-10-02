@@ -7,6 +7,15 @@ document.querySelector('form').addEventListener('submit', function (event) {
     event.preventDefault();
     let userName = document.getElementById("user-name").value;
 
+    // Text input validation
+    if(userName.length > 12 || userName === "" || userName.includes(' ')) {
+        document.getElementById('error-message').style.display = 'block';
+        // Hide error message after 3 seconds
+        setTimeout(function() {
+            document.getElementById('error-message').style.display = 'none';
+        }, 3000); // 3000 milliseconds = 3 seconds
+        return;
+    }
     // Hide elements with class 'start-game'
     document.querySelectorAll(".start-game").forEach(element => {
         element.style.display = "none";
