@@ -442,6 +442,10 @@ nav {
     margin-right: 2rem;
 }
 
+main {
+    min-height: 366px;
+}
+
 .scroll-down-arrow {
     bottom: 24%;
 }
