@@ -316,7 +316,7 @@ form {
     width: 46px;
     height: 46px;
     font-size: 36px;
-    border: 1px solid white;
+    border: 1px solid #00D26A;
     border-radius: 50%;
     background-color: white;
     transition: background-color 3s ease-in-out;
@@ -324,7 +324,6 @@ form {
 }
 
 .btn:focus {
-    border: 1px solid #00D26A;
     transform: scale(1.2);
 }
 
@@ -375,9 +374,9 @@ form {
     width: 40px;
     height: 40px;
     font-size: 28px;
-    border: 1px solid #E8F5E9;
+    border: 1px solid #00D26A;
     border-radius: 3px;
-    background-color: #E8F5E9;
+    background-color: white;
     box-shadow: -2px 2px 5px rgb(79, 79, 91);
 }
 
@@ -601,7 +600,6 @@ footer {
     }
 
     .btn:hover {
-        border: 1px solid #00D26A;
         transform: scale(1.2);
         cursor: pointer;
     }

@@ -80,17 +80,18 @@ The purpose of creating this game is to entertain users by providing a fun and c
 
 ### Colour Scheme
 
-The colour scheme draws inspiration from the hand signs and the lizard emojis shades. Yellow #D67D00, #FFC83D and green #00D26A, #e2f5e2. while maintaining a minimalistic design to avoid visual overload, 
+As I chose to use emojis to design the game mechanics and to check if the user wants to play again in the final stage, I decided to use the yellow shade of the hand sign emojis and the green shade of the lizard emoji for the game’s color scheme. Below is an overview of the primary, secondary, and accent colors used:
 
-The header background features an image of a padel court, with the dominant colour being rgb(18, 128, 223) or #1280DF. This colour choice also influenced the footer colour across all three web pages. To ensure readability, the menu bar links and Font Fantastic icons in the footer are white, creating contrast against the blue background.
+For the primary background colors, I applied #e2f5e2 to the header and footer backgrounds and white to the body background. This helps users understand where the header and footer end and the main section begins, while also maintaining a consistent brand identity across the website.
 
-The header title stands out with a slightly different white shade, rgb(250, 250, 243) or #FAFAF3, compared to other links in the navigation bar and footer. For desktop screens, a hovering effect changes the content colour of the header and footer to rgb(230, 191, 49) or #E6BF31, maintaining contrast against their backgrounds.
+For the primary text color, I applied rgb(3, 3, 14), a rich black color that contrasts well against both primary background colors mentioned above, enhancing accessibility for users.
 
-On mobile screens, navigation links appear in a drop-down menu, opening on a transparent rich black background (rgba(1, 1, 21, 0.2)). This ensures visibility against the header background image while keeping the image itself visible. For tablet and desktop screens, a fixed navigation bar beneath the header image displays the navigation links at all times. To distinguish the navbar from the header image, I used rgb(44, 36, 155) or #2C249B.
+Secondary text colors I have used are red and #00D26A. Red has been used to display the computer score, results when computer wins as well as informing the user if anything is wrong during the input validation. #00D26A has been used to display the user's score, results when the user wins and the Rules title when rules section opened.
 
-The body sections alternate between white and Aliceblue backgrounds, aiding users in understanding where one section ends and another begins. Black is used for the font colour on the body to ensure contrast and better visibility.
+#### Accent Colors
 
-Lastly, button borders (on all screen sizes) and the fieldset borders (on tablet and desktop screens) share the same blue colour as the header image and footer, which is rgb(18, 128, 223). This design creates cohesion with the rest of the website’s colour scheme while remaining noticeable to users.
+
+Yellow #D67D00, #FFC83D and green #00D26A, #e2f5e2. 
 
 ![The Rock, Scissors, Paper, Lizard, Spock, Colour Scheme](assets/images/color-scheme.png)
 
