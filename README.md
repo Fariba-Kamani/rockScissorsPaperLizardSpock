@@ -86,12 +86,11 @@ For the primary background colors, I applied #e2f5e2 to the header and footer ba
 
 For the primary text color, I applied rgb(3, 3, 14), a rich black color that contrasts well against both primary background colors mentioned above, enhancing accessibility for users.
 
-Secondary text colors I have used are red and #00D26A. Red has been used to display the computer score, results when computer wins as well as informing the user if anything is wrong during the input validation. #00D26A has been used to display the user's score, results when the user wins and the Rules title when rules section opened.
+The secondary text colors I have used are red and #00d26a. Red is used to display the computer’s score, results when the computer wins in the game setting, and validation error messages during the login phase. #00d26a is used to display the user’s score, results when the user wins, and the rules title when the rules section opens.
 
-#### Accent Colors
+#00d26a, #ffc83d, and #d67d00 have been applied as accent colors to buttons, borders, focus, and hover effects to make the intended objects stand out from the background and make the interface more interactive and engaging for the user.
 
-
-Yellow #D67D00, #FFC83D and green #00D26A, #e2f5e2. 
+Finally, rgb(79, 79, 91) has been used to add shadow and dimension to the game control buttons, as well as the yes and no buttons for handling the exit game scenario, enhancing the visibility of these elements.
 
 ![The Rock, Scissors, Paper, Lizard, Spock, Colour Scheme](assets/images/color-scheme.png)
 
