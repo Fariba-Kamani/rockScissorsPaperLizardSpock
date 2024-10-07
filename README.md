@@ -60,21 +60,19 @@ The purpose of creating this game is to entertain users by providing a fun and c
 
 
 #### First Time Visitor Goals
-* I would like to 
-* 
-* I want the website to be intuitive and easy to use.
-* I want the website to be responsive and compatible with my device.
+* As a first-time visitor, I want to understand the rules and mechanics of the game quickly, so that I can start playing without confusion.
+* As a first-time visitor, I want an intitive and engaging interface that immediately explains what to do, so I can begin playing right away.
+* As a first-time visitor, I want to have access to the rules and tutorials at any time, so I can confidently make my choices during the game.
+* As a first-time visitor, I want the interface to be responsive and compatible with my device.
 
 #### Returning Visitor Goals
 
-* I want to be able to
-* 
+* As a returning visitor, I want to start playing right away without having to go through the tutorial or introduction.
+* As a returning visitor, I want an easy login with minimal input required to start the game.
 
 #### Frequent Visitor Goals
 
-* I want to be able 
-* I want to be able to 
-* I want to be able to
+* As a frequent visitor, I want to be able to choose between other players or the computer to compete with.
 
 - - -
 
@@ -94,7 +92,7 @@ The body sections alternate between white and Aliceblue backgrounds, aiding user
 
 Lastly, button borders (on all screen sizes) and the fieldset borders (on tablet and desktop screens) share the same blue colour as the header image and footer, which is rgb(18, 128, 223). This design creates cohesion with the rest of the website’s colour scheme while remaining noticeable to users.
 
-![The Let's Padel Colour Scheme](assets/images/lets-padel-color-scheme.png)
+![The Rock, Scissors, Paper, Lizard, Spock, Colour Scheme](assets/images/color-scheme.png)
 
 ### Typography
 
