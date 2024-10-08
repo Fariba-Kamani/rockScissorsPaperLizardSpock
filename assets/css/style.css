@@ -60,6 +60,7 @@ h1 {
     width: 12%;
     margin-left: 1rem;
     border-radius: 50%;
+    background-color: white;
     border: 2px solid #00D26A;
     padding: 0.1rem;
 }
@@ -77,10 +78,6 @@ h1 {
     align-self: flex-end;
     text-align: start;
     margin-right: 1rem;
-}
-
-.rules:focus {
-    color: #D67D00;
 }
 
 .nav-error i {
@@ -578,6 +575,13 @@ footer {
         cursor: pointer;
     }
 
+    /* Class to disable hover effect */
+    .no-hover:hover {
+        transform: none;
+        color: #00D26A;
+        cursor: default;
+    }
+
     #close-rules:hover {
         color: #FFC83D;
         cursor: pointer;
@@ -614,6 +618,4 @@ footer {
         transform: scale(1.2);
         cursor: pointer;
     }
-
-
 }
