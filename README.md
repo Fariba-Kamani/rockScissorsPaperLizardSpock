@@ -122,39 +122,43 @@ Wireframes were created for mobile, tablet and desktop using balsamiq.
 
 ### Features
 
-The website consists of a home page, a Find Players page and a Gallery page.
+The website consists of a home page and a 404 error page. 
+The home page consists of three phases; the login phase, the game phase and the final result phase.
+the 404 error page to make sure that Github shows the 404.html when the page is not found. The 500 error page hasn't been added since GitHub Pages does not handle 500 errors since it's a static site hosting service.
+Both html pages on the website are responsive on all devices and have the following common features: 
 
-All Pages on the website are responsive and have the following features:
+* The favicon in the browser tab.
 
-* A favicon in the browser tab.
+  ![favicon]()
 
-  ![favicon](assets/images/favicon-tab.png)
+* The header
 
-* The title of the site at the top of the page. 
+  ![header]()
 
-  ![The  Title](assets/images/title-link-to-homepage.png)
+* The logo on the left hand side of the header.
 
-* Rules button icon in form of a question mark at the top right hand side of the header 
+  ![logo]()
 
-  ![The rules button](assets/images/dropdown-navigation-menu.png)  
+* The title of the site in the center of the header. 
+
+  ![The Title]()
+
+* The rules button, shown with a question mark icon on the right-hand side of the header and Added hover effect for desktop screens, does not appear on the 404 error page. Instead, a yellow exclamation mark is displayed.
+
+  ![The rules button]()  
   
 
-* The footer of the site, located at the bottom of every page, features links to the website’s Facebook, Instagram, email, and phone. These links are displayed using Font Awesome icons. When hovered over on desktop screens, each icon changes to a Saffron yellow colour.
+* The footer of the site, located at the bottom of every page, features links to the website’s Facebook, Instagram, email, and phone. These links are displayed using Font Awesome icons. Added hover effect for desktop screens.
 
   ![footer](assets/images/footer.png)
 
 #### Login
 
-![Responsive home page]()
+![Responsive login]()
 
 
-* 
-  * 
 
-  * 
-  * 
 
-* 
 
 #### Game
 
