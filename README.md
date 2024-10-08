@@ -96,34 +96,18 @@ Finally, rgb(79, 79, 91) has been used to add shadow and dimension to the game c
 
 ### Typography
 
-Google Fonts was used to import the chosen fonts for use on the site.
+Google Fonts was used to import the chosen font for use on the site.
 
-![Exo 2](assets/images/title-font.png)
+![]()
 
-* For the page title, I have used the Google font Exo 2, which is described as a contemporary geometric sans serif typeface by [Google Fonts](https://fonts.google.com/specimen/Exo+2/about?preview.text=LET%27S%20PADEL&preview.size=42). I chose this font for the title because it looks playful and fun, which goes well with the agenda of the website.
-
-![Roboto](assets/images/body-font.png)
-
-* For the body of the page, I have used the Google font ‘Roboto’ because it is clean, readable, and easy on the eyes, making the user experience as smooth as possible. According to [Google Fonts](https://fonts.google.com/specimen/Roboto/about?query=roboto&selected=Material+Symbols+Outlined:sports_tennis:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%235f6368), Roboto is featured in more than 695 million websites. Additionally, according to [Github](https://github.com/googlefonts/roboto), the font provides robust multi-language support and comes in various weights, styles, and alternate glyphs. 
+* For both the page title and the body, I have used the Google font Cabin. This font is a modern take on early 20th-century modernist sans-serif fonts; it is simple and readable but includes more modern curves and a unique style. Cabin has been featured in many game apps due to its legibility, approachable aesthetic, and web and mobile friendliness, which also influenced my decision to use it for my project. <a href="https://fonts.google.com/specimen/Cabin/about">3</a>, <a href="https://github.com/impallari/Cabin">4</a>
 
 * In case the imported Google fonts don’t load, both fonts will fall back to sans-serif.
 
 ### Imagery
 
-All images used on the website have been resized using [Image Resizer.com](https://imageresizer.com/), converted to WebP format with [FreeConver](https://www.freeconvert.com/jpg-to-webp) and compressed using [tinify](https://tinypng.com/) to be optimized for using on the website and help loading the website faster for the users.
+The only image used on the website is the logo, located on the left-hand side of the header. To optimize the image for the website and improve loading times for users, I used <a href="Image Resizer.com](https://imageresizer.com/">Image Resizer</a> to resize and compress the logo, and <a href="https://www.freeconvert.com/jpg-to-webp">FreeConver</a> to convert it to WebP format. The image was downloaded from <a href="https://www.pikpng.com/downpngs/Jhxmoi_pierre-ciseaux-feuille-lzard-spock-aligned-rock-paper/">here</a>. I have added an alt attribute to the image to display text if the image file doesn’t load and to describe the image for screen readers used by visually impaired users.
 
-The headers on all three pages have a background image of a padel court taken from, https://psauction.com/item/view/975429/mobil-komplett-padelbana-instantpadel-duo-10x20m-ny-och-ej-monterad, to give the user the same feeling as being on the padel court.
-
-You can see the URLs from which the images on the Gallery page are taken, in the list below. All of them have an alt attribute to display text if the image file doesn’t load, and to describe the image for screen readers used by visually impaired users.
-
-* https://thumbs.dreamstime.com/b/serious-middle-aged-latin-man-tennis-player-playing-padel-friendly-match-outdoor-court-spring-focused-hitting-ball-267446063.jpg
-* https://www.vanguardlawmag.com/wp-content/uploads/2024/04/IMG_5960.jpg
-* https://www.lta.org.uk/49d339/siteassets/play/padel/image/woman-playing-padel2.jpg?w=3200
-* https://tennis-uni.com/wp-content/uploads/padel-tennisspieler-netz-400x267.jpeg
-* https://media.istockphoto.com/id/1413274533/photo/four-senior-friends-enjoying-together-while-playing-padel.jpg?s=612x612&w=0&k=20&c=ZuI09DB7woiuqmYD-J5dlzg1ID5VOSoh6m_7gFII4_E=
-* https://thepeninsulaqatar.com/get/maximage/20240303_1709445598-694.jpg?1709445599
-* https://thepadelstate.com/wp-content/uploads/2024/02/Sofia-Arujo-1021x500.jpg
-* https://rutinasdeportivas.es/medios/2017/01/Quieres-saber-cu%C3%A1les-son-los-beneficios-del-p%C3%A1del-y-porque-es-importante-practicarlo-parejas.jpg
 
 ### Wireframes
 
