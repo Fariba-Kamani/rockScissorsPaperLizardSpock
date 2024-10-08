@@ -98,9 +98,9 @@ Finally, rgb(79, 79, 91) has been used to add shadow and dimension to the game c
 
 Google Fonts was used to import the chosen font for use on the site.
 
-![]()
+![Cabin Font Example](assets/images/cabin-font-example.png)
 
-* For both the page title and the body, I have used the Google font Cabin. This font is a modern take on early 20th-century modernist sans-serif fonts; it is simple and readable but includes more modern curves and a unique style. Cabin has been featured in many game apps due to its legibility, approachable aesthetic, and web and mobile friendliness, which also influenced my decision to use it for my project. <a href="https://fonts.google.com/specimen/Cabin/about">3</a>, <a href="https://github.com/impallari/Cabin">4</a>
+* For both the page title and the body, I have used the font Cabin. This font is a modern take on early 20th-century modernist sans-serif fonts; it is simple and readable but includes more modern curves and a unique style. Cabin has been featured in many game apps due to its legibility, approachable aesthetic, and web and mobile friendliness, which also influenced my decision to use it for my project. <a href="https://fonts.google.com/specimen/Cabin/about">3</a>, <a href="https://github.com/impallari/Cabin">4</a>
 
 * In case the imported Google fonts don’t load, both fonts will fall back to sans-serif.
 
