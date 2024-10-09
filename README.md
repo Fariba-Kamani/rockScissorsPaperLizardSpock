@@ -1,10 +1,10 @@
 # Rock, Scissors, Paper, Lizard, Spock
 
-![Rock, Scissors, Paper, Lizard, Spock shown on a variety of screen sizes]()
+![Rock, Scissors, Paper, Lizard, Spock shown on a variety of screen sizes](assets/images/responsive.png)
 
 Visit the deployed site: [Rock, Scissors, Paper, Lizard, Spock](https://fariba-kamani.github.io/rockScissorsPaperLizardSpock/)
 
-Rock, Scissors, Paper, Lizard, Spock is an expansion of Rock, Paper, Scissors with the additional hand signs of Lizard and Spock. It was first invented by Sam Kass, an internet pioneer and blogger. It has also been featured in an episode of the TV show, The Big Bang Theory <a href="https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock">1</a>, <a href="https://bigbangtheory.fandom.com/wiki/Sam_Kass">2</a>.
+Rock, Scissors, Paper, Lizard, Spock is an expansion of Rock, Paper, Scissors with the additional hand signs of Lizard and Spock. It was first invented by Sam Kass, an internet pioneer and blogger. It has also been featured in an episode of the TV show, The Big Bang Theory [1](https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock), [2](https://bigbangtheory.fandom.com/wiki/Sam_Kass).
 
 This website is a game application based on the mentioned expansion, in which the player competes against the computer in seven rounds before the game decides the winner. Emojis have been used to showcase the hand signs in the game and are called weapons. ‘✊’ (raised fist) for rock, ‘✋’ (raised hand) for paper, ‘✌️’ (peace) for scissors, ‘🦎’ for lizard, and ‘🖖’ (Vulcan salute) for Spock are available for the player to choose from in the form of five buttons during each round. At first, the hand sign ‘🤌’ (pinched fingers) was used for lizard, but during the game development, I decided that ‘🦎’ for lizard is more intuitive and recognizable. Additionally, it brings another layer of playfulness to the game design.
 
@@ -58,7 +58,6 @@ The purpose of creating this game is to entertain users by providing a fun and c
 
 ### User Stories
 
-
 #### First Time Visitor Goals
 * As a first-time visitor, I want to understand the rules and mechanics of the game quickly, so that I can start playing without confusion.
 * As a first-time visitor, I want an intitive and engaging interface that immediately explains what to do, so I can begin playing right away.
@@ -96,11 +95,15 @@ Finally, rgb(79, 79, 91) has been used to add shadow and dimension to the game c
 
 ### Typography
 
-Google Fonts was used to import the chosen font for use on the site.
+For this project, I decided to host the Google Fonts locally to eliminate the need for an external network request and improve the performance score of my website. To do so, I downloaded the fonts I had previously chosen from [Google Fonts](https://fonts.google.com/) using [google-webfonts-helper](https://gwfh.mranftl.com/fonts) and placed them in the assets/fonts directory of my project. I then updated the CSS to reference the locally stored fonts.
 
 ![Cabin Font Example](assets/images/cabin-font-example.png)
 
-* For both the page title and the body, I have used the font Cabin. This font is a modern take on early 20th-century modernist sans-serif fonts; it is simple and readable but includes more modern curves and a unique style. Cabin has been featured in many game apps due to its legibility, approachable aesthetic, and web and mobile friendliness, which also influenced my decision to use it for my project. [3](https://fonts.google.com/specimen/Cabin/about), [4](https://github.com/impallari/Cabin)
+* For the body, I have used the font Cabin. This font is a modern take on early 20th-century modernist sans-serif fonts; it is simple and readable but includes more modern curves and a unique style. Cabin has been featured in many game apps due to its legibility, approachable aesthetic, and web and mobile friendliness, which also influenced my decision to use it for my project. [3](https://fonts.google.com/specimen/Cabin/about), [4](https://github.com/impallari/Cabin)
+
+![Cabin Sketch Font Example](assets/images/cabin-sketch-google-font.png)
+
+* For the title, I used the Cabin Sketch font, a hand-drawn and playful variant of the Cabin font, which I think it gives the website a casual and artsy vibe.
 
 * In case the imported Google fonts don’t load, both fonts will fall back to sans-serif.
 
@@ -152,17 +155,17 @@ Both html pages on the website are responsive on all devices and have the follow
 
   ![footer](assets/images/footer.png)
 
-#### Login
+#### Login Phase
 
-![Responsive login]()
-
-
+![Responsive login](assets/images/responsive-login.png)
 
 
 
-#### Game
 
-![the  responsive]()
+
+#### Game Phase
+
+![Responsive Game Phase](assets/images/responsive-game.png)
 
   * 
 
