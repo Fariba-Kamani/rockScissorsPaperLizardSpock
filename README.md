@@ -100,13 +100,13 @@ Google Fonts was used to import the chosen font for use on the site.
 
 ![Cabin Font Example](assets/images/cabin-font-example.png)
 
-* For both the page title and the body, I have used the font Cabin. This font is a modern take on early 20th-century modernist sans-serif fonts; it is simple and readable but includes more modern curves and a unique style. Cabin has been featured in many game apps due to its legibility, approachable aesthetic, and web and mobile friendliness, which also influenced my decision to use it for my project. <a href="https://fonts.google.com/specimen/Cabin/about">3</a>, <a href="https://github.com/impallari/Cabin">4</a>
+* For both the page title and the body, I have used the font Cabin. This font is a modern take on early 20th-century modernist sans-serif fonts; it is simple and readable but includes more modern curves and a unique style. Cabin has been featured in many game apps due to its legibility, approachable aesthetic, and web and mobile friendliness, which also influenced my decision to use it for my project. [3](https://fonts.google.com/specimen/Cabin/about), [4](https://github.com/impallari/Cabin)
 
 * In case the imported Google fonts don’t load, both fonts will fall back to sans-serif.
 
 ### Imagery
 
-The only image used on the website is the logo, located on the left-hand side of the header. To optimize the image for the website and improve loading times for users, I used <a href="Image Resizer.com](https://imageresizer.com/">Image Resizer</a> to resize and compress the logo, and <a href="https://www.freeconvert.com/jpg-to-webp">FreeConver</a> to convert it to WebP format. The image was downloaded from <a href="https://www.pikpng.com/downpngs/Jhxmoi_pierre-ciseaux-feuille-lzard-spock-aligned-rock-paper/">here</a>. I have added an alt attribute to the image to display text if the image file doesn’t load and to describe the image for screen readers used by visually impaired users.
+The only image used on the website is the logo, located on the left-hand side of the header. To optimize the image for the website and improve loading times for users, I used [Image Resizer.com](https://imageresizer.com/) to resize and compress the logo, and [freeconvert.com](https://www.freeconvert.com/jpg-to-webp) to convert it to WebP format. The image was downloaded from https://www.pikpng.com/downpngs/Jhxmoi_pierre-ciseaux-feuille-lzard-spock-aligned-rock-paper/. I have added an alt attribute to the image to display text if the image file doesn’t load and to describe the image for screen readers used by visually impaired users.
 
 
 ### Wireframes
