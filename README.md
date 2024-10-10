@@ -126,44 +126,90 @@ Wireframes were created for mobile, tablet and desktop using balsamiq.
 ### Features
 
 The website consists of a home page and a 404 error page. 
-The home page consists of three phases; the login phase, the game phase and the final result phase.
+The home page consists of three phases; the login phase, the game phase and the final result phase. The rules are available at all time during all phases of the home page with an exception of during result display of each round.
 the 404 error page to make sure that Github shows the 404.html when the page is not found. The 500 error page hasn't been added since GitHub Pages does not handle 500 errors since it's a static site hosting service.
 Both html pages on the website are responsive on all devices and have the following common features: 
 
 * The favicon in the browser tab.
 
-  ![favicon]()
+  ![favicon](assets/images/favicon.png)
 
 * The header
 
-  ![header]()
+  ![header](assets/images/header.png)
 
-* The logo on the left hand side of the header.
+  * The logo on the left hand side of the header.
 
-  ![logo]()
+    ![logo](assets/images/the-logo.png)
 
-* The title of the site in the center of the header. 
+  * The title of the site in the center of the header. 
 
-  ![The Title]()
+    ![The title](assets/images/the-title.png)
 
-* The rules button, shown with a question mark icon on the right-hand side of the header and Added hover effect for desktop screens, does not appear on the 404 error page. Instead, a yellow exclamation mark is displayed.
+  * The rules button, shown with a question mark icon on the right-hand side of the header and Added hover effect for desktop screens, does not appear on the 404 error page. Instead, a yellow exclamation mark is displayed.
 
-  ![The rules button]()  
-  
+    ![The rules button](assets/images/rules-button.png) ![The rules button hover effect](assets/images/rules-button-hover.png) ![The 404 warning sign](assets/images/404-warning-sign.png)
 
-* The footer of the site, located at the bottom of every page, features links to the website’s Facebook, Instagram, email, and phone. These links are displayed using Font Awesome icons. Added hover effect for desktop screens.
+* The rules box; opens with the rules button
 
-  ![footer](assets/images/footer.png)
+![The rules box responsive](assets/images/rules-responsive.png)
 
-#### Login Phase
+  * The rules box header, sticks to the top during scrolling
+
+  ![]()
+
+  * The rules box title on the top left side
+
+  ![]()
+
+  * The close icon on the top right side, works as a closing button, can be selected and closed with both mouse and tab key, added hover effect for desktop screens
+
+  ![]()
+
+  * The vertical scroll bar
+
+  ![]()
+
+  * The sticky down arrow to the bottom right of the rules box, works as a link to bottom of the rules list
+
+  ![]()
+
+* The footer of the site, located at the bottom of every page, features icon links to the website’s Facebook, Instagram, email, and phone. These links are displayed using Font Awesome icons. Added hover effect for desktop screens.
+
+  ![the footer](assets/images/the-footer.png)
+
+  ![the footer hover effect](assets/images/footer-hover.png)
+
+
+#### The Login Phase
 
 ![Responsive login](assets/images/responsive-login.png)
 
+* The section title
+
+![The section title](assets/images/login-title.png)
+
+* The login form
+
+![The login form](assets/images/login-form.png)
+
+  * The name input field and it's label. Allowed auto complete, and added focus function on page load
+
+  ![The name input and label](assets/images/input-field-and-label.png)
+
+  * The PLAY! button that submits the form. Added hover effect for desktop screens.
+
+  ![The PLAY! button](assets/images/play-button.png) ![The PLAY! button with hover effect](assets/images/play-button-hover.png)
+
+  * The form validation error message; appears in red text underneath the name input for three seconds after each attempt to submit and invalid input.
+
+  ![The form validation error message](assets/images/form-validation-error.png)
 
 
 
 
-#### Game Phase
+
+#### The Game Phase
 
 ![Responsive Game Phase](assets/images/responsive-game.png)
 
@@ -172,16 +218,13 @@ Both html pages on the website are responsive on all devices and have the follow
   * 
   * 
 
-  
+#### The Final result Phase
 
+![Responsive Final Result Phase](assets/images/responsive-final-result.png)
 
-#### Rules
+#### The 404 error page
 
-![the  page responsive]()
-
-  
-
-#### Final result
+![Responsive 404 Error Page](assets/images/responsive-404-error-page.png)
 
 #### Future Implementations
 
