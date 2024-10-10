@@ -152,27 +152,25 @@ Both html pages on the website are responsive on all devices and have the follow
 
 * The rules box; opens with the rules button
 
-![The rules box responsive](assets/images/rules-responsive.png)
+  ![The rules box responsive](assets/images/rules-responsive.png)
 
-  * The rules box header, sticks to the top during scrolling
+    * The rules box header, sticks to the top during scrolling
 
-  ![]()
+    * The rules box title on the left hand-side
 
-  * The rules box title on the top left side
+    * The close icon on the right hand-side, works as a closing button, can be selected and closed with both mouse and tab key, added hover effect for desktop screens
 
-  ![]()
+      ![The rules box header](assets/images/rules-box-header.png)
 
-  * The close icon on the top right side, works as a closing button, can be selected and closed with both mouse and tab key, added hover effect for desktop screens
+      ![The rules box close icon hover effect](assets/images/rules-box-close-hover.png)
 
-  ![]()
+    * The vertical scroll bar
 
-  * The vertical scroll bar
+      ![The vertical scroll bar](assets/images/verrtical-scroll-bar.png)
 
-  ![]()
+    * The sticky scroll down arrow to the bottom right of the rules box, works as a link to bottom of the rules list
 
-  * The sticky down arrow to the bottom right of the rules box, works as a link to bottom of the rules list
-
-  ![]()
+      ![The scroll down arrow](assets/images/scroll-down-arrow.png)
 
 * The footer of the site, located at the bottom of every page, features icon links to the website’s Facebook, Instagram, email, and phone. These links are displayed using Font Awesome icons. Added hover effect for desktop screens.
 
@@ -204,10 +202,6 @@ Both html pages on the website are responsive on all devices and have the follow
   * The form validation error message; appears in red text underneath the name input for three seconds after each attempt to submit and invalid input.
 
   ![The form validation error message](assets/images/form-validation-error.png)
-
-
-
-
 
 #### The Game Phase
 
