@@ -36,7 +36,7 @@
 /* General styles */
 body {
     min-height: 100vh;
-    width: 100vw;
+    min-width: 100vw;
     background-color: white;
     color: rgb(3, 3, 14);
     text-transform: uppercase;
@@ -86,10 +86,6 @@ h1 {
     background-color: white;
     border: 2px solid #00D26A;
     padding: 0.1rem;
-}
-
-.nav {
-    border: none;
 }
 
 /*Rules button*/
@@ -233,6 +229,7 @@ form {
 /*Result display area style*/
 .result-display-area {
     width: 100%;
+    min-width: 344px;
     display: none;
     flex-direction: column;
     align-items: center;
@@ -243,7 +240,7 @@ form {
 .players-pick {
     display: flex;
     flex-direction: row;
-    gap: 5rem;
+    gap: 4rem;
     justify-content: center;
     /* Center the picks horizontally */
     justify-items: center;
@@ -254,14 +251,14 @@ form {
 
 .user-pick {
     transform: rotate(90deg) rotateY(180deg);
-    font-size: 3.75rem;
+    font-size: 3rem;
     align-self: flex-end;
     text-align: start;
 }
 
 .computer-pick {
     transform: rotate(-90deg);
-    font-size: 3.75rem;
+    font-size: 3rem;
     align-self: flex-end;
     text-align: start;
 }
@@ -270,7 +267,7 @@ form {
     display: flex;
     flex-direction: row;
     flex: 1;
-    gap: 5rem;
+    gap: 4rem;
     justify-content: space-around;
     justify-items: center;
     width: 100%;
@@ -280,33 +277,33 @@ form {
     width: 45%;
     align-self: flex-start;
     text-align: start;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .computer-score {
     width: 45%;
     align-self: flex-start;
     text-align: end;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .user-counter {
     color: #00D26A;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
 }
 
 .pc-counter {
     color: rgb(245, 19, 60);
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
 }
 
 .text-result {
     padding: 2rem 0 0;
-    font-size: 1.25rem;
+    font-size: 1rem;
     letter-spacing: 0.06rem;
-    line-height: 1.25rem;
+    line-height: 1.5rem;
     font-weight: bold;
     display: none;
     text-align: center;
@@ -323,9 +320,11 @@ form {
 }
 
 #control-area-heading {
-    padding-bottom: 2rem;
+    margin-top: 1.5rem;
+    padding: 2rem 2rem 3rem 2rem;
     text-align: center;
-    font-size: 1.25rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
 }
 
 .control-btn {
@@ -336,9 +335,9 @@ form {
 }
 
 .btn {
-    width: 3rem;
-    height: 3rem;
-    font-size: 2.25rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.75rem;
     border: 1px solid #00D26A;
     border-radius: 50%;
     background-color: white;
@@ -455,6 +454,11 @@ footer {
 @media screen and (min-width: 667px) {
 
     /*Header style*/
+    main {
+        min-height: 401px;
+
+    }
+
     header {
         width: 100%;
     }
@@ -462,14 +466,6 @@ footer {
     .logo {
         width: 5%;
         margin-left: 2rem;
-    }
-
-    nav {
-        margin-right: 2rem;
-    }
-
-    main {
-        min-height: 367px;
     }
 
     .start-game {
@@ -483,7 +479,7 @@ footer {
     }
 
     .result-display-area {
-
+        min-width: 393px;
         margin-top: 6.25rem;
         padding-top: 0;
     }
@@ -530,13 +526,17 @@ footer {
 /* Media query: tablets and larger (768px and up)*/
 @media screen and (min-width: 768px) {
 
+    main {
+        min-height: 615px;
+    }
+
     .start-game {
         margin-top: 4rem;
         padding-top: 6rem;
     }
 
-    main {
-        min-height: 615px;
+    .user-pick, .computer-pick {
+        font-size: 3.75rem;
     }
 
     .result-display-area {
@@ -552,12 +552,17 @@ footer {
         
     }
 
-    
-
     .control-btn {
+        margin-top: 1.5rem;
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(3, 1fr);
         gap: 0.5rem;
+    }
+
+    .btn {
+        width: 3rem;
+        height: 3rem;
+        font-size: 2.25rem;
     }
 
     #rock {
@@ -584,27 +589,54 @@ footer {
 
 /* Media query: tablets and larger (992px and up)*/
 @media screen and (min-width: 992px) {
+   
+    main {
+        min-height: 665px;
+    }
 
-    h1 {
+    .start-game h2 {
+        min-height: 1.5rem;
+        padding-top: 0.5rem;
+    }
+
+    form {
+        margin-top: 4rem;
+        padding-top: 2rem;
+    }
+
+    label {
+        height: 30px;
+    }
+
+    .rules {
+        font-size: 2.7rem;
+    }
+
+    .players-pick {
+        min-height: 110px;
+    }
+
+    .user-pick, .computer-pick {
+        font-size: 3.3rem;
+    }
+
+    .control-btn {
+        gap: 0;
+    }
+
+    .btn {
+        width: 3.5rem;
+        height: 3.5rem;
         font-size: 2rem;
     }
 
-    .start-game {
-        margin-top: 7rem;
+    footer {
+        clear: both;
     }
 
-    .result-display-area,
-    .controls-area {
-        width: 100%;
-    }
-
-    .result-display-area {
-        margin-top: 7.25rem;
-    }
-
-    .text-result {
-        padding: 1.5rem 0 3rem;
-    }
+   #contact-ways i {
+    width:2rem;
+   }
 
     .rules:hover {
         transform: scale(1.2);
