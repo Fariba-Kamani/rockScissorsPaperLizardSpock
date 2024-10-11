@@ -348,7 +348,7 @@ form {
 }
 
 .btn:focus {
-    transform: scale(1.2);
+    border: 1px solid #D67D00;
 }
 
 #rock {

@@ -207,17 +207,82 @@ Both html pages on the website are responsive on all devices and have the follow
 
 ![Responsive Game Phase](assets/images/responsive-game.png)
 
-  * 
-  * 
-  * 
+  * The result display area
+
+    ![The result display area](assets/images/result-display-before-players-pick.png) 
+
+    * The players' pick display
+
+      ![The players' pick display](assets/images/players-pick.png)
+
+    * The score area
+
+      ![The score area](assets/images/scores-area.png)
+
+    * The round result display
+
+      * The user wins message
+        
+        ![User wins](assets/images/round-result-user-wins.png)
+
+      * The computer wins message
+
+        ![Computer wins](assets/images/round-result-computer-wins.png)
+
+      * The it's a tie message
+
+        ![It's a tie](assets/images/round-result-tie.png)
+
+      * Wait to see the final result
+
+        ![Pre-final-result display message](assets/images/wait-for-final-result.png)
+
+  * The controls area
+
+    ![The controls area](assets/images/controls-area.png)
+
+    * The section title and the round counter
+
+      ![The section title and the round counter](assets/images/controls-area-round-counter-title.png)
+
+    * The control buttons, added hover effect for desktop screens
+
+      ![The control buttons](assets/images/control-buttons.png) 
+
+      ![The control buttons with hover effect](assets/images/control-buttons-hover.png) 
 
 #### The Final result Phase
 
 ![Responsive Final Result Phase](assets/images/responsive-final-result.png)
 
+  * The final result display
+
+    ![The final result display example 1](assets/images/final-result1.png)
+
+    ![The final result display example 2](assets/images/final-result2.png)
+  
+  * The YES/NO buttons, added hover effect for desktop screens
+
+    ![The yes/no buttons](assets/images/yes-no-buttons.png)
+
+    ![The yes/no buttons with hover effect](assets/images/yes-no-buttons-hover.png)
+
+    * The thumb up button; takes the user back to a new game.
+  
+    * The thumb down button; reloads the page and takes the user back to the login phase.
+
 #### The 404 error page
 
 ![Responsive 404 Error Page](assets/images/responsive-404-error-page.png)
+
+ * The 404 error page message
+  
+  ![The 404 error page message](assets/images/error-page-message.png)
+
+* The back to home page link
+
+  ![The back to home page link](assets/images/link-back-to-home-page.png)
+
 
 #### Future Implementations
 
@@ -246,7 +311,7 @@ I have been mindful during coding to ensure that anyone can understand my websit
 
 ### Languages Used
 
-HTML and CSS
+HTML, CSS, and JavaScript
 
 ### Frameworks, Libraries & Programs Used
 
