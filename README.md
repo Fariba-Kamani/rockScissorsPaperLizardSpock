@@ -12,7 +12,7 @@ The game starts with a login form where the player is asked to enter a name, whi
 
 The rules are: Scissors cut paper, paper covers rock, rock crushes lizard, lizard poisons Spock, Spock smashes scissors, scissors decapitate lizard, lizard eats paper, paper disproves Spock, Spock vaporizes rock, and as it always has, rock crushes scissors. The rules are accessible at all times during the game on the top right side of the header, indicated by a question mark icon.
 
-The final result will be shown after all seven rounds are completed, giving the player two options: either playing again or quitting the game. The options are represented as buttons using emojis, continuing the theme of using hand gestures: 👍 (thumbs up) for yes and playing a new game, and 👎 (thumbs down) for no and quitting the game. If the player chooses yes, a new game with reset scores and rounds will begin, and if they choose no, they will be directed to the login.
+The final result will be shown after all seven rounds are completed, giving the player two options: either playing again or quitting the game. The options are represented as buttons using emojis, continuing the theme of using hand gestures: ‘👍’ (thumbs up) for yes and playing a new game, and ‘👎’ (thumbs down) for no and quitting the game. If the player chooses yes, a new game with reset scores and rounds will begin, and if they choose no, they will be directed to the login.
 
 The purpose of creating this game is to entertain users by providing a fun and casual experience while demonstrating core concepts in front-end web development, including HTML, CSS, and JavaScript. It features a simple, user-friendly interface that ensures smooth gameplay and instant visual feedback on the user’s and computer’s choices, as well as the game results. I have ensured the use of responsive layouts so that the game works well on all screen sizes. Additionally, features like keyboard controls and screen reader support have been added to make the game accessible to a wider audience.
 
@@ -286,11 +286,12 @@ Both html pages on the website are responsive on all devices and have the follow
 
 #### Future Implementations
 
-In future implementations I would like to:
+In future implementations:
 
-1. 
-2. 
-3. 
+1. I would like to expand the game so that users can choose between competing against the computer or other players.
+
+2. I would like to add another difficulty level to the game for when the user chooses to compete against the computer. The options will be ‘Casual’ and ‘Challenging’, and the user will be able to select the difficulty during the login phase. The ‘Casual’ difficulty level will function as the game currently does, while the ‘Challenging’ difficulty level will have the computer’s picks for each round based on an analysis of the user’s previous choices.
+
 
 ### Accessibility
 
@@ -298,12 +299,12 @@ I have been mindful during coding to ensure that anyone can understand my websit
 
 * Semantic HTML has been used to help both the browser understand the content and provide screen readers with extra functionality for keyboard operation, rather than relying solely on a mouse.
 * Semantic text structure, such as headings, paragraphs, and lists, has been used to help screen readers provide the indicators they need to read out the content in a useful way.
-* Semantic structural elements, such as nav, header, section, and footer, have been used to provide screen readers with important information that can be conveyed to their users.
-* UI controls, such as links, buttons, and forms, have been used to allow users to interact with the website. By browser default, they can be accessed using a keyboard or by clicking the tab key to jump from one UI control to another.
-* Form labels have been used so that screen readers can clearly label input fields for users.
-* The aria-label attribute has been used to provide a more meaningful description for icons, links, background images, and interactive elements, specifically for screen reader users.
-* Use a hover state on all buttons on the site to make it clear to the user whether they are hovering over a button.
-* Use a sensible font, font sizes, line heights, color contrast for the text content and sticking to common conventions to make the website intuitive, easy to read and follow for all users.
+* Semantic structural elements, such as header, section, and footer, have been used to provide screen readers with important information that can be conveyed to their users.
+* UI controls, such as links, buttons, and forms, have been implemented to enable user interaction with the website. By default, these controls can be accessed using a keyboard, allowing users to navigate between them by pressing the Tab key. Additionally, I have added the functionality to select the close icon in the rules box header using the Tab key and to close the rules box by pressing the Enter key, as this was not included in the browser’s default behavior.
+* Form label have been used so that screen readers can clearly label input fields for users.
+* The aria-label attribute has been used to provide a more meaningful description for icons, links, the logo image, and interactive elements, specifically for screen reader users.
+* Hover and focus state has been used on all buttons on the site to make it clear to the user whether they are hovering over or selecting a button.
+* I have tried to use a sensible font, font sizes, line heights, color contrast for the text content and sticking to common conventions to make the website intuitive, easy to read and follow for all users.
 
 - - -
 
@@ -323,19 +324,19 @@ HTML, CSS, and JavaScript
 
 * [GitPod](https://gitpod.io/) - IDE used to create the site.
 
-* [Google Fonts](https://fonts.google.com/) - To import the fonts used on the website.
+* [Google Fonts](https://fonts.google.com/) - To choose the fonts used on the website.
+
+* [google-webfonts-helper](https://gwfh.mranftl.com/fonts) - To download and locally host the selected Google Fonts.
 
 * [Chrome DevTools](https://developer.chrome.com/docs/devtools) - To troubleshoot and test features, solve issues with responsiveness and styling.
 
-* [Favicon generator](https://realfavicongenerator.net/) To create favicon.
+* [Favicon generator](https://realfavicongenerator.net/) - To create favicon.
 
-* [Am I Responsive?](http://ami.responsivedesign.is/) To show the website image on a range of devices.
+* [Am I Responsive?](http://ami.responsivedesign.is/) - To show the website image on a range of devices.
 
-* [Tinify](https://tinypng.com/) To compress images.
+* [Image Resizer.com](https://imageresizer.com/) - To resize and compress images. 
 
-* [Image Resizer.com](https://imageresizer.com/) To resize and compress images. 
-
-* [FreeConver](https://www.freeconvert.com/jpg-to-webp) To convert the images to webp format.
+* [FreeConvert](https://www.freeconvert.com/jpg-to-webp) - To convert the logo image to webp format.
  
 * [Microsoft Bing Copilot Tools](https://www.bing.com/chat) - An AI chat that I used to check the spell and grammar of my website and README.md file.
 - - -
@@ -344,12 +345,12 @@ HTML, CSS, and JavaScript
 
 ### Deployment
 
-The site is deployed using GitHub Pages - [Let's Padel](https://fariba-kamani.github.io/lets-padel/).
+The site is deployed using GitHub Pages - [Rock, Scissors, Paper, Lizard, Spock](https://fariba-kamani.github.io/rockScissorsPaperLizardSpock/).
 
 To Deploy the site using GitHub Pages:
 
 1. Login (or signup) to Github.
-2. Go to the repository for this project, [fariba-kamani/lets-padel](https://github.com/fariba-kamani/lets-padel).
+2. Go to the repository for this project, [fariba-kamani/rockScissorsPaperLizardSpock](https://github.com/Fariba-Kamani/rockScissorsPaperLizardSpock).
 3. Click the settings button.
 4. Select pages in the left hand navigation menu.
 5. From the source dropdown select main branch and press save.
@@ -362,7 +363,7 @@ To Deploy the site using GitHub Pages:
 To fork the repository:
 
 1. Log in (or sign up) to Github.
-2. Go to the repository for this project, [fariba-kamani/lets-padel](https://github.com/fariba-kamani/lets-padel)
+2. Go to the repository for this project, [fariba-kamani/rockScissorsPaperLizardSpock](https://github.com/Fariba-Kamani/rockScissorsPaperLizardSpock). 
 3. Click the Fork button in the top right corner.
 
 #### How to Clone
@@ -370,7 +371,7 @@ To fork the repository:
 To clone the repository:
 
 1. Log in (or sign up) to GitHub.
-2. Go to the repository for this project, [fariba-kamani/lets-padel](https://github.com/fariba-kamani/lets-padel)
+2. Go to the repository for this project, [fariba-kamani/rockScissorsPaperLizardSpock](https://github.com/Fariba-Kamani/rockScissorsPaperLizardSpock)
 3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
 4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
 5. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
@@ -393,11 +394,9 @@ Please refer to [TESTING.md](TESTING.md) file for all testing carried out.
 
 ### Code Used
 
-Throughout the entire project development, I utilized the Code Institute course material for HTML and CSS. I followed the tutorials for the Love Running walkthrough project to set up and start my project properly, make a dropdown navigation menu using checkbox for mobile screens, and make a masonry design for how the images display on the Gallery page depending on the screen size. Additionally, I incorporated ideas from the Coders Coffeehouse walkthrough project to make the content in the second section of the Home page responsive using inline-block display property.
+Throughout the entire project development, I utilized the Code Institute course material for HTML,CSS, and JavaScript. I followed the tutorials for the Love Running and Love Math walkthrough projects to set up and start my project properly.
 
-I have used [Stack Overflow](stackoverflow.com) to get some ideas for how to use regular expression in order to define patterns for the form input validation of input type="text" and input type="tel".
-
-I have also used the tutor support to learn how to link to an email and phone number in the footer. This allows users to open their email client with a specified recipient or trigger a phone call (on mobiles) by clicking the phone icon link in the footer.
+I have also used the tutor support to get help with solving the overflow issue caused by contents extending beyond the visible boundaries of its container or the browser's visible area (viewport).
 
 ### Content
 
@@ -410,5 +409,5 @@ All the imagery I’ve used, along with the corresponding links, is provided in 
 I would like to acknowledge
 
 * My Code Institute mentor, Jubril Akolade, for reviewing my project and inspiring me to improve my website.
-* The Code Institute tutor team, who were available and guided me whenever I was stuck troubleshooting issues during the development of my project.
+* The Code Institute tutor team, who were available and guided me whenever I was stuck troubleshooting issues during the development of my projects.
 * My partner and friends, who took the time to test my website on their devices and provided constructive feedback.
