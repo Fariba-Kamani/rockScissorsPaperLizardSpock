@@ -208,7 +208,6 @@ Both html pages on the website are responsive on all devices and have the follow
 ![Responsive Game Phase](assets/images/responsive-game.png)
 
   * 
-
   * 
   * 
 

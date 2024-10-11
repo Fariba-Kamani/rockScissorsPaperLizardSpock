@@ -128,19 +128,21 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: #00D26A;
     background-color: rgba(255, 255, 255, 1);
     border-bottom: 2px solid #FFC83D;
     position: sticky;
     top: 0;
+    padding: 0.3rem;
 
 }
 
 #rules-header h2 {
-    font-size: 28px;
     text-transform: none;
+    font-size: 1.7rem;
     font-weight: 100;
+    height: 2rem;
 }
 
 .scroll-down-arrow {
@@ -373,7 +375,7 @@ form {
     display: none;
     background-color: white;
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 15%;
     width: 70%;
     border: 4px outset #FFC83D;
@@ -393,8 +395,8 @@ form {
 }
 
 .yes-no-buttons {
-    width: 3rem;
-    height: 3rem;
+    width: 3.3rem;
+    height: 3.3rem;
     font-size: 2.25rem;
     border: 1px solid #00D26A;
     border-radius: 3px;
@@ -589,6 +591,10 @@ footer {
 
 /* Media query: tablets and larger (992px and up)*/
 @media screen and (min-width: 992px) {
+
+   * {
+        overflow-x: hidden;
+    }
    
     main {
         min-height: 665px;
@@ -609,15 +615,11 @@ footer {
     }
 
     .rules {
-        font-size: 2.7rem;
+        font-size: 2.4rem;
     }
 
     .players-pick {
-        min-height: 110px;
-    }
-
-    .user-pick, .computer-pick {
-        font-size: 3.3rem;
+        padding-bottom: 1rem;
     }
 
     .control-btn {
@@ -625,30 +627,24 @@ footer {
     }
 
     .btn {
-        width: 3.5rem;
-        height: 3.5rem;
-        font-size: 2rem;
+        width: 3.2rem;
+        height: 3.2rem;
+        margin: 0.3rem;
     }
-
-    footer {
-        clear: both;
-    }
-
-   #contact-ways i {
-    width:2rem;
-   }
 
     .rules:hover {
-        transform: scale(1.2);
         color: #FFC83D;
         cursor: pointer;
     }
 
     /* Class to disable hover effect */
     .no-hover:hover {
-        transform: none;
         color: #00D26A;
         cursor: default;
+    }
+
+    #contact-ways i {
+        width: 2rem;
     }
 
     #close-rules:hover {
@@ -664,18 +660,17 @@ footer {
     }
 
     .btn:hover {
-        transform: scale(1.2);
+        border: 1px solid #FFC83D;
         cursor: pointer;
     }
 
     #contact-ways i:hover {
-        transform: scale(1.2);
         color: #FFC83D;
         cursor: pointer;
     }
 
     .yes-no-buttons:hover {
-        transform: scale(1.2);
+        border: 1px solid #FFC83D;
         cursor: pointer;
     }
 }
