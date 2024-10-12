@@ -386,11 +386,21 @@ Please refer to [TESTING.md](TESTING.md) file for all testing carried out.
 
   * **Overflow**
 
-    Towards the end of developement of the project I decided to increase the sizes of some features such as control buttons, the rules button and the players' pick section whick ended up causing overflow, due to some content extended beyond the visible boundaries of their container or the viewport. I solved the issue with getting help from the tutor team at Code Institute. For smaller screens I managed to eliminate the overflow by reducing the content size, increasing the container size, or changing the padding properties. For desktop screens I have been introducing hover effect which would enlarge some items by hovering over them which was partly causing the overflow. I removed the transform properties that were set to <transform: scale(1.2)> from the hover related classes. That didn't quite solve everything which forced me to also introduce the property <overflow-x: hidden;> 
+    Towards the end of the project development, I decided to increase the sizes of some features, such as control buttons, the rules button, and the players' pick section. This change caused overflow, as some content extended beyond the visible boundaries of their container or viewport. With help from the tutor team at Code Institute, I resolved the issue. For smaller screens, I eliminated the overflow by reducing the content size, increasing the container size, or changing the padding properties. For desktop screens, I had introduced a hover effect that enlarged some items when hovered over, which partly caused the overflow. I removed the transform properties set to `transform: scale(1.2)` from the hover-related classes. This didn't solve everything, so I had to define ` max-width` and `css max-height` for the problematic containers to finally resolve the bug. 
 
+  * **The rules button interfering with the exit game senario**
+
+    After choosing to quit the game from the final result phase and returning to the login phase, the user would unintentionally be thrown back into the game without logging in, simply by opening and closing the rules box. Through troubleshooting, I realized the issue was due to how I handled the exit game scenario, which was initially based on toggling the visibility and `display` property of different phases. To resolve this, I decided it was better to reload the page when the user wants to quit the game, using the JavaScript code `location.reload(true);`.
+
+  * **The rules button and the eventListener**
+
+  Opening the rules box during the display of the final result caused some unexpected behavior. The program would make some sections visible to the user that were supposed to be hidden at the wrong time and phase in the course of the game. Initially, I had used two event listeners for capturing the "click" on the rules button to track if the user wanted to access the rules box before or after login, to display the right phase after the user closed the rules box. However, this approach proved problematic as the code development progressed, causing the program to act unexpectedly in certain scenarios.
+
+  To resolve this, I used only one event listener and included an if-statement in the related event handler to identify the phase or part of the game from which the user had opened the rules box. This allowed me to provide the correct feedback and ensure the user could continue from where they left off to check the rules.
 
 ### Known Bugs
 
+  There are no known or unsolved bugs left in the program.
 
 - - -
 
@@ -398,9 +408,7 @@ Please refer to [TESTING.md](TESTING.md) file for all testing carried out.
 
 ### Code Used
 
-Throughout the entire project development, I utilized the Code Institute course material for HTML,CSS, and JavaScript. I followed the tutorials for the Love Running and Love Math walkthrough projects to set up and start my project properly.
-
-I have also used the tutor support to get help with solving the overflow issue caused by contents extending beyond the visible boundaries of its container or the browser's visible area (viewport).
+Throughout the entire project development, I utilized the Code Institute course materials for HTML, CSS, and JavaScript. I followed the tutorials for the Love Running and Love Math walkthrough projects to set up and start my project properly. I also used tutor support to solve the overflow issue caused by content extending beyond the visible boundaries of its container or the browser's visible area (viewport).
 
 ### Content
 

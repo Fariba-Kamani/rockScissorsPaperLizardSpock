@@ -1,7 +1,21 @@
+
+/*Love maths/ Tidying up: https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LM101+3/courseware/2d651bf3f23e48aeb9b9218871912b2e/04d7bdb98119413991e2a31e9a291970/
+Loading events: https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+1/courseware/0a4bf408d10c4149bb686457ac11edf6/fe180c06af614d2f86e32957ae17a859/
+Adding event listeners: https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+1/courseware/0a4bf408d10c4149bb686457ac11edf6/fe180c06af614d2f86e32957ae17a859/
+*/
+/** 
+ * This eventlistener clears the text input field in the login form, 
+ * and sets its focus with a ready cursor
+ */
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('user-name').focus();
     document.getElementById('user-name').value = "";
 })
+
+/**This event listener prevents the default submit,
+ * and takes care of the text input validation
+ * by providing the user with an error message in case of invalid submission
+ */
 document.querySelector('form').addEventListener('submit', function (event) {
     event.preventDefault();
     let userName = document.getElementById("user-name").value;
