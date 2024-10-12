@@ -14,16 +14,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /**This event listener prevents the default submit,
  * and takes care of the text input validation
- * by providing the user with an error message in case of invalid submission
+ * by providing the user with an error message in case of invalid submission,
+ * or allow user to start a new game after the validation passes.
  */
 document.querySelector('form').addEventListener('submit', function (event) {
+    // Prevents default submission
+    /* Form submission: 
+    https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+1/courseware/0a4bf408d10c4149bb686457ac11edf6/16d62f1111064f5cb6a64582da96a41b/*/
     event.preventDefault();
+    // Gets the text input value
+    /* Getting form values:
+    https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+1/courseware/0a4bf408d10c4149bb686457ac11edf6/16d62f1111064f5cb6a64582da96a41b/*/ 
     let userName = document.getElementById("user-name").value;
 
     // Text input validation
     if (userName.length > 12 || userName === "" || userName.includes(' ')) {
+        // Displays the error message underneath the text input.
+        /* Changing existing elements: 
+        https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+1/courseware/0a4bf408d10c4149bb686457ac11edf6/37e3becd93804fdf8bf586523f56ead5/*/
         document.getElementById('error-message').style.display = 'block';
-        // Hide error message after 3 seconds
+        /* Hide error message after 3 seconds. 
+        https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout
+        */
         setTimeout(function () {
             document.getElementById('error-message').style.display = 'none';
         }, 3000); // 3000 milliseconds = 3 seconds
