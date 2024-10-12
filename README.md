@@ -384,6 +384,10 @@ Please refer to [TESTING.md](TESTING.md) file for all testing carried out.
 
 ### Solved Bugs
 
+  * **Overflow**
+
+    Towards the end of developement of the project I decided to increase the sizes of some features such as control buttons, the rules button and the players' pick section whick ended up causing overflow, due to some content extended beyond the visible boundaries of their container or the viewport. I solved the issue with getting help from the tutor team at Code Institute. For smaller screens I managed to eliminate the overflow by reducing the content size, increasing the container size, or changing the padding properties. For desktop screens I have been introducing hover effect which would enlarge some items by hovering over them which was partly causing the overflow. I removed the transform properties that were set to <transform: scale(1.2)> from the hover related classes. That didn't quite solve everything which forced me to also introduce the property <overflow-x: hidden;> 
+
 
 ### Known Bugs
 

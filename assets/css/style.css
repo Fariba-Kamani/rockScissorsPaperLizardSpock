@@ -96,7 +96,7 @@ h1 {
     font-size: 2.3rem;
     align-self: flex-start;
     text-align: start;
-    margin-right: 1rem;
+    margin-right: 1.5rem;
 }
 
 .rules-explain {
@@ -398,28 +398,27 @@ form {
 
 /* 404 error page*/
 .warning-sign {
-    height: 2.5rem;
-    width: 2.5rem;
-    padding: 0.1rem;
-    margin-right: 1rem;
+    display: flex;
+    justify-content: center; /* Horizontally centers the icon */
+    align-items: center;     /* Vertically centers the icon */
+    height: 40%;           /* Example height of the div */
+    width: 12%;            /* Example width of the div */
+    margin-right: 1.5rem;
 }
 
 .warning-sign i {
-    color: #D67D00;
-    font-size: 2.3rem;
-    align-self: flex-start;
-    text-align: center;
-} 
-
+    font-size: 2.3rem;          
+    color: #D67D00          
+}
 .error-page {
     background-color: white;
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 15%;
     width: 70%;
     border: 4px outset #FFC83D;
     border-radius: 3px;
-    padding: 1rem;
+    padding: 2rem;
     line-height: 2rem;
     letter-spacing: 0.1rem;
     text-align: center;
@@ -454,7 +453,6 @@ footer {
 }
 
 #contact-ways i:focus {
-    transform: scale(1.2);
     color: #FFC83D;
 }
 
@@ -598,8 +596,8 @@ footer {
 /* Media query: tablets and larger (992px and up)*/
 @media screen and (min-width: 992px) {
 
-   * {
-        overflow-x: hidden;
+    header {
+        max-width: 100%;
     }
    
     main {
@@ -622,6 +620,11 @@ footer {
 
     .rules {
         font-size: 2.4rem;
+    }
+
+    .warning-sign {
+        max-width: 60px;
+        max-height: 60px;
     }
 
     .players-pick {
