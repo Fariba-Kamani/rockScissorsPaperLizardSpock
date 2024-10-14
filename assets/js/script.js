@@ -487,29 +487,33 @@ function gameRules() {
 }
 
 /**
- * 
+ * This function closes the rules box, 
+ * and makes sure the user goes back to the phase they opened the rules box from.
  * @param {number} flag - A number indicating the phase from which the rules box was opened: 
- *                        1 for login phase, 2 for game phase.
+ * 1 for login phase, 2 for game phase.
  */
 function closeRules(flag) {
-    let endGameElements = document.querySelectorAll(".end-game");
+    /*Array.form() converts the NodeList (returned by querySelectorAll()) into a proper array. 
+    This allows the use of array methods like .every().
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from
+    */
+    let finalResultDisplay = document.querySelectorAll(".final-result-display");
+    let isVisible = Array.from(finalResultDisplay).every(element => element.style.display === "block");
 
-    // Check if all elements are hidden
-    let isVisible = Array.from(endGameElements).every(element => element.style.display === "block");
+    // Checks if the final result box is visible at the time the user clicks to close the rules box.
     if (isVisible) {
         document.querySelectorAll(".rules-explain").forEach(element => {
             element.style.display = "none";
         });
-
     } else if (flag === 1) {
+        /* When the flag is 1, the user must go back to login phase after closing the rules box. 
+        And other phases must be hidden.*/
         document.querySelectorAll(".rules-explain").forEach(element => {
             element.style.display = "none";
         });
         document.querySelectorAll(".result-display-area").forEach(element => {
             element.style.display = "none";
         });
-
-        // Show elements with class 'controls-area'
         document.querySelectorAll(".controls-area").forEach(element => {
             element.style.display = "none";
         });
@@ -517,6 +521,8 @@ function closeRules(flag) {
             element.style.display = "flex";
         });
     } else {
+        /* When the flag is 2, the user must go back to game phase after closing the rules box, 
+        and other phases must be hidden.*/
         document.querySelectorAll(".rules-explain").forEach(element => {
             element.style.display = "none";
         });
@@ -526,75 +532,98 @@ function closeRules(flag) {
         document.querySelectorAll(".result-display-area").forEach(element => {
             element.style.display = "flex";
         });
-
-        // Show elements with class 'controls-area'
         document.querySelectorAll(".controls-area").forEach(element => {
             element.style.display = "flex";
         });
-
     }
-
 }
 
+/**
+ * This function compares the user score with the computer score and decides the winner,
+ * and displays the final result box.
+ * It listens for a click action on one of the yes-no buttons.
+ */
 function finalResult() {
+    // Takes the user score from #user-counter as a string and turns it to integer.
     let userScore = parseInt(document.getElementById('user-counter').innerText);
+
+    // Takes the computer score from #pc-counter as a string and turns it to integer.
     let computerScore = parseInt(document.getElementById('pc-counter').innerText);
+
+    // Hides the game phase.
     document.querySelectorAll(".result-display-area").forEach(element => {
         element.style.display = "none";
     });
-
     document.querySelectorAll(".controls-area").forEach(element => {
         element.style.display = "none";
     });
 
-    document.querySelectorAll(".end-game").forEach(element => {
+    // Displays the final result box.
+    document.querySelectorAll(".final-result-display").forEach(element => {
         element.style.display = "block";
     });
 
+    // Decides the winner by comparing the scores
     if (userScore === computerScore) {
-        document.getElementById('round-result').innerText = "It's a tie!";
-        document.getElementById('round-result').style.color = 'rgb(3, 3, 14)';
+        document.getElementById('result-report').innerText = "It's a tie!";
+        document.getElementById('result-report').style.color = 'rgb(3, 3, 14)'; //black
     } else if (userScore > computerScore) {
-        document.getElementById('round-result').innerText = "You win!";
-        document.getElementById('round-result').style.color = '#00D26A';
+        document.getElementById('result-report').innerText = "You win!";
+        document.getElementById('result-report').style.color = '#00D26A'; //green
     } else {
-        document.getElementById('round-result').innerText = "Computer wins!";
-        document.getElementById('round-result').style.color = 'rgb(255, 0, 17)';
+        document.getElementById('result-report').innerText = "Computer wins!";
+        document.getElementById('result-report').style.color = 'rgb(255, 0, 17)'; //red
     }
+
+    // Makes an array of the elements in .yes-no-buttons and assigns it to buttons.
     let buttons = document.getElementsByClassName('yes-no-buttons');
+
+    // Attaches event listener to each button in buttons array.
     for (let button of buttons) {
-        button.removeEventListener('click', quitContinue); // Prevent duplicate listeners
-        button.addEventListener('click', quitContinue); // Attach event listener
+       // button.removeEventListener('click', quitContinue); // Prevent duplicate listeners
+        button.addEventListener('click', quitContinue); 
     }
 }
 
+/**
+ * This function checks if the user wants to play again or quit.
+ * Resets the game phase and sends the user to the game phase, if the user wants to play again.
+ * Reloads the website and sends the user to login phase.
+ */
 function quitContinue() {
-    document.getElementById('control-area-heading').innerHTML = `Round <span id="round-count">1</span><br>Choose your weapon!`;
-    document.getElementById('user-counter').innerText = "0";
-    document.getElementById('pc-counter').innerText = "0";
-    document.getElementById('text-result').innerHTML = "";
     switch (this.getAttribute('data-type')) {
         case 'yes':
-            document.querySelectorAll(".end-game").forEach(element => {
+            // Prepares for a new game by resetting the #control-area-heading, players' score and the #text-result.
+            document.getElementById('control-area-heading').innerHTML = `Round <span id="round-count">1</span><br>Choose your weapon!`;
+            document.getElementById('user-counter').innerText = "0";
+            document.getElementById('pc-counter').innerText = "0";
+            document.getElementById('text-result').innerHTML = "";
+
+            // Hides the final result display
+            document.querySelectorAll(".final-result-display").forEach(element => {
                 element.style.display = "none";
             });
+
+            // Makes the game phase sections (elements) visible
             document.querySelectorAll(".result-display-area").forEach(element => {
                 element.style.display = "flex";
             });
-
             document.querySelectorAll(".controls-area").forEach(element => {
                 element.style.display = "flex";
             });
-
             document.querySelectorAll(".control-btn").forEach(element => {
                 element.style.display = "grid";
             });
 
+            // Resets the players' pick area back to rock.
             document.getElementById('computer-pick').innerHTML = "✊";
             document.getElementById('user-pick').innerHTML = "✊";
             break;
         case 'no':
-            location.reload(true);
+            /* Reloads the page or current document.
+            https://developer.mozilla.org/en-US/docs/Web/API/Location/reload
+            */
+            location.reload();
             break;
     }
 }

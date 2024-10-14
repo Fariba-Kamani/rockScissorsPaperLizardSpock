@@ -198,6 +198,7 @@ form {
     text-transform: none;
     color: red;
     letter-spacing: 0.1rem;
+    min-height: 2rem;
 }
 
 .start-btn {
@@ -363,7 +364,7 @@ form {
     grid-area: 2 / 5 / 2 / 5;
 }
 
-.end-game {
+.final-result-display {
     display: none;
     background-color: white;
     position: absolute;
@@ -596,8 +597,12 @@ footer {
 /* Media query: tablets and larger (992px and up)*/
 @media screen and (min-width: 992px) {
 
+    * {
+        overflow-x: hidden;
+    }
+
     header {
-        max-width: 100%;
+        min-width: 100%;
     }
    
     main {
@@ -629,6 +634,10 @@ footer {
 
     .players-pick {
         padding-bottom: 1rem;
+    }
+
+    .scores {
+        max-width: 328px;
     }
 
     .control-btn {
