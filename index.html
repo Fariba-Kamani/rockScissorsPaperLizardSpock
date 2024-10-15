@@ -55,10 +55,10 @@
                 <h2 class="hidden">The result display area</h2>
                 <!-- The players' pick container -->
                 <div class="players-pick">
-                    <span class="user-pick" id="user-pick" aria-label="Represents the player's pick. Shows 'rock' if the player hasn't picked yet.">
+                    <span class="user-pick" id="user-pick">
                         ✊
                     </span>
-                    <span class="computer-pick" id="computer-pick" aria-label="Represents the computer's pick. Shows 'rock' if the computer hasn't picked yet.">
+                    <span class="computer-pick" id="computer-pick">
                         ✊
                     </span>
                 </div>
@@ -110,7 +110,8 @@
                 <!-- The rules box header -->
                 <div id="rules-header">
                     <h2>Rules</h2>
-                    <div id="close-rules" tabindex="0" aria-label="Closes the rules window">
+                    <!-- tabindex attribute allows the div element to gain focus by tab key  -->
+                    <div id="close-rules" tabindex="0">
                         <i class="fa-regular fa-rectangle-xmark"></i>
                     </div>
                 </div>
