@@ -276,6 +276,10 @@ form {
     padding: 2rem 2rem 0;
 }
 
+.hidden {
+    display: none;
+}
+
 /* The players' pick display*/
 .players-pick {
     display: flex;
@@ -580,11 +584,6 @@ footer {
         min-width: 393px;
         margin-top: 6.25rem;
         padding-top: 0;
-    }
-
-    /* The style related to round result with the class .text-result */
-    .text-result {
-        padding-top: 5rem 0 3rem 0;
     }
 
     /* Controls area style */

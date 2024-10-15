@@ -52,12 +52,13 @@
         <div class="section-container">
             <!-- Result display area -->
             <section class="result-display-area">
+                <h2 class="hidden">The result display area</h2>
                 <!-- The players' pick container -->
                 <div class="players-pick">
-                    <span class="user-pick" id="user-pick" aria-label="Player's pick">
+                    <span class="user-pick" id="user-pick" aria-label="Represents the player's pick. Shows 'rock' if the player hasn't picked yet.">
                         ✊
                     </span>
-                    <span class="computer-pick" id="computer-pick" aria-label="Computer's pick">
+                    <span class="computer-pick" id="computer-pick" aria-label="Represents the computer's pick. Shows 'rock' if the computer hasn't picked yet.">
                         ✊
                     </span>
                 </div>
@@ -109,27 +110,28 @@
                 <!-- The rules box header -->
                 <div id="rules-header">
                     <h2>Rules</h2>
-                    <div id="close-rules" tabindex="0" aria-label="Closes the rules window"><i
-                            class="fa-regular fa-rectangle-xmark"></i></div>
+                    <div id="close-rules" tabindex="0" aria-label="Closes the rules window">
+                        <i class="fa-regular fa-rectangle-xmark"></i>
+                    </div>
                 </div>
                 <!-- The rules box content -->
                 <div id="rules-text">
-                    <p>
-                        <ul>
-                            <li>Scissors cuts Paper.</li>
-                            <li>Scissors decapitates Lizard.</li>
-                            <li>Paper covers Rock.</li>
-                            <li>Paper disproves Spock.</li>
-                            <li>Rock crushes Lizard.</li>
-                            <li>Rock crushes Scissors.</li>
-                            <li>Lizard poisons Spock.</li>
-                            <li>Lizard eats paper.</li>
-                            <li>Spock vaporizes rock.</li>
-                            <li>Spock smashes scissors</li>
-                            <li>In tie situations, both the player and the computer get one point each.</li>
-                            <li>Best score wins after seven rounds.</li>
-                        </ul>
-                    </p>
+
+                    <ul>
+                        <li>Scissors cuts Paper.</li>
+                        <li>Scissors decapitates Lizard.</li>
+                        <li>Paper covers Rock.</li>
+                        <li>Paper disproves Spock.</li>
+                        <li>Rock crushes Lizard.</li>
+                        <li>Rock crushes Scissors.</li>
+                        <li>Lizard poisons Spock.</li>
+                        <li>Lizard eats paper.</li>
+                        <li>Spock vaporizes rock.</li>
+                        <li>Spock smashes scissors</li>
+                        <li>In tie situations, both the player and the computer get one point each.</li>
+                        <li>Best score wins after seven rounds.</li>
+                    </ul>
+
                     <div id="bottom"></div>
                 </div>
                 <!-- The scroll down arrow, links to the bottom of rules box -->

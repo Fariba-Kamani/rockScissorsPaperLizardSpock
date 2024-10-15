@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 /* Love maths/ Tidying up: 
 https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LM101+3/courseware/2d651bf3f23e48aeb9b9218871912b2e/04d7bdb98119413991e2a31e9a291970/
 Loading events: 
@@ -10,7 +11,7 @@ https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+1/coursew
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('user-name').focus();
     document.getElementById('user-name').value = "";
-})
+});
 
 /*This event listener select the first form element in the document: 
   https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector,
@@ -91,51 +92,47 @@ function setUser(user) {
  * and calls for the functions showUsersChoice and showComputersChoice.
  */
 function runGame() {
-
     // Takes the elements with the .btn and makes the buttons array
     let buttons = document.getElementsByClassName('btn');
-    let playerChoice;
 
     // This for loop adds event listener to the control buttons
     for (let button of buttons) {
-        button.addEventListener('click', function () {
+        button.addEventListener('click', userPickInvestigator);
 
-            /* This switch-case sends the data-type attribute of the clicked control button
-            to the showUserChoice function to be displayed
-            and calls the showComputersChoice function as well.*/
-            /* Switch-case statement: 
-            https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+1/courseware/73e9c0413ead4a21b389e33c77706102/ba023cfa11c04351a3758b21ee4418fe/?child=last
-            Love Maths/ creating event listeners:
-            https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LM101+3/courseware/2d651bf3f23e48aeb9b9218871912b2e/78f3c10a937c4fe09640c7c0098d16bd/*/
-            switch (this.getAttribute('data-type')) {
-                case '✊':
-                    playerChoice = this.getAttribute('data-type');
-                    showUsersChoice(playerChoice);
-                    showComputersChoice();
-                    break;
-                case '✋':
-                    playerChoice = this.getAttribute('data-type');
-                    showUsersChoice(playerChoice);
-                    showComputersChoice();
-                    break;
-                case '✌️':
-                    playerChoice = this.getAttribute('data-type');
-                    showUsersChoice(playerChoice);
-                    showComputersChoice();
-                    break;
-                case '🦎':
-                    playerChoice = this.getAttribute('data-type');
-                    showUsersChoice(playerChoice);
-                    showComputersChoice();
-                    break;
-                case '🖖':
-                    playerChoice = this.getAttribute('data-type');
-                    showUsersChoice(playerChoice);
-                    showComputersChoice();
-                    break;
-            }
-        });
+    }
+}
 
+function userPickInvestigator() {
+    let playerChoice = this.getAttribute('data-type');
+
+    /* This switch-case sends the data-type attribute of the clicked control button
+    to the showUserChoice function to be displayed
+    and calls the showComputersChoice function as well.*/
+    /* Switch-case statement: 
+    https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+1/courseware/73e9c0413ead4a21b389e33c77706102/ba023cfa11c04351a3758b21ee4418fe/?child=last
+    Love Maths/ creating event listeners:
+    https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LM101+3/courseware/2d651bf3f23e48aeb9b9218871912b2e/78f3c10a937c4fe09640c7c0098d16bd/*/
+    switch (this.getAttribute('data-type')) {
+        case '✊':
+            showUsersChoice(playerChoice);
+            showComputersChoice();
+            break;
+        case '✋':
+            showUsersChoice(playerChoice);
+            showComputersChoice();
+            break;
+        case '✌️':
+            showUsersChoice(playerChoice);
+            showComputersChoice();
+            break;
+        case '🦎':
+            showUsersChoice(playerChoice);
+            showComputersChoice();
+            break;
+        case '🖖':
+            showUsersChoice(playerChoice);
+            showComputersChoice();
+            break;
     }
 }
 
@@ -144,7 +141,7 @@ function runGame() {
  */
 function showUsersChoice(playerChoice) {
     /* Changing existing elements: 
-        https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+1/courseware/0a4bf408d10c4149bb686457ac11edf6/37e3becd93804fdf8bf586523f56ead5/*/
+     https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+1/courseware/0a4bf408d10c4149bb686457ac11edf6/37e3becd93804fdf8bf586523f56ead5/*/
     document.getElementById('user-pick').innerHTML = playerChoice;
 }
 
@@ -162,7 +159,7 @@ function showComputersChoice() {
     /* Changing existing elements: 
     https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+1/courseware/0a4bf408d10c4149bb686457ac11edf6/37e3becd93804fdf8bf586523f56ead5/*/
     document.getElementById('computer-pick').innerHTML = choices[index];
-    ShowResult();
+    showResult();
 }
 
 /**
@@ -188,7 +185,7 @@ function countComputersScore() {
 /**
  * This function displays the text result after each round
  */
-function ShowResult() {
+function showResult() {
     let options = {
         '✊': 'rock',
         '✋': 'paper',
@@ -471,7 +468,7 @@ function gameRules() {
 
         //(1)
         document.querySelector("#close-rules").addEventListener('click', function () {
-            closeRules(flag)
+            closeRules(flag);
         });
 
         // (2)
