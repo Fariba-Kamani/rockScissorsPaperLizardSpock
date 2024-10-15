@@ -51,7 +51,7 @@ I used Lighthouse within Chrome DevTools to test the performance, accessibility,
   
 * 404 error page
 
-    ![]()
+    ![404.html](assets/images/404-error-page-lighthouse-desktop.png)
 
 ##### Mobile Results
 
@@ -61,7 +61,7 @@ I used Lighthouse within Chrome DevTools to test the performance, accessibility,
 
 * 404 error page
 
-    ![]()
+    ![404.html](assets/images/404-error-page-lighthouse-mobile.png)
 
 #### Accessibility Testing
 
