@@ -95,7 +95,7 @@ h1 {
 }
 
 /*Rules button*/
-.rules {
+.rules, .home-sign {
     /* Aligns itself to the top*/
     align-self: flex-start;
     border: none;
@@ -478,24 +478,6 @@ grid-area: row-start / column-start / row-end / column-end */
 
 /*--------The 404 error page--------*/
 
-/* the warning icon container at the top right of the page header*/
-.warning-sign {
-    display: flex;
-    /* Horizontally centers the icon */
-    justify-content: center;
-    /* Vertically centers the icon */
-    align-items: center;
-    height: 40%;
-    width: 12%;
-    margin-right: 1.5rem;
-}
-
-/* The warning sign icon (!) */
-.warning-sign i {
-    font-size: 2.3rem;
-    color: #D67D00
-}
-
 /* The error page section */
 .error-page {
     background-color: white;
@@ -514,7 +496,9 @@ grid-area: row-start / column-start / row-end / column-end */
 /* The link back to home page */
 .error-page a {
     text-decoration: none;
-    color: #00D26A;
+    background-color: black;
+    color: white;
+    font-weight: bold;
     cursor: pointer;
 }
 
@@ -711,7 +695,7 @@ footer {
     }
 
     /* The rules button */
-    .rules {
+    .rules, .home-sign {
         font-size: 2.4rem;
     }
 
@@ -754,7 +738,7 @@ footer {
     }
 
     /* the rules button hover effect */
-    .rules:hover {
+    .rules:hover, .home-sign:hover {
         color: #FFC83D;
         cursor: pointer;
     }

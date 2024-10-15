@@ -31,11 +31,13 @@ The website has been tested on the following browsers: Chrome, Microsoft Edge, a
 
 #### W3C Validator
 
-  - HTML: No errors were returned for index.html, find-match.html, gallery.html, and submit.html when passing through the official [W3C validator](https://validator.w3.org/).
+  - HTML: No errors were returned for index.html and 404.html when passing through the official [W3C validator](https://validator.w3.org/).
 
   - CSS: No errors were found for style.css when passing through the official [Jigsaw validator](https://jigsaw.w3.org/css-validator/).
 
 #### JavaScript Validator
+
+[JSHint](https://jshint.com/) was used to validate the JavaScript code. No errors were found for script.js when passed through JSHint.
 
 #### Lighthouse
 
@@ -45,7 +47,7 @@ I used Lighthouse within Chrome DevTools to test the performance, accessibility,
 
 * Home page
 
-    ![index.html]()
+    ![index.html](assets/images/lighthouse-desktop.png)
   
 * 404 error page
 
@@ -55,7 +57,7 @@ I used Lighthouse within Chrome DevTools to test the performance, accessibility,
 
 * Home page
 
-    ![index.html]()
+    ![index.html](assets/images/lighthouse-mobile.png)
 
 * 404 error page
 
