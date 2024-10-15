@@ -1,4 +1,3 @@
-
 /* Love maths/ Tidying up: 
 https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LM101+3/courseware/2d651bf3f23e48aeb9b9218871912b2e/04d7bdb98119413991e2a31e9a291970/
 Loading events: 
@@ -29,7 +28,7 @@ document.querySelector('form').addEventListener('submit', function (event) {
 
     // Gets the text input value
     /* Getting form values:
-    https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+1/courseware/0a4bf408d10c4149bb686457ac11edf6/16d62f1111064f5cb6a64582da96a41b/*/ 
+    https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+1/courseware/0a4bf408d10c4149bb686457ac11edf6/16d62f1111064f5cb6a64582da96a41b/*/
     let userName = document.getElementById("user-name").value;
 
     // Text input validation
@@ -47,7 +46,7 @@ document.querySelector('form').addEventListener('submit', function (event) {
         */
         setTimeout(function () {
             document.getElementById('error-message').style.display = 'none';
-        }, 3000); 
+        }, 3000);
         return;
     }
 
@@ -103,7 +102,7 @@ function runGame() {
 
             /* This switch-case sends the data-type attribute of the clicked control button
             to the showUserChoice function to be displayed
-            and calls the showComputersChoice function as well.*/ 
+            and calls the showComputersChoice function as well.*/
             /* Switch-case statement: 
             https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+1/courseware/73e9c0413ead4a21b389e33c77706102/ba023cfa11c04351a3758b21ee4418fe/?child=last
             Love Maths/ creating event listeners:
@@ -142,7 +141,7 @@ function runGame() {
 
 /** 
  * This function sets the user's pick of weapon as the innerHTML of #user-pick 
-*/
+ */
 function showUsersChoice(playerChoice) {
     /* Changing existing elements: 
         https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+1/courseware/0a4bf408d10c4149bb686457ac11edf6/37e3becd93804fdf8bf586523f56ead5/*/
@@ -153,7 +152,7 @@ function showUsersChoice(playerChoice) {
  * This function randomly chooses a weapon from the choices array,
  * sets it as the innerHTML of #computer-pick,
  * and calls the showResult function
-*/
+ */
 function showComputersChoice() {
     let choices = ['✊', '✋', '✌️', '🦎', '🖖'];
 
@@ -168,7 +167,7 @@ function showComputersChoice() {
 
 /**
  * This function counts the user's score
-*/
+ */
 function countUsersScore() {
 
     // Takes the content of #user-counter, turns it to integer, and assign it to userScore.
@@ -180,7 +179,7 @@ function countUsersScore() {
 
 /**
  * This function counts the computer's score
-*/
+ */
 function countComputersScore() {
     let computerScore = parseInt(document.getElementById('pc-counter').innerText);
     document.getElementById('pc-counter').innerText = ++computerScore;
@@ -329,7 +328,7 @@ function ShowResult() {
     // Shows the text result for 3 seconds and then reset for a new round
     setTimeout(function () {
         // Hides the text result after 3 seconds
-        result.style.display = 'none'; 
+        result.style.display = 'none';
 
         // Resets user and computer choices to ✊
         document.getElementById('user-pick').innerHTML = '✊';
@@ -364,7 +363,7 @@ function roundCounter() {
 
         // Delays the execution of exitGame() by 7 seconds, so that the user have time to read the #control-area-heading.
         setTimeout(function () {
-            finalResult(); 
+            finalResult();
         }, 7000);
     } else if (myCounter < 7) {
 
@@ -412,7 +411,7 @@ function gameRules() {
         */
         // Removes hover effect by adding a class that disables it.
         rulesElement.classList.add("no-hover");
-        
+
         // Resets the hover effect by removing the no-hover class from the list of the rules button classes.
         rulesElement.classList.remove("no-hover");
 
@@ -435,16 +434,16 @@ function gameRules() {
             element.style.display = "none";
         });
 
-        
+
         /* (1)This event listener listens for click action on the close icon in the rules box header.
         Passing an anonymous function to the event listener, 
         to be able to pass the flag as parameter to the event handler.
-        https://plainenglish.io/blog/passing-arguments-to-event-listeners-in-javascript-1a81bc397ecb*/ 
+        https://plainenglish.io/blog/passing-arguments-to-event-listeners-in-javascript-1a81bc397ecb*/
         document.querySelector("#close-rules").addEventListener('click', function () {
             closeRules(flag);
         });
 
-         // (2) This event listener listens for keydown action on the close icon in the rules box header.
+        // (2) This event listener listens for keydown action on the close icon in the rules box header.
         document.querySelector("#close-rules").addEventListener("keydown", function (event) {
             // (3) Checks if the pressed key is "Enter", calls the closeRules function.
             if (event.key === "Enter") {
@@ -454,7 +453,7 @@ function gameRules() {
 
     } else {
         flag = 2; // User is trying to open the rules box from the game phase.
-        
+
         // Opens the rules box
         rulesExplain.forEach(element => {
             element.style.display = "block";
@@ -580,8 +579,8 @@ function finalResult() {
 
     // Attaches event listener to each button in buttons array.
     for (let button of buttons) {
-       // button.removeEventListener('click', quitContinue); // Prevent duplicate listeners
-        button.addEventListener('click', quitContinue); 
+        // button.removeEventListener('click', quitContinue); // Prevent duplicate listeners
+        button.addEventListener('click', quitContinue);
     }
 }
 

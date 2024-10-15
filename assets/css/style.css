@@ -1,29 +1,35 @@
-
- /* cabin-sketch-regular - latin */
+/* cabin-sketch-regular - latin */
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
     font-family: 'Cabin Sketch';
     font-style: normal;
     font-weight: 400;
-    src: url('../fonts/cabin-sketch-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* cabin-sketch-700 - latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    src: url('../fonts/cabin-sketch-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* cabin-sketch-700 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
     font-family: 'Cabin Sketch';
     font-style: normal;
     font-weight: 700;
-    src: url('../fonts/cabin-sketch-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
+    src: url('../fonts/cabin-sketch-latin-700.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 
-  /* cabin-regular - latin */
+/* cabin-regular - latin */
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
     font-family: 'Cabin';
     font-style: normal;
     font-weight: 400;
-    src: url('../fonts/cabin-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
+    src: url('../fonts/cabin-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 
 /* Asterisk wildcard selector to override default styles added by the browser*/
 * {
@@ -37,26 +43,23 @@
 body {
     min-height: 100vh;
     min-width: 100vw;
+    display: flex;
+    /* For elements to show underneath each other*/
+    flex-direction: column;
+    align-items: center;
+    /* Generic project styles */
+    font-family: "Cabin", sans-serif;
     background-color: white;
     color: rgb(3, 3, 14);
     text-transform: uppercase;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: "Cabin", sans-serif;
 }
 
-main {
-    display: flex;
-    /* For main element to take all surplus space and push the footer element down */
-    flex: 1 0 auto;
-}
-
+/* Header */
 header {
     display: flex;
-    flex: 1;
     flex-direction: row;
     flex-wrap: wrap;
+    flex: 1;
     justify-content: space-between;
     position: absolute;
     top: 0;
@@ -66,6 +69,7 @@ header {
     background-color: #e2f5e2;
 }
 
+/* The website title */
 h1 {
     font-family: 'Cabin Sketch', sans-serif;
     font-size: 1.5rem;
@@ -77,29 +81,40 @@ h1 {
     color: inherit;
 }
 
+/* The website logo*/
 .logo {
+    /* Aligns itself to the top*/
     align-self: flex-start;
-    text-align: end;
     width: 12%;
-    margin-left: 1rem;
+    /* Circle shaped border*/
     border-radius: 50%;
     background-color: white;
     border: 2px solid #00D26A;
     padding: 0.1rem;
+    margin-left: 1rem;
 }
 
 /*Rules button*/
 .rules {
+    /* Aligns itself to the top*/
+    align-self: flex-start;
     border: none;
     background: none;
     color: #00D26A;
     font-size: 2.3rem;
-    align-self: flex-start;
-    text-align: start;
     margin-right: 1.5rem;
 }
 
+/* Main content */
+main {
+    display: flex;
+    /* For main element to take all surplus space and push the footer element down */
+    flex: 1 0 auto;
+}
+
+/* -------The rules box------- */
 .rules-explain {
+    /* It is hidden by default, and it becomes visible by JS when needed. */
     display: none;
     background-color: white;
     position: absolute;
@@ -107,41 +122,52 @@ h1 {
     left: 10%;
     width: 80%;
     height: 50%;
+    /*Adds a vertical scroll bar*/
     overflow-y: scroll;
     border: 4px outset #FFC83D;
     border-radius: 3px;
     padding: 0 1.5rem 0.5rem;
     line-height: 1.75rem;
     letter-spacing: 0.1rem;
+    /* To display in front of other elements if they overlap.*/
     z-index: 10;
 }
 
+/* The rules box header*/
 #rules-header {
     display: flex;
+    /* To place the box header elements horisontally*/
     flex-direction: row;
     justify-content: space-between;
     font-size: 1.7rem;
     color: #00D26A;
     background-color: rgba(255, 255, 255, 1);
     border-bottom: 2px solid #FFC83D;
+    /* To make it stick to the top of the rules box when scrolling vertically.*/
     position: sticky;
     top: 0;
     padding: 0.3rem;
 
 }
 
+/* The rules box header title*/
 #rules-header h2 {
+    /* The remove the inherited uppercase format*/
     text-transform: none;
     font-size: 1.7rem;
     font-weight: 100;
     height: 2rem;
 }
 
+/* The scroll down arrow to show the user to scroll down to see more. 
+It also works as a link to the bottom of the rules box. */
 .scroll-down-arrow {
+    /*Sticky position to stay fixed while scrolling.*/
     position: sticky;
+    /* Moves the element 5% from the bottom edge of the container. */
     bottom: 5%;
+    /* Moves the element 95% from the left edge of the container. */
     left: 95%;
-    transform: translateX(-50%);
     font-size: 3rem;
     font-weight: bold;
     color: inherit;
@@ -149,17 +175,23 @@ h1 {
     color: #00D26A;
 }
 
+/* The close icon in the rules box header, 
+when it has received focus from the user through clicking, or tab key.*/
 #close-rules:focus {
     color: #FFC83D;
 }
 
+/* The rules box list of content*/
 #rules-text li {
+    /* To remove the list default style*/
     list-style-type: none;
+    /* To remove the inherited uppercase*/
     text-transform: none;
 }
 
+/*-----The login phase------*/
 
-/*Start section*/
+/* The Start section */
 .start-game {
     text-align: center;
     padding: 6rem 2rem 2rem;
@@ -167,15 +199,18 @@ h1 {
     line-height: 1rem;
 }
 
+/* The start section title*/
 .start-game h2 {
     font-size: 1rem;
 
 }
 
+/* The login form*/
 form {
     margin-top: 1.5rem;
 }
 
+/* The text input*/
 #user-name {
     width: 160px;
     height: 47.19px;
@@ -191,6 +226,7 @@ form {
     font-weight: bold;
 }
 
+/* The input validation message, appears if the user tries to submit an invalid name format.*/
 #error-message {
     display: none;
     padding-top: 1rem;
@@ -198,9 +234,11 @@ form {
     text-transform: none;
     color: red;
     letter-spacing: 0.1rem;
+    /* For avoiding overflow*/
     min-height: 2rem;
 }
 
+/* The submit (PLAY!) button*/
 .start-btn {
     font-family: inherit;
     text-transform: inherit;
@@ -215,49 +253,64 @@ form {
     letter-spacing: 0.1em;
 }
 
+/* The submit button when it has received focus from the user through clicking, or tab key.*/
 .start-btn:focus {
     border: 2px solid #00D26A;
     background-color: #00D26A;
     color: white;
 }
 
-/*Result display area style*/
+/*-----The game phase------*/
+
+/*Result display area section*/
 .result-display-area {
-    width: 100%;
-    min-width: 344px;
+    /* It's hidden by default and becomes visible after the login phase by JS*/
     display: none;
+    width: 100%;
+    /* Defined to stop the width from altering during the course of every round */
+    min-width: 344px;
+    /* For it's children to show underneath each other */
     flex-direction: column;
     align-items: center;
     margin-top: 10rem;
     padding: 2rem 2rem 0;
 }
 
+/* The players' pick display*/
 .players-pick {
     display: flex;
     flex-direction: row;
+    /* The space between the items*/
     gap: 4rem;
-    justify-content: center;
     /* Center the picks horizontally */
-    justify-items: center;
+    justify-content: center;
     /* Center the picks vertically */
+    justify-items: center;
     width: 100%;
 }
 
-
+/* The user's pick */
 .user-pick {
+    /* Rotates the element 90 degrees clockwise around the z-axis, 180 degrees around the y-axis
+    to flip it horisontally
+    rotate(): https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate
+    rotateY(): https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotateY*/
     transform: rotate(90deg) rotateY(180deg);
     font-size: 3rem;
+    /* Aligns itself at the bottom of the container*/
     align-self: flex-end;
-    text-align: start;
 }
 
+/* The computer's pick */
 .computer-pick {
+    /* Rotates the element 90 degrees counter clockwise */
     transform: rotate(-90deg);
     font-size: 3rem;
+    /* Aligns itself at the bottom of the container*/
     align-self: flex-end;
-    text-align: start;
 }
 
+/* The scores area */
 .scores {
     display: flex;
     flex-direction: row;
@@ -268,44 +321,53 @@ form {
     width: 100%;
 }
 
+/* User's score */
 .user-score {
     width: 45%;
     align-self: flex-start;
+    /* Aligns the text to the left */
     text-align: start;
     font-size: 1rem;
 }
 
+/* Computer's score */
 .computer-score {
     width: 45%;
     align-self: flex-start;
+    /* Aligns the text to the right */
     text-align: end;
     font-size: 1rem;
 }
 
+/* user's score counter shows abit bigger, bold and in green */
 .user-counter {
     color: #00D26A;
     font-weight: bold;
     font-size: 1.1rem;
 }
 
+/* computer's score counter shows abit bigger, bold and in red */
 .pc-counter {
     color: rgb(245, 19, 60);
     font-weight: bold;
     font-size: 1.1rem;
 }
 
+/* The style related to the round result with the class .text-result */
 .text-result {
+    /* It's hidden by default and becomes visible at the end of each round with JS */
+    display: none;
     padding: 2rem 0 0;
     font-size: 1rem;
     letter-spacing: 0.06rem;
     line-height: 1.5rem;
     font-weight: bold;
-    display: none;
     text-align: center;
 }
 
-/*Controls area style*/
+/* Controls area style */
 .controls-area {
+    /* It's hidden by default and becomes visible after login phase by JS.*/
     display: none;
     flex-direction: column;
     align-items: center;
@@ -314,6 +376,7 @@ form {
     width: 100%;
 }
 
+/* For the title of the controls-area section */
 #control-area-heading {
     margin-top: 1.5rem;
     padding: 2rem 2rem 3rem 2rem;
@@ -322,6 +385,8 @@ form {
     line-height: 1.5rem;
 }
 
+/* THe control buttons container, show in 3 rows and 5 columns, 
+each row and column will take up one fraction of the remaining space of the grid container */
 .control-btn {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -329,6 +394,7 @@ form {
     gap: 0.5rem;
 }
 
+/* The control buttons */
 .btn {
     width: 2.5rem;
     height: 2.5rem;
@@ -340,10 +406,13 @@ form {
     box-shadow: -2px 2px 5px rgb(79, 79, 91);
 }
 
+/* Each button when the gain focus by clicking or tab */
 .btn:focus {
     border: 1px solid #D67D00;
 }
 
+/* Placement of every individual button in the grid container 
+grid-area: row-start / column-start / row-end / column-end */
 #rock {
     grid-area: 1 / 2 / 2 / 3;
 }
@@ -364,7 +433,11 @@ form {
     grid-area: 2 / 5 / 2 / 5;
 }
 
+/*------THe final result phase------*/
+
+/* The final result display box */
 .final-result-display {
+    /* It gains visibility after the 7:th round is completed */
     display: none;
     background-color: white;
     position: absolute;
@@ -379,6 +452,7 @@ form {
     text-align: center;
 }
 
+/* The yes-no buttons' container with the id #continue-quit */
 #continue-quit {
     display: flex;
     flex-wrap: wrap;
@@ -387,6 +461,7 @@ form {
     margin-top: 1rem;
 }
 
+/* The yes-no buttons*/
 .yes-no-buttons {
     width: 3.3rem;
     height: 3.3rem;
@@ -397,20 +472,27 @@ form {
     box-shadow: -2px 2px 5px rgb(79, 79, 91);
 }
 
-/* 404 error page*/
+/*--------The 404 error page--------*/
+
+/* the warning icon container at the top right of the page header*/
 .warning-sign {
     display: flex;
-    justify-content: center; /* Horizontally centers the icon */
-    align-items: center;     /* Vertically centers the icon */
-    height: 40%;           /* Example height of the div */
-    width: 12%;            /* Example width of the div */
+    /* Horizontally centers the icon */
+    justify-content: center;
+    /* Vertically centers the icon */
+    align-items: center;
+    height: 40%;
+    width: 12%;
     margin-right: 1.5rem;
 }
 
+/* The warning sign icon (!) */
 .warning-sign i {
-    font-size: 2.3rem;          
-    color: #D67D00          
+    font-size: 2.3rem;
+    color: #D67D00
 }
+
+/* The error page section */
 .error-page {
     background-color: white;
     position: absolute;
@@ -425,13 +507,14 @@ form {
     text-align: center;
 }
 
+/* The link back to home page */
 .error-page a {
     text-decoration: none;
     color: #00D26A;
     cursor: pointer;
 }
 
-/* Footer */
+/*-------Footer--------*/
 footer {
     display: block;
     width: 100%;
@@ -439,20 +522,24 @@ footer {
     background-color: #e2f5e2;
 }
 
+/* The unordered list with id #contact-ways */
 #contact-ways {
-    text-align: center;
-    padding: 10px 0;
     display: flex;
     justify-content: space-evenly;
+    text-align: center;
+    padding: 10px 0;
+    /* To remove the default style of the list */
     list-style-type: none;
 }
 
+/* The contact ways icons from font awesome */
 #contact-ways i {
     font-size: 170%;
     padding: 5%;
     color: #00D26A;
 }
 
+/* The icons when they gain focus by clicking or tab key */
 #contact-ways i:focus {
     color: #FFC83D;
 }
@@ -460,49 +547,58 @@ footer {
 /* Media query: full screen mobile and larger (667px and up)*/
 @media screen and (min-width: 667px) {
 
-    /*Header style*/
-    main {
-        min-height: 401px;
-
-    }
-
+    /* The Header*/
     header {
         width: 100%;
     }
 
+    /* The logo image */
     .logo {
         width: 5%;
         margin-left: 2rem;
     }
 
+    /* The main */
+    main {
+        min-height: 401px;
+    }
+
+    /* The Start section */
     .start-game {
         margin-top: 5.4rem;
         padding: 3rem 1rem 1rem;
         line-height: 0.5rem;
     }
 
+    /* The form submit (PLAY!) button */
     .start-btn {
         margin-top: 1rem;
     }
 
+    /* Result display area section */
     .result-display-area {
         min-width: 393px;
         margin-top: 6.25rem;
         padding-top: 0;
     }
 
+    /* The style related to round result with the class .text-result */
     .text-result {
         padding-top: 5rem 0 3rem 0;
     }
 
+    /* Controls area style */
     .controls-area {
         padding: 0 3rem 2rem;
     }
 
+    /* Controls area title */
     #control-area-heading {
         padding-bottom: 1.25rem;
     }
 
+    /* To show the control buttons in one row next to each other 
+    for full screen mobile screens */
     .control-btn {
         grid-template-rows: repeat(1, 1fr);
         gap: 1.5rem;
@@ -530,19 +626,22 @@ footer {
 
 }
 
-/* Media query: tablets and larger (768px and up)*/
+/* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
 
+    /* To avoid the footer from jumping up and down during game phase */
     main {
         min-height: 615px;
     }
 
+    /* login phase, the start-game section */
     .start-game {
         margin-top: 4rem;
         padding-top: 6rem;
     }
 
-    .user-pick, .computer-pick {
+    .user-pick,
+    .computer-pick {
         font-size: 3.75rem;
     }
 
@@ -553,12 +652,13 @@ footer {
     .text-result {
         padding-top: 2rem;
     }
-    
+
     #control-area-heading {
         padding-top: 2rem;
-        
+
     }
 
+    /* Change the control buttons back to pentagon formation to better use the free space */
     .control-btn {
         margin-top: 1.5rem;
         grid-template-columns: repeat(5, 1fr);
@@ -594,9 +694,10 @@ footer {
 
 }
 
-/* Media query: tablets and larger (992px and up)*/
+/* Media query: tablets and larger (992px and up) */
 @media screen and (min-width: 992px) {
 
+    /* To fix the page horisontally and stop it from scrolling horisontally for smoother user experience. */
     * {
         overflow-x: hidden;
     }
@@ -604,11 +705,18 @@ footer {
     header {
         min-width: 100%;
     }
-   
+
+    /* To stop the footer from jumping up and down during the game phase */
     main {
         min-height: 665px;
     }
 
+    /* The rules button */
+    .rules {
+        font-size: 2.4rem;
+    }
+
+    /* The login phase, start-game section's title */
     .start-game h2 {
         min-height: 1.5rem;
         padding-top: 0.5rem;
@@ -619,57 +727,52 @@ footer {
         padding-top: 2rem;
     }
 
+    /* Defining height for label to avoid overflow */
     label {
         height: 30px;
     }
 
-    .rules {
-        font-size: 2.4rem;
-    }
-
-    .warning-sign {
-        max-width: 60px;
-        max-height: 60px;
-    }
-
+    /* Players' pick section */
     .players-pick {
         padding-bottom: 1rem;
     }
 
+    /* To stop the scores section change width during the game phase */
     .scores {
         max-width: 328px;
     }
 
+    /* Reducing the gap due to overflow issue */
     .control-btn {
         gap: 0;
     }
 
+    /* Control buttons */
     .btn {
         width: 3.2rem;
         height: 3.2rem;
         margin: 0.3rem;
     }
 
+    /* the rules button hover effect */
     .rules:hover {
         color: #FFC83D;
         cursor: pointer;
     }
 
-    /* Class to disable hover effect */
+    /* Class to disable hover effect, it will be added and removed by js when needed */
     .no-hover:hover {
         color: #00D26A;
         cursor: default;
     }
 
-    #contact-ways i {
-        width: 2rem;
-    }
-
+    /* Close icon in the rules box header, hover effect*/
     #close-rules:hover {
         color: #FFC83D;
         cursor: pointer;
     }
 
+    /* The submit (PLAY!) button hover effect */
     .start-btn:hover {
         border: 2px solid #00D26A;
         background-color: #00D26A;
@@ -677,18 +780,27 @@ footer {
         cursor: pointer;
     }
 
-    .btn:hover {
-        border: 1px solid #FFC83D;
-        cursor: pointer;
-    }
-
-    #contact-ways i:hover {
-        color: #FFC83D;
-        cursor: pointer;
-    }
-
+    /* The control buttons and ye-no buttons hover effect */
+    .btn:hover,
     .yes-no-buttons:hover {
         border: 1px solid #FFC83D;
+        cursor: pointer;
+    }
+
+    /* the warning icon container at the top right of the 404 error page header*/
+    .warning-sign {
+        max-width: 60px;
+        max-height: 60px;
+    }
+
+    /* Added width to the footer icons to avoid the overflow */
+    #contact-ways i {
+        width: 2rem;
+    }
+
+    /* The footer icons hover effect*/
+    #contact-ways i:hover {
+        color: #FFC83D;
         cursor: pointer;
     }
 }

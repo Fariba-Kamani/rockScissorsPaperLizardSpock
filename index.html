@@ -18,20 +18,22 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <!--Title-->
+    <!-- Title -->
     <title>Rock Scissors Paper Lizard Spock</title>
 </head>
 
 <body>
-    <!--Header-->
+    <!-- Header -->
     <header>
         <img class="The websites logo" src="assets/images/logo.webp" alt="Logo">
         <h1 class="heading"> Rock, Scissors, Paper, Lizard, Spock</h1>
         <button class="rules" data-type="rules" aria-label="Opens the rules window"><i
-                    class="fa-regular fa-circle-question"></i></button>
+                class="fa-regular fa-circle-question"></i></button>
     </header>
+    <!-- Main content -->
     <main>
-        <!--login section-->
+        <!-- login pahse -->
+        <!-- start game section -->
         <section class="start-game">
             <div>
                 <h2>Best of seven rounds</h2>
@@ -46,9 +48,11 @@
                 </form>
             </div>
         </section>
+        <!-- The game phase -->
         <div class="section-container">
-            <!--Result display area-->
+            <!-- Result display area -->
             <section class="result-display-area">
+                <!-- The players' pick container -->
                 <div class="players-pick">
                     <span class="user-pick" id="user-pick" aria-label="Player's pick">
                         ✊
@@ -57,6 +61,7 @@
                         ✊
                     </span>
                 </div>
+                <!-- The players' scores container -->
                 <div class="scores">
                     <div class="user-score">
                         <p> <span id="player"></span>
@@ -72,11 +77,12 @@
                         </p>
                     </div>
                 </div>
+                <!-- The round's result container -->
                 <div class="text-result" id="text-result">
                     User wins!
                 </div>
             </section>
-            <!--Control buttons area-->
+            <!-- Control buttons area section -->
             <section class="controls-area">
                 <h2 id="control-area-heading">Round <span id="round-count">1</span><br>Choose your weapon!</h2>
                 <div class="control-btn">
@@ -87,6 +93,7 @@
                     <button class="btn" id="spock" data-type="🖖" aria-label="spock">🖖</button>
                 </div>
             </section>
+            <!-- Final result display section -->
             <section class="final-result-display">
                 <div>
                     <h2 id="result-report">Final result</h2>
@@ -97,12 +104,15 @@
                     </div>
                 </div>
             </section>
+            <!-- Rules display section -->
             <section class="rules-explain" id="rule-box">
+                <!-- The rules box header -->
                 <div id="rules-header">
                     <h2>Rules</h2>
                     <div id="close-rules" tabindex="0" aria-label="Closes the rules window"><i
                             class="fa-regular fa-rectangle-xmark"></i></div>
                 </div>
+                <!-- The rules box content -->
                 <div id="rules-text">
                     <p>
                         <ul>
@@ -122,11 +132,13 @@
                     </p>
                     <div id="bottom"></div>
                 </div>
+                <!-- The scroll down arrow, links to the bottom of rules box -->
                 <a href="#bottom" class="scroll-down-arrow">↓</a>
             </section>
         </div>
 
     </main>
+    <!-- The footer -->
     <footer>
         <ul id="contact-ways">
             <li><a href="https://www.facebook.com/" target="_blank" rel="noopener"
