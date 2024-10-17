@@ -59,8 +59,8 @@ The purpose of creating this game is to entertain users by providing a fun and c
 ### User Stories
 
 #### First Time Visitor Goals
-* As a first-time visitor, I want to understand the rules and mechanics of the game quickly, so that I can start playing without confusion.
-* As a first-time visitor, I want an intitive and engaging interface that immediately explains what to do, so I can begin playing right away.
+* As a first-time visitor, I want to understand the mechanics of the game quickly, so that I can start playing without confusion.
+* As a first-time visitor, I want an intuitive and engaging interface that immediately explains what to do, so I can begin playing right away.
 * As a first-time visitor, I want to have access to the rules and tutorials at any time, so I can confidently make my choices during the game.
 * As a first-time visitor, I want the interface to be responsive and compatible with my device.
 
