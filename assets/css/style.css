@@ -296,9 +296,7 @@ form {
 /* The user's pick */
 .user-pick {
     /* Rotates the element 90 degrees clockwise around the z-axis, 180 degrees around the y-axis
-    to flip it horisontally
-    rotate(): https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate
-    rotateY(): https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotateY*/
+    to flip it horisontally*/
     transform: rotate(90deg) rotateY(180deg);
     font-size: 3rem;
     /* Aligns itself at the bottom of the container*/

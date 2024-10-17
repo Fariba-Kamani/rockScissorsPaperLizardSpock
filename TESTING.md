@@ -23,6 +23,7 @@ Visit the deployed site: [Rock, Scissors, Paper, Lizard, Spock](https://fariba-k
     * [The Login Phase](#the-login-phase)
     * [The Game Phase](#the-game-phase)
     * [The final result phase](#the-final-result-phase)
+    * [The 404 Error Page](#the-404-error-page)
 
 Testing was ongoing throughout the entire project development. Chrome DevTools was used while building to find and resolve any issues that arose and to ensure that everything was working correctly as expected. The same tools were also employed to verify that the project is responsive, visually appealing, and functions as intended on all standard screen sizes. 
 The website has been tested on the following browsers: Chrome, Microsoft Edge, and Safari. Additionally, I tested the project on a VivoBook Asus laptop, iPhone 13, and iPhone 14. Furthermore, a few friends conducted additional testing on both Android and iOS mobile devices. 
@@ -101,7 +102,7 @@ Besides the Chrome DevTools, I also used [Responsive Web Design Checker](https:/
 
 #### **The Full Testing**
 
-##### The Common Features
+##### **The Common Features**
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
@@ -121,7 +122,7 @@ Besides the Chrome DevTools, I also used [Responsive Web Design Checker](https:/
 | The footer link icons | To open in a seperate tab | Clicked on each icon | They all direct to their related links openning in a new tab | Pass |
 | The footer icons hover effect | To turn yellow when hovered over for desktops | Hovered over all the footer icons | They turn yellow when hovered over | Pass |
 
-##### The Login Phase
+##### **The Login Phase**
 
  | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
@@ -131,7 +132,7 @@ Besides the Chrome DevTools, I also used [Responsive Web Design Checker](https:/
 | The PLAY! button |  |  |  | Pass |
 | The form validation error message |  |  |  | Pass |
 
-##### The Game Phase
+##### **The Game Phase**
 
  | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
@@ -148,11 +149,19 @@ Besides the Chrome DevTools, I also used [Responsive Web Design Checker](https:/
 | The control buttons |  |  |  | Pass |
 | The control buttons hover effect |  |  |  | Pass |
 
-##### The Final Result Phase
+##### **The Final Result Phase**
 
  | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-|  |  |  |  | Pass |
-|  |  |  |  | Pass |
-|  |  |  |  | Pass |
-|  |  |  |  | Pass |
+| The final result display |  |  |  | Pass |
+| The thumb up (yes) button |  |  |  | Pass |
+| The thumb down (no) button |  |  |  | Pass |
+| The YES/NO buttons hover effect |  |  |  | Pass |
+
+##### **The 404 Error Page**
+
+  | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| The green home icon link on top right side of the header |  |  |  | Pass |
+| The 404 error page message |  |  |  | Pass |
+| The back to home page link |  |  |  | Pass |

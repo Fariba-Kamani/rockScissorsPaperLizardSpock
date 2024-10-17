@@ -1,11 +1,4 @@
 /* jshint esversion: 6 */
-/* Love maths/ Tidying up: 
-https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LM101+3/courseware/2d651bf3f23e48aeb9b9218871912b2e/04d7bdb98119413991e2a31e9a291970/
-Loading events: 
-https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+1/courseware/0a4bf408d10c4149bb686457ac11edf6/fe180c06af614d2f86e32957ae17a859/
-Adding event listeners: 
-https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+1/courseware/0a4bf408d10c4149bb686457ac11edf6/fe180c06af614d2f86e32957ae17a859/
-*/
 /* This eventlistener clears the text input field in the login form, 
  and sets its focus with a ready cursor */
 document.addEventListener("DOMContentLoaded", function () {
@@ -13,8 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('user-name').value = "";
 });
 
-/*This event listener select the first form element in the document: 
-  https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector,
+/*This event listener select the first form element in the document,
   and listens for submit, prevents the default submit,
   takes care of the text input validation
   by providing the user with an error message in case of invalid submission,
@@ -23,37 +15,26 @@ document.addEventListener("DOMContentLoaded", function () {
 document.querySelector('form').addEventListener('submit', function (event) {
 
     // Prevents default submission
-    /* Form submission: 
-    https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+1/courseware/0a4bf408d10c4149bb686457ac11edf6/16d62f1111064f5cb6a64582da96a41b/*/
     event.preventDefault();
 
     // Gets the text input value
-    /* Getting form values:
-    https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+1/courseware/0a4bf408d10c4149bb686457ac11edf6/16d62f1111064f5cb6a64582da96a41b/*/
     let userName = document.getElementById("user-name").value;
 
     // Text input validation
-    /* .includes(' ')checks if there is space in the userName: 
-    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes*/
+    // .includes(' ') checks if there is space in the userName. 
     if (userName.length > 12 || userName === "" || userName.includes(' ')) {
 
         // Displays the error message underneath the text input.
-        /* Changing existing elements: 
-        https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+1/courseware/0a4bf408d10c4149bb686457ac11edf6/37e3becd93804fdf8bf586523f56ead5/*/
         document.getElementById('error-message').style.display = 'block';
 
-        /* Hides error message after 3000 milliseconds = 3 seconds. 
-        https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout
-        */
+        // Hides error message after 3000 milliseconds = 3 seconds. 
         setTimeout(function () {
             document.getElementById('error-message').style.display = 'none';
         }, 3000);
         return;
     }
 
-    /* Hides all elements with class 'start-game'; the login phase.
-    https://www.tutorialstonight.com/javascript-queryselectorall-foreach?utm_content=cmp-true
-    */
+    // Hides all elements with class 'start-game'; the login phase.
     document.querySelectorAll(".start-game").forEach(element => {
         element.style.display = "none";
     });
@@ -102,16 +83,13 @@ function runGame() {
     }
 }
 
+/**
+ * This switch-case sends the data-type attribute of the clicked control button
+ * to the showUserChoice function to be displayed
+ * and calls the showComputersChoice function as well.
+ */
 function userPickInvestigator() {
     let playerChoice = this.getAttribute('data-type');
-
-    /* This switch-case sends the data-type attribute of the clicked control button
-    to the showUserChoice function to be displayed
-    and calls the showComputersChoice function as well.*/
-    /* Switch-case statement: 
-    https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+1/courseware/73e9c0413ead4a21b389e33c77706102/ba023cfa11c04351a3758b21ee4418fe/?child=last
-    Love Maths/ creating event listeners:
-    https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LM101+3/courseware/2d651bf3f23e48aeb9b9218871912b2e/78f3c10a937c4fe09640c7c0098d16bd/*/
     switch (this.getAttribute('data-type')) {
         case '✊':
             showUsersChoice(playerChoice);
@@ -140,8 +118,6 @@ function userPickInvestigator() {
  * This function sets the user's pick of weapon as the innerHTML of #user-pick 
  */
 function showUsersChoice(playerChoice) {
-    /* Changing existing elements: 
-     https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+1/courseware/0a4bf408d10c4149bb686457ac11edf6/37e3becd93804fdf8bf586523f56ead5/*/
     document.getElementById('user-pick').innerHTML = playerChoice;
 }
 
@@ -152,12 +128,7 @@ function showUsersChoice(playerChoice) {
  */
 function showComputersChoice() {
     let choices = ['✊', '✋', '✌️', '🦎', '🖖'];
-
-    // https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+1/courseware/73e9c0413ead4a21b389e33c77706102/48be8fcda02741f4b784016d5894101c/
     let index = Math.floor(Math.random() * choices.length);
-
-    /* Changing existing elements: 
-    https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+1/courseware/0a4bf408d10c4149bb686457ac11edf6/37e3becd93804fdf8bf586523f56ead5/*/
     document.getElementById('computer-pick').innerHTML = choices[index];
     showResult();
 }
@@ -402,10 +373,6 @@ function gameRules() {
         // Alerts the user that the rules can't be shown during result display
         alert("The rules box can't be opened during the rounds' result display.");
 
-        /*classList:
-        https://www.w3schools.com/jsref/prop_element_classlist.asp,
-        https://www.javascripttutorial.net/javascript-dom/javascript-classlist/
-        */
         // Removes hover effect by adding a class that disables it.
         rulesElement.classList.add("no-hover");
 
@@ -432,17 +399,16 @@ function gameRules() {
         });
 
 
-        /* (1)This event listener listens for click action on the close icon in the rules box header.
+        /* This event listener listens for click action on the close icon in the rules box header.
         Passing an anonymous function to the event listener, 
-        to be able to pass the flag as parameter to the event handler.
-        https://plainenglish.io/blog/passing-arguments-to-event-listeners-in-javascript-1a81bc397ecb*/
+        to be able to pass the flag as parameter to the event handler.*/
         document.querySelector("#close-rules").addEventListener('click', function () {
             closeRules(flag);
         });
 
-        // (2) This event listener listens for keydown action on the close icon in the rules box header.
+        // This event listener listens for keydown action on the close icon in the rules box header.
         document.querySelector("#close-rules").addEventListener("keydown", function (event) {
-            // (3) Checks if the pressed key is "Enter", calls the closeRules function.
+            // Checks if the pressed key is "Enter", calls the closeRules function.
             if (event.key === "Enter") {
                 closeRules(flag);
             }
@@ -465,15 +431,10 @@ function gameRules() {
         controlsArea.forEach(element => {
             element.style.display = "none";
         });
-
-        //(1)
         document.querySelector("#close-rules").addEventListener('click', function () {
             closeRules(flag);
         });
-
-        // (2)
         document.querySelector("#close-rules").addEventListener("keydown", function (event) {
-            // (3)
             if (event.key === "Enter") {
                 closeRules(flag);
             }
@@ -490,9 +451,7 @@ function gameRules() {
  */
 function closeRules(flag) {
     /*Array.form() converts the NodeList (returned by querySelectorAll()) into a proper array. 
-    This allows the use of array methods like .every().
-    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from
-    */
+    This allows the use of array methods like .every().*/
     let finalResultDisplay = document.querySelectorAll(".final-result-display");
     let isVisible = Array.from(finalResultDisplay).every(element => element.style.display === "block");
 
@@ -616,9 +575,7 @@ function quitContinue() {
             document.getElementById('user-pick').innerHTML = "✊";
             break;
         case 'no':
-            /* Reloads the page or current document.
-            https://developer.mozilla.org/en-US/docs/Web/API/Location/reload
-            */
+            // Reloads the page or current document.
             location.reload();
             break;
     }

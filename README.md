@@ -4,7 +4,7 @@
 
 Visit the deployed site: [Rock, Scissors, Paper, Lizard, Spock](https://fariba-kamani.github.io/rockScissorsPaperLizardSpock/)
 
-Rock, Scissors, Paper, Lizard, Spock is an expansion of Rock, Paper, Scissors with the additional hand signs of Lizard and Spock. It was first invented by Sam Kass, an internet pioneer and blogger. It has also been featured in an episode of the TV show, The Big Bang Theory [1](https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock), [2](https://bigbangtheory.fandom.com/wiki/Sam_Kass).
+Rock, Scissors, Paper, Lizard, Spock is an expansion of Rock, Paper, Scissors with the additional hand signs of Lizard and Spock. It was first invented by Sam Kass, an internet pioneer and blogger. It has also been featured in an episode of the TV show, The Big Bang Theory.
 
 This website is a game application based on the mentioned expansion, in which the player competes against the computer in seven rounds before the game decides the winner. Emojis have been used to showcase the hand signs in the game and are called weapons. ‘✊’ (raised fist) for rock, ‘✋’ (raised hand) for paper, ‘✌️’ (peace) for scissors, ‘🦎’ for lizard, and ‘🖖’ (Vulcan salute) for Spock are available for the player to choose from in the form of five buttons during each round. At first, the hand sign ‘🤌’ (pinched fingers) was used for lizard, but during the game development, I decided that ‘🦎’ for lizard is more intuitive and recognizable. Additionally, it brings another layer of playfulness to the game design.
 
@@ -99,7 +99,7 @@ For this project, I decided to host the Google Fonts locally to eliminate the ne
 
 ![Cabin Font Example](assets/images/cabin-font-example.png)
 
-* For the body, I have used the font Cabin. This font is a modern take on early 20th-century modernist sans-serif fonts; it is simple and readable but includes more modern curves and a unique style. Cabin has been featured in many game apps due to its legibility, approachable aesthetic, and web and mobile friendliness, which also influenced my decision to use it for my project. [3](https://fonts.google.com/specimen/Cabin/about), [4](https://github.com/impallari/Cabin)
+* For the body, I have used the font Cabin. This font is a modern take on early 20th-century modernist sans-serif fonts; it is simple and readable but includes more modern curves and a unique style. Cabin has been featured in many game apps due to its legibility, approachable aesthetic, and web and mobile friendliness, which also influenced my decision to use it for my project.
 
 ![Cabin Sketch Font Example](assets/images/cabin-sketch-google-font.png)
 
@@ -146,9 +146,8 @@ Both html pages on the website are responsive on all devices and have the follow
 
     ![The title](assets/images/the-title.png)
 
-  * The rules button, shown with a question mark icon on the right-hand side of the header and Added hover effect for desktop screens, does not appear on the 404 error page. Instead, a yellow exclamation mark is displayed.
-
-    ![The rules button](assets/images/rules-button.png) ![The rules button hover effect](assets/images/rules-button-hover.png) ![The 404 warning sign](assets/images/404-warning-sign.png)
+  * The rules button, shown with a question mark icon on the right-hand side of the header and Added hover effect for desktop screens, does not appear on the 404 error page. Instead, a green home icon appears to link back to home page.
+    ![The rules button](assets/images/rules-button.png) ![The rules button hover effect](assets/images/rules-button-hover.png) ![The 404 error page home icon](assets/images/404-error-page-home-link-icon.png) ![The 404 error page home icon hover effect](assets/images/home-icon-hover.png)
 
 * The rules box; opens with the rules button
 
@@ -275,13 +274,17 @@ Both html pages on the website are responsive on all devices and have the follow
 
 ![Responsive 404 Error Page](assets/images/responsive-404-error-page.png)
 
- * The 404 error page message
+* The green home icon link on top right side of the header
+
+  ![The green home icon link](assets/images/404-error-page-home-link-icon.png)
+
+* The 404 error page message
   
   ![The 404 error page message](assets/images/error-page-message.png)
 
 * The back to home page link
 
-  ![The back to home page link](assets/images/link-back-to-home-page.png)
+  ![The back to home page link](assets/images/404-error-page-link.png)
 
 
 #### Future Implementations
@@ -290,7 +293,7 @@ In future implementations:
 
 1. I would like to expand the game so that users can choose between competing against the computer or other players.
 
-2. I would like to add another difficulty level to the game for when the user chooses to compete against the computer. The options will be ‘Casual’ and ‘Challenging’, and the user will be able to select the difficulty during the login phase. The ‘Casual’ difficulty level will function as the game currently does, while the ‘Challenging’ difficulty level will have the computer’s picks for each round based on an analysis of the user’s previous choices.
+2. I would like to add a high score feature to the game that tracks the number of consecutive games won without losing or tying. The longer the winning streak, the higher the score. A high score would represent the longest streak a player has achieved.
 
 
 ### Accessibility
@@ -332,13 +335,25 @@ HTML, CSS, and JavaScript
 
 * [Favicon generator](https://realfavicongenerator.net/) - To create favicon.
 
+* [Font Awesome](https://fontawesome.com/) - for used font awesome icons.
+
 * [Am I Responsive?](http://ami.responsivedesign.is/) - To show the website image on a range of devices.
+
+* [Responsive Web Design Checker](https://responsivedesignchecker.com/) - to assess the website's responsiveness
+
+* [WAVE](https://wave.webaim.org/) - a web accessibility evaluation tool
 
 * [Image Resizer.com](https://imageresizer.com/) - To resize and compress images. 
 
 * [FreeConvert](https://www.freeconvert.com/jpg-to-webp) - To convert the logo image to webp format.
  
 * [Microsoft Bing Copilot Tools](https://www.bing.com/chat) - An AI chat that I used to check the spell and grammar of my website and README.md file.
+
+* [JSHint](https://jshint.com/) - to validate the JavaScript code.
+
+* [W3C validator](https://validator.w3.org/) - to validate the HTML code.
+
+* [Jigsaw validator](https://jigsaw.w3.org/css-validator/) - to validate the css code.
 - - -
 
 ## Deployment & Local Development
@@ -394,9 +409,9 @@ Please refer to [TESTING.md](TESTING.md) file for all testing carried out.
 
   * **The rules button and the eventListener**
 
-  Opening the rules box during the display of the final result caused some unexpected behavior. The program would make some sections visible to the user that were supposed to be hidden at the wrong time and phase in the course of the game. Initially, I had used two event listeners for capturing the "click" on the rules button to track if the user wanted to access the rules box before or after login, to display the right phase after the user closed the rules box. However, this approach proved problematic as the code development progressed, causing the program to act unexpectedly in certain scenarios.
+    Opening the rules box during the display of the final result caused some unexpected behavior. The program would make some sections visible to the user that were supposed to be hidden at the wrong time and phase in the course of the game. Initially, I had used two event listeners for capturing the "click" on the rules button to track if the user wanted to access the rules box before or after login, to display the right phase after the user closed the rules box. However, this approach proved problematic as the code development progressed, causing the program to act unexpectedly in certain scenarios.
 
-  To resolve this, I used only one event listener and included an if-statement in the related event handler to identify the phase or part of the game from which the user had opened the rules box. This allowed me to provide the correct feedback and ensure the user could continue from where they left off to check the rules.
+    To resolve this, I used only one event listener and included an if-statement in the related event handler to identify the phase or part of the game from which the user had opened the rules box. This allowed me to provide the correct feedback and ensure the user could continue from where they left off to check the rules.
 
 ### Known Bugs
 
@@ -408,13 +423,62 @@ Please refer to [TESTING.md](TESTING.md) file for all testing carried out.
 
 ### Code Used
 
-Throughout the entire project development, I utilized the Code Institute course materials for HTML, CSS, and JavaScript. I followed the tutorials for the Love Running and Love Math walkthrough projects to set up and start my project properly. I also used tutor support to solve the overflow issue caused by content extending beyond the visible boundaries of its container or the browser's visible area (viewport).
+Throughout the entire project development, I utilized the Code Institute course materials for HTML, CSS, and JavaScript. I followed the tutorials for the Love Running and Love Maths walkthrough projects to set up and start my project properly. The links from Code Institute that I relied on through my project are as follow:
+
+  * [Code Institute, Love Maths, Tidying up](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LM101+3/courseware/2d651bf3f23e48aeb9b9218871912b2e/04d7bdb98119413991e2a31e9a291970/) - used for clearing the text input field in the login form, 
+  and setting its focus with a ready cursor.
+
+  * [Code Institute, Love Maths, Creating event listeners](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LM101+3/courseware/2d651bf3f23e48aeb9b9218871912b2e/78f3c10a937c4fe09640c7c0098d16bd/)
+
+  * [Code Institute, Loading events](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+1/courseware/0a4bf408d10c4149bb686457ac11edf6/fe180c06af614d2f86e32957ae17a859/) and [Code Institute,Adding event listeners](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+1/courseware/0a4bf408d10c4149bb686457ac11edf6/fe180c06af614d2f86e32957ae17a859/) - used to add event listeners such as: `document.addEventListener("DOMContentLoaded", function () {});`
+
+  * [Code Institute, form submission](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+1/courseware/0a4bf408d10c4149bb686457ac11edf6/16d62f1111064f5cb6a64582da96a41b/)
+
+  * [Code Institute, Getting form values](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+1/courseware/0a4bf408d10c4149bb686457ac11edf6/16d62f1111064f5cb6a64582da96a41b/)
+
+  * [Code Institute, Changing existing elements](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+1/courseware/0a4bf408d10c4149bb686457ac11edf6/37e3becd93804fdf8bf586523f56ead5/) - used for situations such as `document.getElementById('error-message').style.display = 'block';`
+
+  * [Code Institute, Switch-case statement](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+1/courseware/73e9c0413ead4a21b389e33c77706102/ba023cfa11c04351a3758b21ee4418fe/?child=last)
+
+  * [Code Institute, built in functions ](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+1/courseware/73e9c0413ead4a21b389e33c77706102/48be8fcda02741f4b784016d5894101c/) - such as `Math.random()`
+
+I also used tutor support to solve the overflow issue caused by content extending beyond the visible boundaries of its container or the browser's visible area (viewport).
+
+Additionally, I used online free resources such as [Mozilla Developer](https://developer.mozilla.org/), [TutorialsTonight](https://www.tutorialstonight.com/), [JavaScript Tutorial](https://www.javascripttutorial.net/), and [Plain English](https://plainenglish.io/) to complement the Code Institute materials during the development of the project.
+
+  * [Mozilla Developer, querySelector](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector) - for learning about and using querySelector in my code.
+  * [Mozilla Developer, includes() method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes) - used in text input validation section to check if the input string includes any spaces.
+  * [Mozilla Developer, setTimeout() method](https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout) - used for setting a timer to hide and show elements, for example, during the round's result display.
+  * [Mozilla Developer,Array.form()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from) - used to convert the NodeList (returned by querySelectorAll()) into a proper array.
+  * [Mozilla Developer, reload()](https://developer.mozilla.org/en-US/docs/Web/API/Location/reload) - used for reloading the page in quitContinue() function, when the user wants to quit the game
+  * [Mozilla Developer, rotate()](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate) and [Mozilla Developer,rotateY()](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotateY) - used in css for rotating the .user-pick and .computer-pick around the z-axis and y-axis.
+  * [TutorialsTonight, JavaScript forEach querySelectorAll](https://www.tutorialstonight.com/javascript-queryselectorall-foreach#foreach) - used for manipulating all elements within a specific class; 
+  ```javascript 
+  document.querySelectorAll(".final-result-display").forEach(element => { 
+    element.style.display = "none";
+  });
+  ```
+  * [JavaScript Tutorial, classList](https://www.javascripttutorial.net/javascript-dom/javascript-classlist/) - to work with css classes of an element.
+  * [Plain English, passing argument to event listeners](https://plainenglish.io/blog/passing-arguments-to-event-listeners-in-javascript-1a81bc397ecb)
+
 
 ### Content
 
-For documentation and creating my README.md file I have taken inspiration from the sample README.md file that my mentor shared with me [The Quiz Arms](https://github.com/kera-cudmore/TheQuizArms/blob/main/README.md) as well as the README.md sample available on the course for Portfolio 1: Assessments Guide Preview.
+I took inspiration from this YouTube tutorial, [Build JavaScript ROCK PAPER SCISSORS in 18 minutes! 👊](https://youtu.be/3uKdQx-SZ5A?si=FvG8n2t8TIvopE3C), to use emojis for the game's hand signs.
 
-All the imagery I’ve used, along with the corresponding links, is provided in [Imagery](#imagery) section.
+[Font Awesome](https://fontawesome.com/) - was used for all icons used in the project.
+
+For documentation and creating my README.md file I have taken inspiration from the sample README.md file that my mentor shared with me [The Quiz Arms](https://github.com/kera-cudmore/TheQuizArms/blob/main/README.md).
+
+https://www.pikpng.com/downpngs/Jhxmoi_pierre-ciseaux-feuille-lzard-spock-aligned-rock-paper/ - where I downloaded the logo image.
+
+I relied on The Big Bang Theory Wiki for the README introduction about the game and how it was invented using the following links:
+  * https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock 
+  * https://bigbangtheory.fandom.com/wiki/Sam_Kass 
+
+[Google Fonts](https://fonts.google.com/specimen/Cabin/about) and [Github](https://github.com/impallari/Cabin) were used to explain and describe the chosen Google fonts for the project in the [typography](#typography) section.
+
+All other technologies used during the development of this project are mentioned and credited in the [technologies used](#technologies-used) section.
 
 ### Acknowledgments
 
