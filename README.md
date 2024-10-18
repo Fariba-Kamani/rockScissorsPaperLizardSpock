@@ -358,7 +358,7 @@ HTML, CSS, and JavaScript
 
 * [W3C validator](https://validator.w3.org/) - to validate the HTML code.
 
-* [Jigsaw validator](https://jigsaw.w3.org/css-validator/) - to validate the css code.
+* [Jigsaw validator](https://jigsaw.w3.org/css-validator/) - to validate the CSS code.
 - - -
 
 ## Deployment & Local Development
@@ -406,15 +406,15 @@ Please refer to [TESTING.md](TESTING.md) file for all testing carried out.
 
   * **Overflow**
 
-    Towards the end of the project development, I decided to increase the sizes of some features, such as control buttons, the rules button, and the players' pick section. This change caused overflow, as some content extended beyond the visible boundaries of their container or viewport. With help from the tutor team at Code Institute, I resolved the issue. For smaller screens, I eliminated the overflow by reducing the content size, increasing the container size, or changing the padding properties. For desktop screens, I had introduced a hover effect that enlarged some items when hovered over, which partly caused the overflow. I removed the transform properties set to `transform: scale(1.2)` from the hover-related classes. This didn't solve everything, so I had to define ` max-width` and `css max-height` for the problematic containers to finally resolve the bug. 
+    Towards the end of the project development, I decided to increase the sizes of some features, such as control buttons, the rules button, and the players' pick section. This change caused overflow, as some content extended beyond the visible boundaries of their container or viewport. With help from the tutor team at Code Institute, I resolved the issue. For smaller screens, I eliminated the overflow by reducing the content size, increasing the container size, or changing the padding properties. For desktop screens, I had introduced a hover effect that enlarged some items when hovered over, which partly caused the overflow. I removed the transform properties set to `transform: scale(1.2)` from the hover-related classes. This didn't solve everything, so I had to define `max-width` and `max-height` for the problematic containers to finally resolve the bug. 
 
-  * **The rules button interfering with the exit game senario**
+  * **The rules box interfering with the exit game senario**
 
-    After choosing to quit the game from the final result phase and returning to the login phase, the user would unintentionally be thrown back into the game without logging in, simply by opening and closing the rules box. Through troubleshooting, I realized the issue was due to how I handled the exit game scenario, which was initially based on toggling the visibility and `display` property of different phases. To resolve this, I decided it was better to reload the page when the user wants to quit the game, using the JavaScript code `location.reload(true);`.
+    After choosing to quit the game from the final result phase and returning to the login phase, the user would unintentionally be thrown back into the game without logging in, simply by opening and closing the rules box. Through troubleshooting, I realized the issue was due to how I had handled the exit game scenario, which was initially based on toggling the visibility and `display` property of different phases. To resolve this, I decided it was better to reload the page when the user wants to quit the game, using the JavaScript code `location.reload(true);`.
 
-  * **The rules button and the eventListener**
+  * **The rules box and the eventListener**
 
-    Opening the rules box during the display of the final result caused some unexpected behavior. The program would make some sections visible to the user that were supposed to be hidden at the wrong time and phase in the course of the game. Initially, I had used two event listeners for capturing the "click" on the rules button to track if the user wanted to access the rules box before or after login, to display the right phase after the user closed the rules box. However, this approach proved problematic as the code development progressed, causing the program to act unexpectedly in certain scenarios.
+    Opening the rules box during the display of the round result caused some unexpected behavior. The program would make some sections visible to the user that were supposed to be hidden at the wrong time and phase in the course of the game. Initially, I had used two event listeners for capturing the "click" on the rules button to track if the user wanted to access the rules box before or after login phase, to be able to display the right phase after the user closed the rules box. However, this approach proved problematic as the code development progressed, causing the program to act unexpectedly in certain scenarios.
 
     To resolve this, I used only one event listener and included an if-statement in the related event handler to identify the phase or part of the game from which the user had opened the rules box. This allowed me to provide the correct feedback and ensure the user could continue from where they left off to check the rules.
 
@@ -428,7 +428,7 @@ Please refer to [TESTING.md](TESTING.md) file for all testing carried out.
 
 ### Code Used
 
-Throughout the entire project development, I utilized the Code Institute course materials for HTML, CSS, and JavaScript. I followed the tutorials for the Love Running and Love Maths walkthrough projects to set up and start my project properly. The links from Code Institute that I relied on through my project are as follow:
+Throughout the entire project development, I utilized the Code Institute course materials for HTML, CSS, and JavaScript. I followed the tutorials for the Love Running and Love Maths walkthrough projects to set up and start my project properly. The links from Code Institute that I relied on through out my project are as follow:
 
   * [Code Institute, Love Maths, Tidying up](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LM101+3/courseware/2d651bf3f23e48aeb9b9218871912b2e/04d7bdb98119413991e2a31e9a291970/) - used for clearing the text input field in the login form, 
   and setting its focus with a ready cursor.
@@ -441,11 +441,11 @@ Throughout the entire project development, I utilized the Code Institute course 
 
   * [Code Institute, Getting form values](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+1/courseware/0a4bf408d10c4149bb686457ac11edf6/16d62f1111064f5cb6a64582da96a41b/)
 
-  * [Code Institute, Changing existing elements](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+1/courseware/0a4bf408d10c4149bb686457ac11edf6/37e3becd93804fdf8bf586523f56ead5/) - used for situations such as `document.getElementById('error-message').style.display = 'block';`
+  * [Code Institute, Changing existing elements](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+1/courseware/0a4bf408d10c4149bb686457ac11edf6/37e3becd93804fdf8bf586523f56ead5/) - used for situations such as: `document.getElementById('error-message').style.display = 'block';`
 
   * [Code Institute, Switch-case statement](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+1/courseware/73e9c0413ead4a21b389e33c77706102/ba023cfa11c04351a3758b21ee4418fe/?child=last)
 
-  * [Code Institute, built in functions ](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+1/courseware/73e9c0413ead4a21b389e33c77706102/48be8fcda02741f4b784016d5894101c/) - such as `Math.random()`
+  * [Code Institute, built in functions ](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+1/courseware/73e9c0413ead4a21b389e33c77706102/48be8fcda02741f4b784016d5894101c/) - such as: `Math.random()`
 
 I also used tutor support to solve the overflow issue caused by content extending beyond the visible boundaries of its container or the browser's visible area (viewport).
 
@@ -453,10 +453,10 @@ Additionally, I used online free resources such as [Mozilla Developer](https://d
 
   * [Mozilla Developer, querySelector](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector) - for learning about and using querySelector in my code.
   * [Mozilla Developer, includes() method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes) - used in text input validation section to check if the input string includes any spaces.
-  * [Mozilla Developer, setTimeout() method](https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout) - used for setting a timer to hide and show elements, for example, during the round's result display.
-  * [Mozilla Developer,Array.form()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from) - used to convert the NodeList (returned by querySelectorAll()) into a proper array.
-  * [Mozilla Developer, reload()](https://developer.mozilla.org/en-US/docs/Web/API/Location/reload) - used for reloading the page in quitContinue() function, when the user wants to quit the game
-  * [Mozilla Developer, rotate()](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate) and [Mozilla Developer,rotateY()](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotateY) - used in css for rotating the .user-pick and .computer-pick around the z-axis and y-axis.
+  * [Mozilla Developer, setTimeout() method](https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout) - used for setting a timer to hide and show elements for a specific amount of time, for example, during the rounds result display.
+  * [Mozilla Developer,Array.form()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from) - used to convert the NodeList (returned by `querySelectorAll()`) into a proper array to be able to use array methods.
+  * [Mozilla Developer, reload()](https://developer.mozilla.org/en-US/docs/Web/API/Location/reload) - used for reloading the page in `quitContinue()` function, when the user wants to quit the game.
+  * [Mozilla Developer, rotate()](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate) and [Mozilla Developer,rotateY()](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotateY) - used in css for rotating the `.user-pick` and `.computer-pick` around the z-axis and y-axis.
   * [TutorialsTonight, JavaScript forEach querySelectorAll](https://www.tutorialstonight.com/javascript-queryselectorall-foreach#foreach) - used for manipulating all elements within a specific class; 
   ```javascript 
   document.querySelectorAll(".final-result-display").forEach(element => { 
@@ -477,7 +477,8 @@ For documentation and creating my README.md file I have taken inspiration from t
 
 https://www.pikpng.com/downpngs/Jhxmoi_pierre-ciseaux-feuille-lzard-spock-aligned-rock-paper/ - where I downloaded the logo image.
 
-I relied on The Big Bang Theory Wiki for the README introduction about the game and how it was invented using the following links:
+I relied on The [Big Bang Theory Wiki](https://bigbangtheory.fandom.com/wiki/Main_Page) for my README introduction section to explain the game and how it was invented, using the following links:
+
   * https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock 
   * https://bigbangtheory.fandom.com/wiki/Sam_Kass 
 

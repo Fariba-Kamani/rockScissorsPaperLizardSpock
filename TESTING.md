@@ -77,6 +77,8 @@ Besides the Chrome DevTools, I also used [Responsive Web Design Checker](https:/
 
 The control buttons in the game phase have a pentagon formation on mobile, tablet, and desktop screens. They form a line in full-screen mode on mobile for a smoother user experience.
 
+  ![full-screen mode on mobile](assets/images/mobile-full-screen-responsive.png)
+
 ### Manual Testing
 
 #### **Testing User Stories**
@@ -95,7 +97,7 @@ The control buttons in the game phase have a pentagon formation on mobile, table
     |  Goals | How are they achieved? |
     | :--- | :--- |
     | As a returning visitor, I want to start playing right away without having to go through the tutorial or introduction. | The rules button is placed in the header to be accessible at all times for users who need it and out of the way for those who are confident about the game's rules. |
-    |  As a returning visitor, I want an easy login with minimal input required to start the game. | There is only one input field required for submission and login to the game. Upon page load, the input field gains focus, placing the cursor in the field for the user to easily type in their name. |
+    |  As a returning visitor, I want an easy login with minimal input required to start the game. | There is only one input field required for submission and login to the game. Upon page load, the input field gains focus, placing the cursor in the field for the user to easily type in their name. Allowed auto complete for even easier login. |
 
   * Frequent Visitors
 
@@ -113,7 +115,7 @@ The control buttons in the game phase have a pentagon formation on mobile, table
 | The title of the site in the center of the header | To show in the center of the header for all phases and pages | Checked for all phases in home page and 404 error page | It shows for all phases and pages | Pass |
 | The rules button | To show on the right hand side of the header for all phases | Checked for all phases in home page | It shows for all phases in home page | Pass |
 | The rules button hover effect | To change color from green to yellow when hovered over | Hovered over the rules button | It changes color from green to yellow when hovered over | Pass |
-| The rules box | To open when rules button is clicked on by mouse or tab key | Clicked on the rules button using both mouse and tab key| The rules box opens | Pass |
+| The rules box | To open when rules button is clicked on by mouse click or the Enter key | Clicked/pressed Enter on the rules button | The rules box opens | Pass |
 | The rules box header | To stick to the top of rules box when scrolling up and down | Scrolled up and down within the rules box | The rules box header sticks to the top | Pass |
 | The close icon on the right hand-side of the rules box header | To close the rules box when clicked on by mouse or tab key | Clicked on the close icon using both mouse and tab key | The rules box closes | Pass |
 | The close icon on the right hand-side of the rules box header hover effect | To change color from green to yellow when hovered over | Hovered over the close icon | It changes color from green to yellow when hovered over | Pass |
