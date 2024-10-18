@@ -371,7 +371,7 @@ function gameRules() {
     if (textResult.style.display === 'block') {
 
         // Alerts the user that the rules can't be shown during result display
-        alert("The rules box can't be opened during the rounds' result display.");
+        alert("The rules box can't be opened during the round result display!");
 
         // Removes hover effect by adding a class that disables it.
         rulesElement.classList.add("no-hover");

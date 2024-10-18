@@ -147,6 +147,7 @@ Both html pages on the website are responsive on all devices and have the follow
     ![The title](assets/images/the-title.png)
 
   * The rules button, shown with a question mark icon on the right-hand side of the header and Added hover effect for desktop screens, does not appear on the 404 error page. Instead, a green home icon appears to link back to home page.
+
     ![The rules button](assets/images/rules-button.png) ![The rules button hover effect](assets/images/rules-button-hover.png) ![The 404 error page home icon](assets/images/404-error-page-home-link-icon.png) ![The 404 error page home icon hover effect](assets/images/home-icon-hover.png)
 
 * The rules box; opens with the rules button
@@ -157,7 +158,7 @@ Both html pages on the website are responsive on all devices and have the follow
 
     * The rules box title on the left hand-side
 
-    * The close icon on the right hand-side, works as a closing button, can be selected and closed with both mouse and tab key, added hover effect for desktop screens
+    * The close icon on the right hand-side, works as a closing button, can be closed with both mouse click and the Enter key, added hover effect for desktop screens
 
       ![The rules box header](assets/images/rules-box-header.png)
 
@@ -198,7 +199,7 @@ Both html pages on the website are responsive on all devices and have the follow
 
   ![The PLAY! button](assets/images/play-button.png) ![The PLAY! button with hover effect](assets/images/play-button-hover.png)
 
-  * The form validation error message; appears in red text underneath the name input for three seconds after each attempt to submit and invalid input.
+  * The form validation error message; appears in red text underneath the name input for three seconds after each attempt to submit an invalid input.
 
   ![The form validation error message](assets/images/form-validation-error.png)
 
@@ -276,7 +277,7 @@ Both html pages on the website are responsive on all devices and have the follow
 
 #### The 404 error page
 
-![Responsive 404 Error Page](assets/images/responsive-404-error-page.png)
+![Responsive 404 Error Page](assets/images/404-error-page-responsive.png)
 
 * The green home icon link on top right side of the header
 
