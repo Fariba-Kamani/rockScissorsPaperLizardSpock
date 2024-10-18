@@ -79,7 +79,7 @@ The purpose of creating this game is to entertain users by providing a fun and c
 
 ### Colour Scheme
 
-As I chose to use emojis to design the game mechanics and to check if the user wants to play again in the final stage, I decided to use the yellow shade of the hand sign emojis and the green shade of the lizard emoji for the game’s color scheme. Below is an overview of the primary, secondary, and accent colors used:
+As I chose to use emojis to design the game mechanics, and for the YES/NO buttons in the final result display phase, I decided to use the yellow shade of the hand sign emojis and the green shade of the lizard emoji for the game’s color scheme. Below is an overview of the primary, secondary, and accent colors used:
 
 For the primary background colors, I applied #e2f5e2 to the header and footer backgrounds and white to the body background. This helps users understand where the header and footer end and the main section begins, while also maintaining a consistent brand identity across the website.
 
@@ -89,7 +89,7 @@ The secondary text colors I have used are red and #00d26a. Red is used to displa
 
 #00d26a, #ffc83d, and #d67d00 have been applied as accent colors to buttons, borders, focus, and hover effects to make the intended objects stand out from the background and make the interface more interactive and engaging for the user.
 
-Finally, rgb(79, 79, 91) has been used to add shadow and dimension to the game control buttons, as well as the yes and no buttons for handling the exit game scenario, enhancing the visibility of these elements.
+Finally, rgb(79, 79, 91) has been used to add shadow and dimension to the game control buttons, as well as the YES/NO buttons for handling the exit game scenario, enhancing the visibility of these elements.
 
 ![The Rock, Scissors, Paper, Lizard, Spock, Colour Scheme](assets/images/color-scheme.png)
 
@@ -232,9 +232,13 @@ Both html pages on the website are responsive on all devices and have the follow
 
         ![It's a tie](assets/images/round-result-tie.png)
 
-      * Wait to see the final result
+      * Wait to see the final result message
 
         ![Pre-final-result display message](assets/images/wait-for-final-result.png)
+      
+      * The alert message; if the rules button is clicked during the round result display
+
+        ![The-alert-message](assets/images/the-alert-message.png)
 
   * The controls area
 

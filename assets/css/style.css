@@ -764,7 +764,7 @@ footer {
     /* The control buttons and ye-no buttons hover effect */
     .btn:hover,
     .yes-no-buttons:hover {
-        border: 1px solid #FFC83D;
+        border: 1px solid #D67D00;
         cursor: pointer;
     }
 

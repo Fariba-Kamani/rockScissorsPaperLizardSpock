@@ -25,8 +25,7 @@ Visit the deployed site: [Rock, Scissors, Paper, Lizard, Spock](https://fariba-k
     * [The final result phase](#the-final-result-phase)
     * [The 404 Error Page](#the-404-error-page)
 
-Testing was ongoing throughout the entire project development. Chrome DevTools was used while building to find and resolve any issues that arose and to ensure that everything was working correctly as expected. The same tools were also employed to verify that the project is responsive, visually appealing, and functions as intended on all standard screen sizes. 
-The website has been tested on the following browsers: Chrome, Microsoft Edge, and Safari. Additionally, I tested the project on a VivoBook Asus laptop, iPhone 13, and iPhone 14. Furthermore, a few friends conducted additional testing on both Android and iOS mobile devices. 
+Testing was ongoing throughout the entire project development. Chrome DevTools were used while building to find and resolve any issues and to ensure that everything was working correctly as expected. The same tools were also employed to verify that the project is responsive, visually appealing, and functions as intended on all standard screen sizes. The website was tested on the following browsers on a VivoBook Asus laptop: Chrome (version: 129.0.6668.100 (Official Build) (64-bit)), Microsoft Edge (version: 129.0.2792.89 (Official build) (64-bit)), Opera One (version: 114.0.5282.102), and Firefox (version: 131.0.3 (64-bit)). I tested the responsiveness and browser compatibility of my website on various screen sizes and devices by inspecting it on the mentioned browsers' equivalent DevTools. The website proved to be responsive and compatible with all the tested browsers. Additionally, I tested the project on Chrome browser on iPhone 13 and iPhone 14. The website worked as expected and was responsive and compatible with both devices. Furthermore, a few friends conducted additional testing on both Android and iOS mobile devices.
 
 ### Automated Testing
 
@@ -134,6 +133,7 @@ The control buttons in the game phase have a pentagon formation on mobile, table
 | The PLAY! button | To submit the form and send the user to the game phase | Filled in the name input field (with a valid input) and pressed the PLAY! button (mouse or tab key) | It submitted the form and sent me to the game phase | Pass |
 | The PLAY! button hover effect| To turn green with white text color when hovered over | Hovered over | It turns green while the text turns white | Pass |
 | The form validation error message in red | To appear for 3 seconds underneath the name input field if the input field is left empty or an invalid input is entered when trying to submit the form. | Left the text input empty/ included space in the input/ entered more than 12 characters | It appears underneath the name input field, for 3 seconds | Pass |
+| The rules box opened from login phase | To hide the login phase when displayed, to show the login phase when closed | Opened and closed the rules box from the login phase | It behaves as expected | Pass |
 
 ##### **The Game Phase**
 
@@ -153,6 +153,8 @@ The control buttons in the game phase have a pentagon formation on mobile, table
 | The control buttons | To display before the user has selected a weapon, to hide for 3 seconds after the user has selected a weapon | Played the game and checked the control buttons behaviour | They work as expected | Pass |
 | The control buttons hover effect | Their border changes turns yellow when hovered over | Hovered over every individual control button by mouse | The hover effect works as expected | Pass |
 | The individual buttons in control button area | To show the related emoji in the user's pick display after selecting each button | Selected every individual control button and checked the user's pick display afterwards | It works as expected | Pass |
+| The rules box opened from the game phase (not during the round result display) | To hide the game phase when displayed, to show the game phase when closed,  | Opened and closed the rules box from the game phase (not during the round result display) | It behaves as expected | Pass |
+| The rules button clicked during the round result display | To show an alert message and not open the rules box | Clicked on the rules button during the round result display | It behaves as expected | Pass |
 
 
 ##### **The Final Result Phase**
