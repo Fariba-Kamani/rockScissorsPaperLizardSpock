@@ -113,14 +113,14 @@ The control buttons in the game phase have a pentagon formation on mobile, table
 | The header | To show on top of the page for all phases and pages | Checked for all phases in home page and 404 error page | It shows for all phases and pages | Pass |
 | The logo on the left hand side of the header | To show on the left hand side of the header for all phases and pages | Checked for all phases in home page and 404 error page | It shows for all phases and pages | Pass |
 | The title of the site in the center of the header | To show in the center of the header for all phases and pages | Checked for all phases in home page and 404 error page | It shows for all phases and pages | Pass |
-| The rules button | To show on the right hand side of the header for all phases | Checked for all phases in home page | It shows for all phases in home page | Pass |
-| The rules button hover effect | To change color from green to yellow when hovered over | Hovered over the rules button | It changes color from green to yellow when hovered over | Pass |
-| The rules box | To open when rules button is clicked on by mouse click or the Enter key | Clicked/pressed Enter on the rules button | The rules box opens | Pass |
-| The rules box header | To stick to the top of rules box when scrolling up and down | Scrolled up and down within the rules box | The rules box header sticks to the top | Pass |
-| The close icon on the right hand-side of the rules box header | To close the rules box when clicked on by mouse or tab key | Clicked on the close icon using both mouse and tab key | The rules box closes | Pass |
-| The close icon on the right hand-side of the rules box header hover effect | To change color from green to yellow when hovered over | Hovered over the close icon | It changes color from green to yellow when hovered over | Pass |
+| The rules button | To show on the right hand side of the header for all phases of the home page | Checked for all phases of the home page | It shows during all phases of the home page | Pass |
+| The rules button hover effect for desktop | To change color from green to yellow when hovered over | Hovered over the rules button | It changes color from green to yellow when hovered over | Pass |
+| The rules box | To open when the rules button is clicked on by mouse click or Enter key | Clicked/pressed Enter on the rules button | The rules box opens | Pass |
+| The rules box header | To stick to the top of the rules box when scrolling up and down | Scrolled up and down within the rules box | The rules box header sticks to the top | Pass |
+| The close icon on the right hand-side of the rules box header | To close the rules box when clicked on by mouse or Enter key | Clicked on the close icon using both mouse and Enter key | The rules box closes | Pass |
+| The close icon on the right hand-side of the rules box header hover effect for desktop | To change color from green to yellow when hovered over | Hovered over the close icon | It changes color from green to yellow when hovered over | Pass |
 | The vertical scroll bar | To appear at the right hand side of the rules box | Opened the rules box | It appears at the right hand side of the rules box | Pass |
-| The sticky scroll down arrow linking to the bottom of the rules box| To stick to the bottom right side of the rules box by scrolling and link to the bottom of the rules box  | Scrolled up and down, and clicked on it | It sticks to the bottom right side of the rules box, it links to the bottom of the rules box when clicked on | Pass |
+| The sticky scroll down arrow linking to the bottom of the rules box| To stick to the bottom right side of the rules box during scrolling and link to the bottom of the rules box when clicked on | Scrolled up and down, and clicked on it | It sticks to the bottom right side of the rules box during scrolling, it links to the bottom of the rules box when clicked on | Pass |
 | The footer |To show at the bottom of the page for all phases and pages | Checked for all phases in home page and 404 error page | It shows at the bottom of the page in all phases and pages | Pass |
 | The footer link icons | To open in a seperate tab | Clicked on each icon | They all direct to their related links openning in a new tab | Pass |
 | The footer icons hover effect | To turn yellow when hovered over for desktops | Hovered over all the footer icons | They turn yellow when hovered over | Pass |
@@ -129,20 +129,20 @@ The control buttons in the game phase have a pentagon formation on mobile, table
 
  | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| The section title | To show as the section's title when the page is loaded | Opened the page | It shows as it should | Pass |
-| The login form | To show when the page is loaded | Opened the page | It shows as it should | Pass |
+| The section title | To show as the section's title when the page is loaded | Opened the page | It shows as expected | Pass |
+| The login form | To show when the page is loaded | Opened the page | It shows as expected | Pass |
 | The name input field | To gain focus upon page load | Opened the page | The cursor appears in the name input field | Pass |
-| The PLAY! button | To submit the form and send the user to the game phase | Filled in the name input field (with a valid input) and pressed the PLAY! button (mouse or tab key) | It submitted the form and sent me to the game phase | Pass |
-| The PLAY! button hover effect| To turn green with white text color when hovered over | Hovered over | It turns green while the text turns white | Pass |
-| The form validation error message in red | To appear for 3 seconds underneath the name input field if the input field is left empty or an invalid input is entered when trying to submit the form. | Left the text input empty/ included space in the input/ entered more than 12 characters | It appears underneath the name input field, for 3 seconds | Pass |
+| The PLAY! button | To submit the form and send the user to the game phase | Filled in the name input field (with a valid input) and pressed the PLAY! button (by mouse or Enter key) | It submitted the form and sent me to the game phase | Pass |
+| The PLAY! button hover effect| For the background to turn green with white text color when hovered over | Hovered over | The background turns green while the text turns white | Pass |
+| The form validation error message in red | To appear for 3 seconds underneath the name input field if the input field is left empty or an invalid input is entered when trying to submit the form. | Left the text input empty/ included space in the input/ entered more than 12 characters | It appears underneath the name input field for all invalid alternatives, for 3 seconds | Pass |
 | The rules box opened from login phase | To hide the login phase when displayed, to show the login phase when closed | Opened and closed the rules box from the login phase | It behaves as expected | Pass |
 
 ##### **The Game Phase**
 
  | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| The result display area before chosing weapon| To show two "rock" signs facing each other as player's pick | Checked the result display area before selecting weapon | It works as expected | Pass |
-| The result display area after chosing weapon | To show the user's pick and the computer's pick, facing each other , and show the round result display for 3 seconds| Selected a weapon and checked the result display area | It works as expected | Pass |
+| The result display area before choosing weapon| To show two "rock" signs facing each other as the player's pick | Checked the result display area before selection of weapon | It works as expected | Pass |
+| The result display area after choosing weapon | To show the user's pick and the computer's pick, facing each other , and show the round result display for 3 seconds| Selected a weapon and checked the result display area | It works as expected | Pass |
 | The user's score area | To show underneath the user's name in green and increase by one each time there is a tie or the user wins the round. | Played the game to check how the counter works | It works as expected | Pass |
 | The computer's score area | To show underneath the computer's section in red and increase by one each time there is a tie or the computer wins the round. | Played the game to check how the counter works | It works as expected | Pass |
 | The round result display | To display for 3 seconds at the end of each round (after the user chooses a weapon) | Played the game and checked how the round result display behave at the end of each round | It works as expected | Pass |
@@ -153,7 +153,7 @@ The control buttons in the game phase have a pentagon formation on mobile, table
 | The controls area | To display before the user has selected a weapon, to hide for 3 seconds after the user has selected a weapon | Played the game and checked the controls area behaviour | It works as expected | Pass |
 | The section title and the round counter | To display before the user has selected a weapon, to hide for 3 seconds after the user has selected a weapon, and to increase by one after each round | Played the game and checked the title and the round counter's behaviour | It works as expected | Pass |
 | The control buttons | To display before the user has selected a weapon, to hide for 3 seconds after the user has selected a weapon | Played the game and checked the control buttons behaviour | They work as expected | Pass |
-| The control buttons hover effect | Their border changes turns yellow when hovered over | Hovered over every individual control button by mouse | The hover effect works as expected | Pass |
+| The control buttons hover effect | Their borders turn yellow when hovered over | Hovered over every individual control button by mouse | The hover effect works as expected | Pass |
 | The individual buttons in control button area | To show the related emoji in the user's pick display after selecting each button | Selected every individual control button and checked the user's pick display afterwards | It works as expected | Pass |
 | The rules box opened from the game phase (not during the round result display) | To hide the game phase when displayed, to show the game phase when closed,  | Opened and closed the rules box from the game phase (not during the round result display) | It behaves as expected | Pass |
 | The rules button clicked during the round result display | To show an alert message and not open the rules box | Clicked on the rules button during the round result display | It behaves as expected | Pass |
@@ -163,9 +163,9 @@ The control buttons in the game phase have a pentagon formation on mobile, table
 
  | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| The final result display | To display right after the Wait-to-see-the-final-result message | Played the game untill the end | The final result display appears right after the Wait-to-see-the-final-result message | Pass |
-| The thumb up (yes) button | To start a new game | Pressed the button by mouse click or enter | It sends to a new game | Pass |
-| The thumb down (no) button | To quit the game by reloading the web page | Pressed the button by mouse click or enter | It refreshes the page and sends to the login phase | Pass |
+| The final result display | To display right after the Wait to see the final result message | Played the game untill the end | The final result display appears right after the Wait to see the final result message | Pass |
+| The thumb up (yes) button | To start a new game | Pressed the button by mouse click or Enter | It sends to a new game | Pass |
+| The thumb down (no) button | To quit the game by reloading the web page | Pressed the button by mouse click or Enter | It refreshes the page and sends to the login phase | Pass |
 | The YES/NO buttons hover effect | The border around the buttons turns yellow when hovered over | Hovered over every individual YES/NO button | The hover effect applies as expected | Pass |
 
 ##### **The 404 Error Page**
@@ -174,5 +174,5 @@ The control buttons in the game phase have a pentagon formation on mobile, table
 | --- | --- | --- | --- | --- |
 | The 404 error page | To laod when the server cannot find the page or resource requested by the user | Entered https://fariba-kamani.github.io/rockScissorsPaperLizardSpock/index.html/non-existent to the browser | The 404 error page opens | Pass |
 | The green home icon link on top right side of the header | To link to home page | Pressed the home icon | It sends to the home page | Pass |
-| The 404 error page message | To show when the page is loaded | Entered a broken link of my github page | It shows when the page loads | Pass |
-| The back to home page link | To link to home page when clicked on | Clicked on it |It sends to the home page | Pass |
+| The 404 error page message | To show when the page is loaded | Checked when the page loads after entering a broken link of my Github page | It shows as expected when the page is loaded | Pass |
+| The back to home page link | To link to home page when clicked on | Clicked on it |It links/sends the user to the home page | Pass |
