@@ -18,7 +18,7 @@ Visit the deployed site: [Rock, Scissors, Paper, Lizard, Spock](https://fariba-k
   * [Responsive Testing](#responsive-testing)
 * [MANUAL TESTING](#manual-testing)
   * [Testing User Stories](#testing-user-stories)
-  * [Full Testing](#full-testing)
+  * [The Full Testing](#the-full-testing)
     * [The Common Features](#the-common-features)
     * [The Login Phase](#the-login-phase)
     * [The Game Phase](#the-game-phase)
@@ -102,6 +102,7 @@ The control buttons in the game phase have a pentagon formation on mobile, table
   * Frequent Visitors
 
     As a frequent visitor, I want to be able to choose between other players or the computer to compete with. This is a feature I plan to implement in the future. However, since the project currently lacks this feature, I have not included the frequent visitor's goal in the user story testing.
+
 
 #### **The Full Testing**
 
