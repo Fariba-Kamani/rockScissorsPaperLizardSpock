@@ -95,7 +95,8 @@ h1 {
 }
 
 /*Rules button*/
-.rules, .home-sign {
+.rules,
+.home-sign {
     /* Aligns itself to the top*/
     align-self: flex-start;
     border: none;
@@ -693,7 +694,8 @@ footer {
     }
 
     /* The rules button */
-    .rules, .home-sign {
+    .rules,
+    .home-sign {
         font-size: 2.4rem;
     }
 
@@ -736,7 +738,8 @@ footer {
     }
 
     /* the rules button hover effect */
-    .rules:hover, .home-sign:hover {
+    .rules:hover,
+    .home-sign:hover {
         color: #FFC83D;
         cursor: pointer;
     }

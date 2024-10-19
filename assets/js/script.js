@@ -6,11 +6,11 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('user-name').value = "";
 });
 
-/*This event listener select the first form element in the document,
+/*This event listener selects the first form element in the document,
   and listens for submit, prevents the default submit,
   takes care of the text input validation
   by providing the user with an error message in case of invalid submission,
-  or allow user to start a new game after the validation passes.
+  or allows user to start a new game after the validation passes.
  */
 document.querySelector('form').addEventListener('submit', function (event) {
 
@@ -45,7 +45,7 @@ document.querySelector('form').addEventListener('submit', function (event) {
         element.style.display = "flex";
     });
 
-    // Show elements with class 'controls-area'
+    // Shows elements with class 'controls-area'
     document.querySelectorAll(".controls-area").forEach(element => {
         element.style.display = "flex";
     });
@@ -79,7 +79,6 @@ function runGame() {
     // This for loop adds event listener to the control buttons
     for (let button of buttons) {
         button.addEventListener('click', userPickInvestigator);
-
     }
 }
 
@@ -202,12 +201,10 @@ function showResult() {
                     ${player} wins!`;
                     result.style.color = '#00D26A';
                     countUsersScore();
-
                 } else {
                     result.innerHTML = `${options[computerPick]} beats ${options[playerPick]}.<br> Computer wins!`;
                     result.style.color = 'rgb(255, 0, 17)'; //red
                     countComputersScore();
-
                 }
                 break;
             case '✋':
@@ -221,12 +218,10 @@ function showResult() {
                     ${player} wins!`;
                     result.style.color = '#00D26A';
                     countUsersScore();
-
                 } else {
                     result.innerHTML = `${options[computerPick]} beats ${options[playerPick]}.<br> Computer wins!`;
                     result.style.color = 'rgb(255, 0, 17)';
                     countComputersScore();
-
                 }
                 break;
             case '✌️':
@@ -240,12 +235,10 @@ function showResult() {
                     ${player} wins!`;
                     result.style.color = '#00D26A';
                     countUsersScore();
-
                 } else {
                     result.innerHTML = `${options[computerPick]} beats ${options[playerPick]}.<br> Computer wins!`;
                     result.style.color = 'rgb(255, 0, 17)';
                     countComputersScore();
-
                 }
                 break;
             case '🦎':
@@ -259,12 +252,10 @@ function showResult() {
                     ${player} wins!`;
                     result.style.color = '#00D26A';
                     countUsersScore();
-
                 } else {
                     result.innerHTML = `${options[computerPick]} beats ${options[playerPick]}.<br> Computer wins!`;
                     result.style.color = 'rgb(255, 0, 17)';
                     countComputersScore();
-
                 }
                 break;
             case '🖖':
@@ -278,19 +269,14 @@ function showResult() {
                     ${player} wins!`;
                     result.style.color = '#00D26A';
                     countUsersScore();
-
                 } else {
                     result.innerHTML = `${options[computerPick]} beats ${options[playerPick]}.<br> Computer wins!`;
                     result.style.color = 'rgb(255, 0, 17)';
                     countComputersScore();
-
                 }
                 break;
-
         }
-
     }
-
     roundCounter();
 
     // Shows the text result for 3 seconds and then reset for a new round
@@ -307,7 +293,6 @@ function showResult() {
             element.style.display = "flex";
         });
     }, 3000);
-
 }
 
 /** 
@@ -398,7 +383,6 @@ function gameRules() {
             element.style.display = "none";
         });
 
-
         /* This event listener listens for click action on the close icon in the rules box header.
         Passing an anonymous function to the event listener, 
         to be able to pass the flag as parameter to the event handler.*/
@@ -413,7 +397,6 @@ function gameRules() {
                 closeRules(flag);
             }
         });
-
     } else {
         flag = 2; // User is trying to open the rules box from the game phase.
 
@@ -439,7 +422,6 @@ function gameRules() {
                 closeRules(flag);
             }
         });
-
     }
 }
 
